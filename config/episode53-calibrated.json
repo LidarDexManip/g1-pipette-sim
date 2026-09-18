@@ -1,0 +1,368 @@
+{
+  "description": "Photo-guided approximate geometry from assets/Media, September 9 2026. SI units; quaternions wxyz. See assets/objects/PHOTO_NOTES.md for uncertainty.",
+  "base_position": [
+    0.0,
+    0.0,
+    0.793
+  ],
+  "base_quaternion": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "timestep": 0.002,
+  "table": {
+    "center_xy": [
+      0.43,
+      -0.09838364194603488
+    ],
+    "size_xy": [
+      0.6,
+      0.65
+    ],
+    "top_z": 0.6559104141459773,
+    "thickness": 0.025
+  },
+  "rack": {
+    "center_xy": [
+      0.2771143622595006,
+      -0.03388364194603488
+    ],
+    "yaw_deg": 0.0,
+    "rows": 8,
+    "cols": 12,
+    "pitch": 0.009,
+    "height": 0.06,
+    "active_cell": [
+      3,
+      5
+    ],
+    "size_xy": [
+      0.128,
+      0.088
+    ],
+    "hole_radius": 0.0035,
+    "plate_thickness": 0.002,
+    "taped_to_table": true
+  },
+  "waste": {
+    "offset_from_rack": [
+      -0.009733737272730858,
+      0.093
+    ],
+    "size_xy": [
+      0.128,
+      0.088
+    ],
+    "height": 0.032
+  },
+  "pipette": {
+    "mount_position": [
+      0.15,
+      0.035,
+      0.0
+    ],
+    "mount_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nozzle_z": -0.145,
+    "tip_length": 0.033,
+    "tip_wall": 0.00045,
+    "tip_profile": [
+      [
+        0,
+        0.00045
+      ],
+      [
+        0.004,
+        0.0009
+      ],
+      [
+        0.025,
+        0.0025
+      ],
+      [
+        0.029,
+        0.0031
+      ],
+      [
+        0.033,
+        0.0031
+      ]
+    ]
+  },
+  "hand_mapping": {
+    "finger_closed_rad": 1.25,
+    "thumb_bend_closed_rad": 0.5,
+    "thumb_rotation_max_rad": 1.3,
+    "register_max": 1000.0
+  },
+  "attachment": {
+    "radial_tolerance": 0.007,
+    "axial_tolerance": 0.005,
+    "angle_tolerance_deg": 20.0,
+    "dwell_seconds": 0.06,
+    "eject_thumb_bend_below": 200.0,
+    "eject_thumb_bend_above": 400.0,
+    "release_speed": 0.06
+  },
+  "cameras": {
+    "overview": {
+      "position": [
+        1.6,
+        -1.6,
+        1.45
+      ],
+      "target": [
+        0.15,
+        0.0,
+        0.7
+      ],
+      "fovy": 45.0
+    },
+    "rgb": {
+      "position": [
+        0.07,
+        0.0,
+        1.23
+      ],
+      "target": [
+        0.2726143622595006,
+        -0.03838364194603488,
+        0.7209104141459772
+      ],
+      "fovy": 48.0
+    },
+    "wrist_left": {
+      "position": [
+        0.35,
+        0.29,
+        0.98
+      ],
+      "target": [
+        0.2726143622595006,
+        -0.03838364194603488,
+        0.7209104141459772
+      ],
+      "fovy": 74.0
+    },
+    "wrist_right": {
+      "position": [
+        0.72,
+        -0.08,
+        0.91
+      ],
+      "target": [
+        0.2726143622595006,
+        -0.03838364194603488,
+        0.7209104141459772
+      ],
+      "fovy": 74.0
+    }
+  },
+  "physics": {
+    "table_mass": 18.0,
+    "rack_mass": 0.18,
+    "tray_mass": 0.08,
+    "pipette_mass": 0.085,
+    "tip_mass": 0.0006,
+    "body_kp": 180.0,
+    "body_kv": 18.0,
+    "body_torque_limit": 80.0,
+    "wrist_kp": 45.0,
+    "wrist_kv": 3.0,
+    "wrist_torque_limit": 5.0,
+    "hand_kp": 3.0,
+    "hand_kv": 0.12,
+    "hand_torque_limit": 1.0,
+    "ejector_kp": 150.0,
+    "ejector_kv": 1.0,
+    "ejector_force_limit": 3.0,
+    "gravity_compensation": true,
+    "constraint_time_constant": 0.008,
+    "timestep": 0.0005,
+    "joint_servos": {
+      "left_hip_pitch_joint": {
+        "kp": 99.16925458003428,
+        "kv": 2.045714014377553,
+        "gravity_compensation": false
+      },
+      "left_hip_roll_joint": {
+        "kp": 99.27898570915413,
+        "kv": 3.5900017649824685,
+        "gravity_compensation": false
+      },
+      "left_hip_yaw_joint": {
+        "kp": 99.52620587441419,
+        "kv": 2.5323052875308347,
+        "gravity_compensation": false
+      },
+      "left_knee_joint": {
+        "kp": 147.6676692998665,
+        "kv": 4.805283831249398,
+        "gravity_compensation": false
+      },
+      "left_ankle_pitch_joint": {
+        "kp": 39.21095043623969,
+        "kv": 11.589941714333623,
+        "gravity_compensation": false
+      },
+      "left_ankle_roll_joint": {
+        "kp": 38.922048318655996,
+        "kv": 1.0752266021226038e-08,
+        "gravity_compensation": false
+      },
+      "right_hip_pitch_joint": {
+        "kp": 98.72711846476234,
+        "kv": 3.247626845790447,
+        "gravity_compensation": false
+      },
+      "right_hip_roll_joint": {
+        "kp": 99.10393900793106,
+        "kv": 2.13660615950166,
+        "gravity_compensation": false
+      },
+      "right_hip_yaw_joint": {
+        "kp": 98.10604312001456,
+        "kv": 2.335369231357081,
+        "gravity_compensation": false
+      },
+      "right_knee_joint": {
+        "kp": 148.00646354957772,
+        "kv": 7.011040335127413,
+        "gravity_compensation": false
+      },
+      "right_ankle_pitch_joint": {
+        "kp": 39.70725116981771,
+        "kv": 0.7179683598853475,
+        "gravity_compensation": false
+      },
+      "right_ankle_roll_joint": {
+        "kp": 39.77509227670806,
+        "kv": 5.818625330729864,
+        "gravity_compensation": false
+      },
+      "waist_yaw_joint": {
+        "kp": 146.54701581618454,
+        "kv": 4.729548288592247,
+        "gravity_compensation": false
+      },
+      "waist_roll_joint": {
+        "kp": 149.4445446681517,
+        "kv": 2.744781476532131,
+        "gravity_compensation": false
+      },
+      "waist_pitch_joint": {
+        "kp": 149.46319084963574,
+        "kv": 8.962387679451599,
+        "gravity_compensation": false
+      },
+      "left_shoulder_pitch_joint": {
+        "kp": 39.78314226601015,
+        "kv": 6.870534276768279,
+        "gravity_compensation": false
+      },
+      "left_shoulder_roll_joint": {
+        "kp": 39.93427244598915,
+        "kv": 6.244301248072058,
+        "gravity_compensation": false
+      },
+      "left_shoulder_yaw_joint": {
+        "kp": 36.86397310665984,
+        "kv": 5.520996213410846,
+        "gravity_compensation": false
+      },
+      "left_elbow_joint": {
+        "kp": 36.83817035047313,
+        "kv": 5.549774520493312,
+        "gravity_compensation": false
+      },
+      "left_wrist_roll_joint": {
+        "kp": 18.391560217658668,
+        "kv": 1.2117816415126534,
+        "gravity_compensation": false
+      },
+      "left_wrist_pitch_joint": {
+        "kp": 19.75803458856658,
+        "kv": 1.2018185453794903,
+        "gravity_compensation": false
+      },
+      "left_wrist_yaw_joint": {
+        "kp": 19.744675139889235,
+        "kv": 1.1543519834200293,
+        "gravity_compensation": false
+      },
+      "right_shoulder_pitch_joint": {
+        "kp": 39.80153907632175,
+        "kv": 6.173052468318889,
+        "gravity_compensation": false
+      },
+      "right_shoulder_roll_joint": {
+        "kp": 39.082556132632746,
+        "kv": 6.01533493141569,
+        "gravity_compensation": false
+      },
+      "right_shoulder_yaw_joint": {
+        "kp": 38.17788075843875,
+        "kv": 5.130374789277774,
+        "gravity_compensation": false
+      },
+      "right_elbow_joint": {
+        "kp": 38.81817358782893,
+        "kv": 5.597595448772142,
+        "gravity_compensation": false
+      },
+      "right_wrist_roll_joint": {
+        "kp": 18.566949881140776,
+        "kv": 1.107607081670265,
+        "gravity_compensation": false
+      },
+      "right_wrist_pitch_joint": {
+        "kp": 19.903636274655906,
+        "kv": 1.1073254015622935,
+        "gravity_compensation": false
+      },
+      "right_wrist_yaw_joint": {
+        "kp": 19.4837351931184,
+        "kv": 0.9819124195957692,
+        "gravity_compensation": false
+      }
+    }
+  },
+  "calibration": {
+    "training_episodes": [
+      53,
+      54,
+      55,
+      56
+    ],
+    "source": "low_level",
+    "method": "Bounded motor effort regression; fixed gains, no target correction or observed-state feedback",
+    "payload_note": "Effective inertial correction fitted to slow free-space effort on episodes 53-56; not a measured physical component or pipette mass.",
+    "ejection_arming_note": "400 register units: training episode 56 holds at 470.47; old 600 cutoff could never arm. Release cutoff remains 200."
+  },
+  "effective_wrist_payload": {
+    "mass": 0.7825217247652952,
+    "position": [
+      0.15818882585089183,
+      -0.011023124918591443,
+      -0.0021316663069249507
+    ]
+  },
+  "fit_note": {
+    "tray_method": "thumb threshold edge at 16.994s; offset expanded to avoid rack overlap",
+    "method": "lowest 12 percent of model nozzle heights; uncalibrated kinematic seed, not image reconstruction",
+    "episode": 53,
+    "anchor_m": [
+      0.2726143622595006,
+      -0.03838364194603488,
+      0.7209104141459772
+    ],
+    "base_pose_measured": false,
+    "dimensions_measured": false
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "dataset_snapshot": "/home/ytung34/.cache/huggingface/hub/datasets--jren313--g1-pipette-3view-hil194/snapshots/643ece1b2e93f15022c83832302848c9978d5f05",
+  "method": "Manual inspection of sampled recorded fixed-camera frames; not an exhaustive video annotation",
+  "episodes": {
+    "52": {
+      "sampled_times_s": [
+        0.2,
+        3,
+        8,
+        14,
+        16,
+        21.4
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": false,
+      "note": "Sampled frames show an initially empty pipette approaching the racked tip, insertion, then lifting the green tip. Exact real attachment time is not measured.",
+      "evidence": "outputs/hil194/pickup-layouts/episode-052/recorded-task-review.jpg"
+    },
+    "104": {
+      "sampled_times_s": [
+        0,
+        2,
+        4.5,
+        6,
+        8,
+        9.1
+      ],
+      "initial_tip_state": "attached",
+      "final_tip_state": "in_rack",
+      "recorded_pickup_visible": false,
+      "external_object_intervention_observed": true,
+      "intervention_observed_at_s": 2.0,
+      "exclude_from_default": true,
+      "note": "The recording starts with a tip attached. A person removes it around 2 s; later sampled frames show the tip in the rack and an empty pipette. The small FK rise is not evidence of a recorded pickup. Robot-command replay does not reproduce this human reset; the fitted simulated pickup is synthetic.",
+      "evidence": "outputs/hil194/pickup-layouts/episode-104/recorded-task-review.jpg"
+    },
+    "5": {
+      "sampled_times_s": [
+        0.2,
+        1,
+        13.55,
+        17.88,
+        17.93
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": true,
+      "note": "The real pipette is empty and the tip remains in the rack at 0.2 and 1 s, but simulation attaches at 0.159 s. Later recorded frames show a pickup. Lift height matches, but attachment timing does not.",
+      "evidence": "outputs/hil194/pickup-layouts/episode-005/recorded-task-review.jpg"
+    },
+    "14": {
+      "sampled_times_s": [
+        0,
+        12.8,
+        14.3,
+        20.97,
+        21.29
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": false,
+      "note": "Sampled frames show an initially empty pipette, insertion at 12.8\u201314.3 s, and a later lifted green tip. Exact real attachment time is not measured.",
+      "evidence": "outputs/hil194/pickup-layouts/episode-014/recorded-task-review.jpg"
+    },
+    "46": {
+      "sampled_times_s": [
+        0,
+        8,
+        13,
+        14,
+        17,
+        21.33
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": false,
+      "note": "Sampled fixed-side frames show approach to the racked tip, insertion, and the green tip lifted on the pipette near 21.3 s. A real pickup is visible; exact attachment time is not measured.",
+      "evidence": "outputs/hil194/pickup-layouts/episode-046/recorded-task-review.jpg"
+    },
+    "8": {
+      "sampled_times_s": [
+        0,
+        2,
+        18
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": true,
+      "note": "Sampled fixed-side frames show an initially empty pipette and a green tip on the pipette in the final frame. Exact real attachment time is not measured. The real pipette remains empty at 2 s, so the saved simulated attachment before 0.2 s is too early.",
+      "evidence": "outputs/hil194/pickup-layouts/additional-recorded-review.jpg"
+    },
+    "81": {
+      "sampled_times_s": [
+        0,
+        2,
+        19.8
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": true,
+      "note": "Sampled fixed-side frames show an initially empty pipette and a green tip on the pipette in the final frame. Exact real attachment time is not measured. The real pipette remains empty at 2 s, so the saved simulated attachment before 0.2 s is too early.",
+      "evidence": "outputs/hil194/pickup-layouts/additional-recorded-review.jpg"
+    },
+    "160": {
+      "sampled_times_s": [
+        0,
+        2,
+        34.8
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": false,
+      "note": "Sampled fixed-side frames show an initially empty pipette and a green tip on the pipette in the final frame. Exact real attachment time is not measured.",
+      "evidence": "outputs/hil194/pickup-layouts/additional-recorded-review.jpg"
+    },
+    "193": {
+      "sampled_times_s": [
+        0,
+        2,
+        14.7
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": false,
+      "note": "Sampled fixed-side frames show an initially empty pipette and a green tip on the pipette in the final frame. Exact real attachment time is not measured.",
+      "evidence": "outputs/hil194/pickup-layouts/additional-recorded-review.jpg"
+    },
+    "191": {
+      "sampled_times_s": [
+        0,
+        2,
+        25.6
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "uncertain_near_rack",
+      "recorded_pickup_visible": null,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": true,
+      "note": "The rack visibly changes pose and the final sampled frame keeps the pipette close to the rack. These samples do not establish a free lifted tip; task outcome needs closer video annotation. The small FK rise alone is insufficient evidence of pickup.",
+      "evidence": "outputs/hil194/pickup-layouts/short-recorded-review.jpg"
+    },
+    "192": {
+      "sampled_times_s": [
+        0,
+        2,
+        27.2
+      ],
+      "initial_tip_state": "in_rack",
+      "final_tip_state": "uncertain_near_rack",
+      "recorded_pickup_visible": null,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": true,
+      "note": "The rack visibly changes pose and the final sampled frame keeps the pipette close to the rack. These samples do not establish a free lifted tip; task outcome needs closer video annotation. The small FK rise alone is insufficient evidence of pickup.",
+      "evidence": "outputs/hil194/pickup-layouts/short-recorded-review.jpg"
+    },
+    "7": {
+      "sampled_times_s": [
+        0,
+        0.2,
+        2,
+        4,
+        6,
+        10,
+        15,
+        20.9
+      ],
+      "initial_tip_state": "nozzle_at_racked_tip",
+      "final_tip_state": "attached",
+      "recorded_pickup_visible": true,
+      "external_object_intervention_observed": false,
+      "exclude_from_default": true,
+      "note": "The nozzle begins near/in the racked tip, but the real pipette is visibly empty and separate from the tip at 4\u20136 s. Later frames show insertion and a lifted green tip. Simulated attachment at 0.1745 s is too early, despite the matching lift height.",
+      "evidence": "outputs/hil194/pickup-layouts/episode-007/recorded-insertion-detail.jpg"
+    }
+  }
+}

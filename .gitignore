@@ -1,0 +1,19 @@
+# Generated runs, recordings, exports, and datasets
+outputs/
+# Procedural mesh cache (regenerated from Python and scene parameters)
+/assets/objects/
+# Reference photographs and downloaded product pages
+/assets/Media/
+# Local dependencies and Python caches
+.analysis-deps/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Local credentials and machine settings
+.env
+.env.*
+!.env.example
+# Relocated configuration and locally generated recipes
+.local/

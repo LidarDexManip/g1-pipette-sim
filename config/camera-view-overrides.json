@@ -1,0 +1,66 @@
+{
+  "dataset_snapshot": "/home/ytung34/.cache/huggingface/hub/datasets--jren313--g1-pipette-3view-hil194/snapshots/643ece1b2e93f15022c83832302848c9978d5f05",
+  "episodes": {
+    "14": {
+      "rgb": {
+        "position": [
+          0.1189855139146993,
+          0.04233990416782171,
+          1.1510168360529218
+        ],
+        "quaternion": [
+          0.6858011050926465,
+          0.2151230802702194,
+          -0.18919968069580728,
+          -0.6690309300872136
+        ],
+        "fovy": 60
+      }
+    }
+  },
+  "note": "Dataset-wide corrected ego viewpoint. Episodes 0-45 use the episode-14 behind-hand fit; episodes 46-193 use the behind-hand planar candidate from saved episode-46 rack annotations. Camera fits remain approximate and scene-dependent; intrinsics/world registration are not independently calibrated. No physics, object positions or robot commands changed.",
+  "evidence": "outputs/episode14-ego-fix/ego-landmarks.json",
+  "defaults": {
+    "rgb": {
+      "position": [
+        0.1189855139146993,
+        0.04233990416782171,
+        1.1510168360529218
+      ],
+      "quaternion": [
+        0.6858011050926465,
+        0.2151230802702194,
+        -0.18919968069580728,
+        -0.6690309300872136
+      ],
+      "fovy": 60
+    }
+  },
+  "sessions": [
+    {
+      "name": "20260909",
+      "start": 46,
+      "end": 194,
+      "views": {
+        "rgb": {
+          "position": [
+            0.08885744602688456,
+            0.054932074292087865,
+            1.1754516313783048
+          ],
+          "quaternion": [
+            0.6882646804256017,
+            0.2215499089764928,
+            -0.23467136407163178,
+            -0.649720492516522
+          ],
+          "fovy": 60
+        }
+      }
+    }
+  ],
+  "session_evidence": {
+    "20260904": "outputs/episode14-ego-fix/ego-landmarks.json",
+    "20260909": "outputs/ego-default-fix/session46-candidates.json"
+  }
+}

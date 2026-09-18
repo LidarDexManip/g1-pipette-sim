@@ -1,0 +1,88 @@
+{
+  "seed": 20260915,
+  "sources": [
+    "/home/ytung34/Projects/g1_pipette_sim/outputs/hil194/augmentation600/candidates/000025"
+  ],
+  "proposals": 8,
+  "record": true,
+  "placement_attempts": 3,
+  "infrastructure_attempts": 2,
+  "recipes": [
+    {
+      "method": "joint_approach",
+      "amplitude_deg": 3.0,
+      "approach_s": [
+        1.5,
+        3.0,
+        6.0
+      ]
+    },
+    {
+      "method": "joint_approach",
+      "amplitude_deg": 3.0,
+      "approach_s": [
+        1.5,
+        3.0,
+        6.0
+      ]
+    },
+    {
+      "method": "joint_approach",
+      "amplitude_deg": 6.0,
+      "approach_s": [
+        1.5,
+        3.0,
+        6.0
+      ]
+    },
+    {
+      "method": "joint_approach",
+      "amplitude_deg": 6.0,
+      "approach_s": [
+        1.5,
+        3.0,
+        6.0
+      ]
+    },
+    {
+      "method": "elbow_pulse",
+      "amplitude_deg": 0.3,
+      "pulse_s": [
+        6.02,
+        7.02,
+        7.42,
+        8.62
+      ]
+    },
+    {
+      "method": "elbow_pulse",
+      "amplitude_deg": -0.3,
+      "pulse_s": [
+        6.02,
+        7.02,
+        7.42,
+        8.62
+      ]
+    },
+    {
+      "method": "elbow_pulse",
+      "amplitude_deg": 0.5,
+      "pulse_s": [
+        6.02,
+        7.02,
+        7.42,
+        8.62
+      ]
+    },
+    {
+      "method": "elbow_pulse",
+      "amplitude_deg": -0.5,
+      "pulse_s": [
+        6.02,
+        7.02,
+        7.42,
+        8.62
+      ]
+    }
+  ]
+}

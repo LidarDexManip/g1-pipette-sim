@@ -1,0 +1,7 @@
+mujoco==3.8.1
+numpy>=1.24
+scipy>=1.10
+pyarrow>=14
+opencv-python>=4.8
+Pillow>=10
+huggingface-hub>=0.24

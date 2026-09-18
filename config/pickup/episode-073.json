@@ -1,0 +1,1326 @@
+{
+  "description": "Photo-guided approximate geometry from assets/Media, September 9 2026. SI units; quaternions wxyz. See assets/objects/PHOTO_NOTES.md for uncertainty.",
+  "base_position": [
+    0.0,
+    0.0,
+    0.793
+  ],
+  "base_quaternion": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "timestep": 0.002,
+  "table": {
+    "center_xy": [
+      0.43,
+      0.009777094307528739
+    ],
+    "size_xy": [
+      0.6,
+      0.65
+    ],
+    "top_z": 0.6547767682455363,
+    "thickness": 0.025
+  },
+  "rack": {
+    "center_xy": [
+      0.38888432772638176,
+      0.04446108241018057
+    ],
+    "yaw_deg": 0.0,
+    "rows": 8,
+    "cols": 12,
+    "pitch": 0.0105,
+    "height": 0.06,
+    "active_cell": [
+      2,
+      4
+    ],
+    "size_xy": [
+      0.128,
+      0.088
+    ],
+    "hole_radius": 0.0035,
+    "plate_thickness": 0.002,
+    "taped_to_table": true,
+    "pitch_provenance": "Image-derived 10.5 mm estimate: rectified side views in episodes 0, 46, 95 and 193 give about 52\u201355 px per well at 5000 px/m under the existing 128x88 mm outer-box assumption. Replaces the prior nominal 9 mm grid, whose outer margins did not match photos. Direct measurement still needed."
+  },
+  "waste": {
+    "offset_from_rack": [
+      0.0,
+      -0.094
+    ],
+    "size_xy": [
+      0.136,
+      0.096
+    ],
+    "height": 0.032,
+    "hinge": {
+      "enabled": true,
+      "initial_angle_deg": 198.0,
+      "range_deg": [
+        0.0,
+        230.0
+      ],
+      "damping": 0.003,
+      "frictionloss": 0.001,
+      "photo_revision": "20260910-rear-hinge",
+      "provenance": "Rear hinge and tabletop-supported full opening confirmed by user and 190247532\u2013190330131 photos. Pin axis 10 mm behind nominal rack edge is estimated; 230-degree limit allows the table to determine the open rest angle. Damping/friction estimated.",
+      "position": [
+        0.0,
+        -0.054,
+        0.06
+      ]
+    }
+  },
+  "pipette": {
+    "mount_position": [
+      0.15,
+      0.035,
+      0.0
+    ],
+    "mount_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nozzle_z": -0.15672340425531914,
+    "tip_length": 0.036,
+    "tip_wall": 0.00045,
+    "tip_profile": [
+      [
+        0,
+        0.0004
+      ],
+      [
+        0.002,
+        0.0006
+      ],
+      [
+        0.026,
+        0.00255
+      ],
+      [
+        0.032,
+        0.0031
+      ],
+      [
+        0.0348,
+        0.0035
+      ],
+      [
+        0.036,
+        0.00345
+      ]
+    ],
+    "product_model": "onilab_0.5_10ul",
+    "handle_profile": [
+      [
+        -0.054,
+        0.0117
+      ],
+      [
+        -0.051,
+        0.0127
+      ],
+      [
+        0.067,
+        0.0127
+      ],
+      [
+        0.073,
+        0.0123
+      ],
+      [
+        0.074,
+        0.0117
+      ]
+    ],
+    "handle_y_scale": 0.9,
+    "shaft_profile": [
+      [
+        -0.14402340425531915,
+        0.0025
+      ],
+      [
+        -0.14202340425531915,
+        0.0029
+      ],
+      [
+        -0.07,
+        0.0042
+      ],
+      [
+        -0.064,
+        0.0049
+      ],
+      [
+        -0.06,
+        0.008
+      ],
+      [
+        -0.057,
+        0.0105
+      ],
+      [
+        -0.053,
+        0.0105
+      ]
+    ],
+    "reference_note": "User measured 10 x 2.5 x 1 inches (254 x 63.5 x 25.4 mm). Assumed bare pipette, plunger at rest; width includes finger rest/ejector. 80 g assembly. Profiles remain photo-derived approximations.",
+    "measured_dimensions_m": {
+      "length": 0.254,
+      "overall_width": 0.0635,
+      "depth": 0.0254
+    },
+    "detail_length_scale": 1.0808510638297872,
+    "hand_rest_outer_y": -0.0395,
+    "display_face_scale": 1.1043478260869566,
+    "photo_revision": "20260910-seated-tip-v3",
+    "photo_sources": [
+      "20260910_155954011_iOS.heic",
+      "20260910_155959559_iOS.heic",
+      "20260910_160004541_iOS.heic",
+      "20260910_160006761_iOS.heic",
+      "20260910_160009996_iOS.heic",
+      "20260910_160014141_iOS.heic",
+      "20260910_160017113_iOS.heic",
+      "20260910_160021099_iOS.heic",
+      "20260910_160028191_iOS.heic",
+      "20260910_160029863_iOS.heic",
+      "20260910_160032272_iOS.heic",
+      "20260910_160035812_iOS.heic",
+      "20260910_163752101_iOS.heic",
+      "20260910_163759213_iOS.heic",
+      "20260910_163808559_iOS.heic",
+      "20260910_163855558_iOS.heic",
+      "20260910_163903681_iOS.heic",
+      "20260910_163923666_iOS.heic",
+      "20260910_163930547_iOS.heic",
+      "20260910_163938670_iOS.heic",
+      "20260910_163952988_iOS.heic",
+      "20260910_163954237_iOS.heic",
+      "20260910_164000128_iOS.heic",
+      "20260910_164029849_iOS.heic",
+      "20260910_164032847_iOS.heic",
+      "20260910_164036640_iOS.heic"
+    ],
+    "nozzle_profile": [
+      [
+        -0.15672340425531914,
+        0.0008
+      ],
+      [
+        -0.15612340425531915,
+        0.00085
+      ],
+      [
+        -0.14772340425531913,
+        0.0016
+      ],
+      [
+        -0.14522340425531913,
+        0.0018
+      ],
+      [
+        -0.14402340425531915,
+        0.0018
+      ]
+    ],
+    "tip_inner_profile": [
+      [
+        0,
+        0.00018
+      ],
+      [
+        0.002,
+        0.0003
+      ],
+      [
+        0.024,
+        0.00065
+      ],
+      [
+        0.025,
+        0.00086
+      ],
+      [
+        0.034,
+        0.0017
+      ],
+      [
+        0.036,
+        0.00186
+      ]
+    ],
+    "seated_insertion_depth": 0.011,
+    "tip_fit_provenance": {
+      "photos": [
+        "20260910_194518156_iOS.heic",
+        "20260910_194520765_iOS.heic",
+        "20260910_194530398_iOS.heic",
+        "20260910_194533467_iOS.heic"
+      ],
+      "scale": "Approximate ratios against user-measured 254 mm pipette in separated/assembled photos",
+      "estimated_tip_length_m": 0.036,
+      "estimated_bare_nozzle_length_m": 0.0127,
+      "estimated_seated_overlap_m": 0.011,
+      "bore": "Unobserved interior approximated to fit nozzle taper with 0.05\u20130.10 mm radial clearance; not measured or calibrated press-fit mechanics"
+    },
+    "red_tape": {
+      "enabled": true,
+      "start_offset_from_nozzle_m": 0.0127,
+      "length_m": 0.02,
+      "visual_offset_m": 2e-05,
+      "rgba": [
+        0.78,
+        0.045,
+        0.035,
+        1
+      ],
+      "provenance": "20260910_205902275, 205920189 and 210014289 side-by-side photos: red tape wraps the blue shaft directly above the black nozzle. About 20 mm axial coverage estimated against the 12.7 mm exposed black nozzle; thickness not measured."
+    }
+  },
+  "hand_mapping": {
+    "finger_closed_rad": 1.4,
+    "thumb_bend_closed_rad": 0.5,
+    "thumb_rotation_max_rad": 1.3,
+    "register_max": 1000.0,
+    "provenance": "Replay supplied action.hand_left/right registers. HIL194 episodes 0\u201345 have reconstructed right-hand commands; 46\u2013193 have recorded commands. Hand feedback is frozen and unused."
+  },
+  "attachment": {
+    "radial_tolerance": 0.0007,
+    "axial_tolerance": 0.005,
+    "angle_tolerance_deg": 5.0,
+    "dwell_seconds": 0.1,
+    "eject_thumb_bend_below": 200.0,
+    "eject_thumb_bend_above": 400.0,
+    "release_speed": 0.06,
+    "min_insertion_depth": 0.01,
+    "max_insertion_depth": 0.012,
+    "constraint_time_constant": 0.002,
+    "constraint_impedance": [
+      0.99,
+      0.999,
+      0.0001
+    ],
+    "automatic_ejection": false
+  },
+  "cameras": {
+    "overview": {
+      "position": [
+        1.6,
+        -1.6,
+        1.45
+      ],
+      "target": [
+        0.15,
+        0.0,
+        0.7
+      ],
+      "fovy": 45.0
+    },
+    "rgb": {
+      "position": [
+        0.47147119385483033,
+        0.11149038693772945,
+        1.188697898580746
+      ],
+      "quaternion": [
+        0.7372933259484329,
+        -0.07193140272102355,
+        0.00039293074640642435,
+        -0.6717322907378449
+      ],
+      "fovy": 60,
+      "resolution_wh": [
+        1280,
+        720
+      ],
+      "role": "fixed_ego"
+    },
+    "wrist_left": {
+      "position": [
+        -0.0004664172764154066,
+        0.07860345800524797,
+        -0.01931379985841989
+      ],
+      "quaternion": [
+        0.6712435944039804,
+        -0.37890281708771667,
+        -0.15270618786248913,
+        0.6185026373129892
+      ],
+      "fovy": 105,
+      "resolution_wh": [
+        1080,
+        1080
+      ],
+      "role": "right_wrist",
+      "parent_body": "right_wrist_yaw_link"
+    },
+    "wrist_right": {
+      "position": [
+        0.283413480516426,
+        0.219073126006953,
+        0.8710253687797647
+      ],
+      "quaternion": [
+        -0.023353333592738286,
+        -0.04847011017928152,
+        0.4481342627289533,
+        0.8923457585474881
+      ],
+      "fovy": 85,
+      "resolution_wh": [
+        1080,
+        1080
+      ],
+      "role": "fixed_side"
+    }
+  },
+  "physics": {
+    "table_mass": 18.0,
+    "rack_mass": 0.18,
+    "tray_mass": 0.08,
+    "pipette_mass": 0.08,
+    "tip_mass": 0.0006,
+    "body_kp": 180.0,
+    "body_kv": 18.0,
+    "body_torque_limit": 80.0,
+    "wrist_kp": 45.0,
+    "wrist_kv": 3.0,
+    "wrist_torque_limit": 5.0,
+    "hand_kp": 3.0,
+    "hand_kv": 0.12,
+    "hand_torque_limit": 1.0,
+    "ejector_kp": 150.0,
+    "ejector_kv": 1.0,
+    "ejector_force_limit": 3.0,
+    "gravity_compensation": true,
+    "constraint_time_constant": 0.008,
+    "timestep": 0.0005,
+    "joint_servos": {
+      "left_hip_pitch_joint": {
+        "kp": 99.16925458003428,
+        "kv": 2.045714014377553,
+        "gravity_compensation": false
+      },
+      "left_hip_roll_joint": {
+        "kp": 99.27898570915413,
+        "kv": 3.5900017649824685,
+        "gravity_compensation": false
+      },
+      "left_hip_yaw_joint": {
+        "kp": 99.52620587441419,
+        "kv": 2.5323052875308347,
+        "gravity_compensation": false
+      },
+      "left_knee_joint": {
+        "kp": 147.6676692998665,
+        "kv": 4.805283831249398,
+        "gravity_compensation": false
+      },
+      "left_ankle_pitch_joint": {
+        "kp": 39.21095043623969,
+        "kv": 11.589941714333623,
+        "gravity_compensation": false
+      },
+      "left_ankle_roll_joint": {
+        "kp": 38.922048318655996,
+        "kv": 1.0752266021226038e-08,
+        "gravity_compensation": false
+      },
+      "right_hip_pitch_joint": {
+        "kp": 98.72711846476234,
+        "kv": 3.247626845790447,
+        "gravity_compensation": false
+      },
+      "right_hip_roll_joint": {
+        "kp": 99.10393900793106,
+        "kv": 2.13660615950166,
+        "gravity_compensation": false
+      },
+      "right_hip_yaw_joint": {
+        "kp": 98.10604312001456,
+        "kv": 2.335369231357081,
+        "gravity_compensation": false
+      },
+      "right_knee_joint": {
+        "kp": 148.00646354957772,
+        "kv": 7.011040335127413,
+        "gravity_compensation": false
+      },
+      "right_ankle_pitch_joint": {
+        "kp": 39.70725116981771,
+        "kv": 0.7179683598853475,
+        "gravity_compensation": false
+      },
+      "right_ankle_roll_joint": {
+        "kp": 39.77509227670806,
+        "kv": 5.818625330729864,
+        "gravity_compensation": false
+      },
+      "waist_yaw_joint": {
+        "kp": 146.54701581618454,
+        "kv": 4.729548288592247,
+        "gravity_compensation": false
+      },
+      "waist_roll_joint": {
+        "kp": 149.4445446681517,
+        "kv": 2.744781476532131,
+        "gravity_compensation": false
+      },
+      "waist_pitch_joint": {
+        "kp": 149.46319084963574,
+        "kv": 8.962387679451599,
+        "gravity_compensation": false
+      },
+      "left_shoulder_pitch_joint": {
+        "kp": 39.78314226601015,
+        "kv": 6.870534276768279,
+        "gravity_compensation": false
+      },
+      "left_shoulder_roll_joint": {
+        "kp": 39.93427244598915,
+        "kv": 6.244301248072058,
+        "gravity_compensation": false
+      },
+      "left_shoulder_yaw_joint": {
+        "kp": 36.86397310665984,
+        "kv": 5.520996213410846,
+        "gravity_compensation": false
+      },
+      "left_elbow_joint": {
+        "kp": 36.83817035047313,
+        "kv": 5.549774520493312,
+        "gravity_compensation": false
+      },
+      "left_wrist_roll_joint": {
+        "kp": 18.391560217658668,
+        "kv": 1.2117816415126534,
+        "gravity_compensation": false
+      },
+      "left_wrist_pitch_joint": {
+        "kp": 19.75803458856658,
+        "kv": 1.2018185453794903,
+        "gravity_compensation": false
+      },
+      "left_wrist_yaw_joint": {
+        "kp": 19.744675139889235,
+        "kv": 1.1543519834200293,
+        "gravity_compensation": false
+      },
+      "right_shoulder_pitch_joint": {
+        "kp": 39.80153907632175,
+        "kv": 6.173052468318889,
+        "gravity_compensation": false
+      },
+      "right_shoulder_roll_joint": {
+        "kp": 39.082556132632746,
+        "kv": 6.01533493141569,
+        "gravity_compensation": false
+      },
+      "right_shoulder_yaw_joint": {
+        "kp": 38.17788075843875,
+        "kv": 5.130374789277774,
+        "gravity_compensation": false
+      },
+      "right_elbow_joint": {
+        "kp": 38.81817358782893,
+        "kv": 5.597595448772142,
+        "gravity_compensation": false
+      },
+      "right_wrist_roll_joint": {
+        "kp": 18.566949881140776,
+        "kv": 1.107607081670265,
+        "gravity_compensation": false
+      },
+      "right_wrist_pitch_joint": {
+        "kp": 19.903636274655906,
+        "kv": 1.1073254015622935,
+        "gravity_compensation": false
+      },
+      "right_wrist_yaw_joint": {
+        "kp": 19.4837351931184,
+        "kv": 0.9819124195957692,
+        "gravity_compensation": false
+      }
+    },
+    "grasp_mode": "contact",
+    "initialize_contact_fingers": true
+  },
+  "calibration": {
+    "training_episodes": [
+      53,
+      54,
+      55,
+      56
+    ],
+    "source": "low_level",
+    "method": "Bounded motor effort regression; fixed gains, no target correction or observed-state feedback",
+    "payload_note": "Effective inertial correction fitted to slow free-space effort on episodes 53-56; not a measured physical component or pipette mass.",
+    "ejection_arming_note": "400 register units: training episode 56 holds at 470.47; old 600 cutoff could never arm. Release cutoff remains 200."
+  },
+  "effective_wrist_payload": {
+    "mass": 0.7825217247652952,
+    "position": [
+      0.15818882585089183,
+      -0.011023124918591443,
+      -0.0021316663069249507
+    ]
+  },
+  "fit_note": {
+    "tray_method": "default offset; no usable thumb edge",
+    "method": "lowest 12 percent of model nozzle heights; uncalibrated kinematic seed, not image reconstruction",
+    "episode": 0,
+    "anchor_m": [
+      0.27536486262360604,
+      0.06977709430752874,
+      0.7130746784261337
+    ],
+    "base_pose_measured": false,
+    "dimensions_measured": false
+  },
+  "camera_fit": {
+    "method": "Approximate planar rack PnP with assumed focal lengths; not intrinsic calibration",
+    "dataset_snapshot": "/home/ytung34/.cache/huggingface/hub/datasets--jren313--g1-pipette-3view-hil194/snapshots/643ece1b2e93f15022c83832302848c9978d5f05",
+    "episode": 46,
+    "annotations": {
+      "rgb": {
+        "wh": [
+          700,
+          394
+        ],
+        "uv": [
+          [
+            299,
+            243
+          ],
+          [
+            359,
+            247
+          ],
+          [
+            352,
+            331
+          ],
+          [
+            290,
+            328
+          ]
+        ],
+        "fovy": 60,
+        "rms": 0.6591833245739145
+      },
+      "wrist_right": {
+        "wh": [
+          850,
+          850
+        ],
+        "uv": [
+          [
+            294,
+            625
+          ],
+          [
+            340,
+            468
+          ],
+          [
+            598,
+            474
+          ],
+          [
+            640,
+            637
+          ]
+        ],
+        "fovy": 85,
+        "rms": 3.174592559040766
+      },
+      "wrist_left": {
+        "wh": [
+          500,
+          500
+        ],
+        "uv": [
+          [
+            287,
+            284
+          ],
+          [
+            216,
+            237
+          ],
+          [
+            315,
+            169
+          ],
+          [
+            374,
+            230
+          ]
+        ],
+        "fovy": 105,
+        "rms": 5.649300639827235
+      }
+    },
+    "camera_order": [
+      "rgb",
+      "wrist_right",
+      "wrist_left"
+    ],
+    "provenance": "Manual rack corners from HIL194 episode 46; assumed rack pose and focal lengths. Approximate session-specific PnP, not calibrated extrinsics."
+  },
+  "episode_scene": {
+    "enabled": false,
+    "reference_episode": 0,
+    "method": "initial-frame relative visual registration in fixed side camera; manually editable landmarks",
+    "unobserved_lid": "carry reference offset with rack; explicitly marked assumed",
+    "registration_anchors": "config/hil194-scene-anchors.json",
+    "registration_anchors_sha256": "7229b71471bbfe7a3bcede2a6ed7b18ee02bf5472b1d4e30522df70b290785b2"
+  },
+  "dataset_profile": {
+    "name": "jren313/g1-pipette-3view-hil194",
+    "task": "Attach a green pipette tip from the tip rack to the pipette.",
+    "task_requires_ejection": false,
+    "sessions": [
+      {
+        "name": "20260904",
+        "start": 0,
+        "end": 46,
+        "overrides": {
+          "cameras": {
+            "overview": {
+              "position": [
+                1.6,
+                -1.6,
+                1.45
+              ],
+              "target": [
+                0.15,
+                0.0,
+                0.7
+              ],
+              "fovy": 45.0
+            },
+            "rgb": {
+              "position": [
+                0.47293317314308647,
+                0.08782406690897415,
+                1.1617856373040685
+              ],
+              "quaternion": [
+                0.7395832821984992,
+                -0.03302010428727013,
+                0.027127009243595172,
+                -0.6717070542839719
+              ],
+              "fovy": 60,
+              "resolution_wh": [
+                1280,
+                720
+              ],
+              "role": "fixed_ego"
+            },
+            "wrist_left": {
+              "position": [
+                0.05676100896279528,
+                0.0026679029606581266,
+                -0.019701477259922273
+              ],
+              "quaternion": [
+                0.6576277159651549,
+                -0.26150488638879443,
+                -0.20424708514702808,
+                0.6763313609453431
+              ],
+              "fovy": 105,
+              "resolution_wh": [
+                1080,
+                1080
+              ],
+              "role": "right_wrist",
+              "parent_body": "right_wrist_yaw_link"
+            },
+            "wrist_right": {
+              "position": [
+                0.2899021311951351,
+                0.20783100282075279,
+                0.8420789491192917
+              ],
+              "quaternion": [
+                -0.012140717050576557,
+                -0.025008647389160314,
+                0.41262347698493956,
+                0.910477367530968
+              ],
+              "fovy": 85,
+              "resolution_wh": [
+                1080,
+                1080
+              ],
+              "role": "fixed_side"
+            }
+          },
+          "camera_fit": {
+            "method": "Approximate planar rack PnP with assumed focal lengths; not intrinsic calibration",
+            "dataset_snapshot": "/home/ytung34/.cache/huggingface/hub/datasets--jren313--g1-pipette-3view-hil194/snapshots/643ece1b2e93f15022c83832302848c9978d5f05",
+            "episode": 0,
+            "annotations": {
+              "rgb": {
+                "wh": [
+                  700,
+                  394
+                ],
+                "uv": [
+                  [
+                    312,
+                    255
+                  ],
+                  [
+                    375,
+                    259
+                  ],
+                  [
+                    368,
+                    350
+                  ],
+                  [
+                    301,
+                    343
+                  ]
+                ],
+                "fovy": 60,
+                "rms": 1.2289355124646537
+              },
+              "wrist_right": {
+                "wh": [
+                  850,
+                  850
+                ],
+                "uv": [
+                  [
+                    257,
+                    573
+                  ],
+                  [
+                    319,
+                    400
+                  ],
+                  [
+                    595,
+                    405
+                  ],
+                  [
+                    658,
+                    575
+                  ]
+                ],
+                "fovy": 85,
+                "rms": 2.2121013977370008
+              },
+              "wrist_left": {
+                "wh": [
+                  700,
+                  700
+                ],
+                "uv": [
+                  [
+                    402,
+                    403
+                  ],
+                  [
+                    314,
+                    334
+                  ],
+                  [
+                    511,
+                    211
+                  ],
+                  [
+                    554,
+                    325
+                  ]
+                ],
+                "fovy": 105,
+                "rms": 4.690169531727878
+              }
+            },
+            "camera_order": [
+              "rgb",
+              "wrist_right",
+              "wrist_left"
+            ],
+            "provenance": "Episode 0 videos are byte-identical to HG-DAgger reference; camera calibration remains approximate."
+          }
+        }
+      },
+      {
+        "name": "20260909",
+        "start": 46,
+        "end": 194,
+        "overrides": {
+          "cameras": {
+            "overview": {
+              "position": [
+                1.6,
+                -1.6,
+                1.45
+              ],
+              "target": [
+                0.15,
+                0.0,
+                0.7
+              ],
+              "fovy": 45.0
+            },
+            "rgb": {
+              "position": [
+                0.47147119385483033,
+                0.11149038693772945,
+                1.188697898580746
+              ],
+              "quaternion": [
+                0.7372933259484329,
+                -0.07193140272102355,
+                0.00039293074640642435,
+                -0.6717322907378449
+              ],
+              "fovy": 60,
+              "resolution_wh": [
+                1280,
+                720
+              ],
+              "role": "fixed_ego"
+            },
+            "wrist_left": {
+              "position": [
+                -0.0004664172764154066,
+                0.07860345800524797,
+                -0.01931379985841989
+              ],
+              "quaternion": [
+                0.6712435944039804,
+                -0.37890281708771667,
+                -0.15270618786248913,
+                0.6185026373129892
+              ],
+              "fovy": 105,
+              "resolution_wh": [
+                1080,
+                1080
+              ],
+              "role": "right_wrist",
+              "parent_body": "right_wrist_yaw_link"
+            },
+            "wrist_right": {
+              "position": [
+                0.283413480516426,
+                0.219073126006953,
+                0.8710253687797647
+              ],
+              "quaternion": [
+                -0.023353333592738286,
+                -0.04847011017928152,
+                0.4481342627289533,
+                0.8923457585474881
+              ],
+              "fovy": 85,
+              "resolution_wh": [
+                1080,
+                1080
+              ],
+              "role": "fixed_side"
+            }
+          },
+          "camera_fit": {
+            "method": "Approximate planar rack PnP with assumed focal lengths; not intrinsic calibration",
+            "dataset_snapshot": "/home/ytung34/.cache/huggingface/hub/datasets--jren313--g1-pipette-3view-hil194/snapshots/643ece1b2e93f15022c83832302848c9978d5f05",
+            "episode": 46,
+            "annotations": {
+              "rgb": {
+                "wh": [
+                  700,
+                  394
+                ],
+                "uv": [
+                  [
+                    299,
+                    243
+                  ],
+                  [
+                    359,
+                    247
+                  ],
+                  [
+                    352,
+                    331
+                  ],
+                  [
+                    290,
+                    328
+                  ]
+                ],
+                "fovy": 60,
+                "rms": 0.6591833245739145
+              },
+              "wrist_right": {
+                "wh": [
+                  850,
+                  850
+                ],
+                "uv": [
+                  [
+                    294,
+                    625
+                  ],
+                  [
+                    340,
+                    468
+                  ],
+                  [
+                    598,
+                    474
+                  ],
+                  [
+                    640,
+                    637
+                  ]
+                ],
+                "fovy": 85,
+                "rms": 3.174592559040766
+              },
+              "wrist_left": {
+                "wh": [
+                  500,
+                  500
+                ],
+                "uv": [
+                  [
+                    287,
+                    284
+                  ],
+                  [
+                    216,
+                    237
+                  ],
+                  [
+                    315,
+                    169
+                  ],
+                  [
+                    374,
+                    230
+                  ]
+                ],
+                "fovy": 105,
+                "rms": 5.649300639827235
+              }
+            },
+            "camera_order": [
+              "rgb",
+              "wrist_right",
+              "wrist_left"
+            ],
+            "provenance": "Manual rack corners from HIL194 episode 46; assumed rack pose and focal lengths. Approximate session-specific PnP, not calibrated extrinsics."
+          },
+          "pipette": {
+            "mount_position": [
+              0.15,
+              0.035,
+              0.0
+            ],
+            "mount_quaternion": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "nozzle_z": -0.15672340425531914,
+            "tip_length": 0.036,
+            "tip_wall": 0.00045,
+            "tip_profile": [
+              [
+                0,
+                0.0004
+              ],
+              [
+                0.002,
+                0.0006
+              ],
+              [
+                0.026,
+                0.00255
+              ],
+              [
+                0.032,
+                0.0031
+              ],
+              [
+                0.0348,
+                0.0035
+              ],
+              [
+                0.036,
+                0.00345
+              ]
+            ],
+            "product_model": "onilab_0.5_10ul",
+            "handle_profile": [
+              [
+                -0.054,
+                0.0117
+              ],
+              [
+                -0.051,
+                0.0127
+              ],
+              [
+                0.067,
+                0.0127
+              ],
+              [
+                0.073,
+                0.0123
+              ],
+              [
+                0.074,
+                0.0117
+              ]
+            ],
+            "handle_y_scale": 0.9,
+            "shaft_profile": [
+              [
+                -0.14402340425531915,
+                0.0025
+              ],
+              [
+                -0.14202340425531915,
+                0.0029
+              ],
+              [
+                -0.07,
+                0.0042
+              ],
+              [
+                -0.064,
+                0.0049
+              ],
+              [
+                -0.06,
+                0.008
+              ],
+              [
+                -0.057,
+                0.0105
+              ],
+              [
+                -0.053,
+                0.0105
+              ]
+            ],
+            "reference_note": "User measured 10 x 2.5 x 1 inches (254 x 63.5 x 25.4 mm). Assumed bare pipette, plunger at rest; width includes finger rest/ejector. 80 g assembly. Profiles remain photo-derived approximations.",
+            "measured_dimensions_m": {
+              "length": 0.254,
+              "overall_width": 0.0635,
+              "depth": 0.0254
+            },
+            "detail_length_scale": 1.0808510638297872,
+            "hand_rest_outer_y": -0.0395,
+            "display_face_scale": 1.1043478260869566,
+            "photo_revision": "20260910-seated-tip-v3",
+            "photo_sources": [
+              "20260910_155954011_iOS.heic",
+              "20260910_155959559_iOS.heic",
+              "20260910_160004541_iOS.heic",
+              "20260910_160006761_iOS.heic",
+              "20260910_160009996_iOS.heic",
+              "20260910_160014141_iOS.heic",
+              "20260910_160017113_iOS.heic",
+              "20260910_160021099_iOS.heic",
+              "20260910_160028191_iOS.heic",
+              "20260910_160029863_iOS.heic",
+              "20260910_160032272_iOS.heic",
+              "20260910_160035812_iOS.heic",
+              "20260910_163752101_iOS.heic",
+              "20260910_163759213_iOS.heic",
+              "20260910_163808559_iOS.heic",
+              "20260910_163855558_iOS.heic",
+              "20260910_163903681_iOS.heic",
+              "20260910_163923666_iOS.heic",
+              "20260910_163930547_iOS.heic",
+              "20260910_163938670_iOS.heic",
+              "20260910_163952988_iOS.heic",
+              "20260910_163954237_iOS.heic",
+              "20260910_164000128_iOS.heic",
+              "20260910_164029849_iOS.heic",
+              "20260910_164032847_iOS.heic",
+              "20260910_164036640_iOS.heic"
+            ],
+            "nozzle_profile": [
+              [
+                -0.15672340425531914,
+                0.0008
+              ],
+              [
+                -0.15612340425531915,
+                0.00085
+              ],
+              [
+                -0.14772340425531913,
+                0.0016
+              ],
+              [
+                -0.14522340425531913,
+                0.0018
+              ],
+              [
+                -0.14402340425531915,
+                0.0018
+              ]
+            ],
+            "tip_inner_profile": [
+              [
+                0,
+                0.00018
+              ],
+              [
+                0.002,
+                0.0003
+              ],
+              [
+                0.024,
+                0.00065
+              ],
+              [
+                0.025,
+                0.00086
+              ],
+              [
+                0.034,
+                0.0017
+              ],
+              [
+                0.036,
+                0.00186
+              ]
+            ],
+            "seated_insertion_depth": 0.011,
+            "tip_fit_provenance": {
+              "photos": [
+                "20260910_194518156_iOS.heic",
+                "20260910_194520765_iOS.heic",
+                "20260910_194530398_iOS.heic",
+                "20260910_194533467_iOS.heic"
+              ],
+              "scale": "Approximate ratios against user-measured 254 mm pipette in separated/assembled photos",
+              "estimated_tip_length_m": 0.036,
+              "estimated_bare_nozzle_length_m": 0.0127,
+              "estimated_seated_overlap_m": 0.011,
+              "bore": "Unobserved interior approximated to fit nozzle taper with 0.05\u20130.10 mm radial clearance; not measured or calibrated press-fit mechanics"
+            },
+            "red_tape": {
+              "enabled": true,
+              "start_offset_from_nozzle_m": 0.0127,
+              "length_m": 0.02,
+              "visual_offset_m": 2e-05,
+              "rgba": [
+                0.78,
+                0.045,
+                0.035,
+                1
+              ],
+              "provenance": "20260910_205902275, 205920189 and 210014289 side-by-side photos: red tape wraps the blue shaft directly above the black nozzle. About 20 mm axial coverage estimated against the 12.7 mm exposed black nozzle; thickness not measured."
+            }
+          }
+        }
+      }
+    ]
+  },
+  "selected_session": "20260909",
+  "pickup_fit_criteria": {
+    "target_m": 0.03790464409617755,
+    "tolerance_m": 0.0037904644096177554,
+    "required_lift_m": 0.0341141796865598,
+    "reference_low_time_s": 8.666999999999101,
+    "reference_high_time_s": 14.700000000006474,
+    "method": "Maximum later rise from 100 ms smoothed measured-joint nozzle FK after first 0.5 s, assuming configured rigid tool mount; not measured object pose"
+  },
+  "layout_search": {
+    "method": "world_lift_and_rack_well_retry",
+    "episode": 73,
+    "dataset": "/home/ytung34/.cache/huggingface/hub/datasets--jren313--g1-pipette-3view-hil194/snapshots/643ece1b2e93f15022c83832302848c9978d5f05",
+    "source": "low_level",
+    "clock": "recorded",
+    "result": {
+      "valid": true,
+      "pickup": false,
+      "attached": true,
+      "lift_m": 0.01897722432455129,
+      "lift_dwell_s": 0.0,
+      "score": -1.5006569716470448,
+      "initial_overlaps": [],
+      "complete": true,
+      "lift_target_m": 0.03790464409617755,
+      "lift_tolerance_m": 0.0037904644096177554,
+      "required_lift_m": 0.0341141796865598,
+      "evaluation_model": "full_48_sector_tip",
+      "invalid_reason": null,
+      "maximum_lid_penetration_mm": 0.0,
+      "events": [
+        {
+          "time": 4.209,
+          "state": "attached",
+          "nozzle_position": [
+            0.36591986583473524,
+            0.029982114398750568,
+            0.7094202899299745
+          ]
+        }
+      ],
+      "contacts": {
+        "pipette/rack": {
+          "samples": 183,
+          "maximum_penetration_mm": 0.2568663483611459,
+          "maximum_normal_force_N": 33.14450433586253
+        },
+        "pipette/tip": {
+          "samples": 401062,
+          "maximum_penetration_mm": 0.016575630720083508,
+          "maximum_normal_force_N": 3.6237873552640005
+        }
+      },
+      "lift_frame": "world",
+      "rack_clearance_m": 0.016757785600459596,
+      "world_lift_since_attachment_m": 0.01897722432455129,
+      "maximum_rack_vertical_motion_after_attachment_m": 4.7902476311034725e-05,
+      "success": false
+    },
+    "criteria": {
+      "lift_reference": "recorded_joint_fk_v1",
+      "lift_dwell_s": 0.1,
+      "max_tool_penetration_mm": 0.5,
+      "max_tool_force_N": 100.0,
+      "max_lid_penetration_mm": 0.1,
+      "lift_frame": "world_tip_rise_since_attachment",
+      "minimum_rack_clearance_m": 0.002
+    },
+    "delta_xy_z_yaw": [
+      0.10001946510277565,
+      -0.038816011897348165,
+      0.00670208981940253,
+      0.0
+    ],
+    "active_cell": [
+      2,
+      4
+    ],
+    "trials": 44,
+    "meaning": "Trajectory-conditioned rack/tip placement with unchanged robot actions and physics; not measured real object placement."
+  }
+}
