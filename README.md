@@ -1,14 +1,14 @@
 # G1 / Inspire pipette workspace simulation
 
-**New machine:** follow [the portable quickstart](docs/QUICKSTART.md) for installation, the pinned real dataset, simulation, augmentation collection, and illustration videos. No historical outputs are included.
+**New machine:** follow [the portable quickstart](README_SETUP.md) for installation, the pinned real dataset, simulation, augmentation collection, and illustration videos. No historical outputs are included.
 
 Saved pickup acceptance below refers to historical attachment/lift criteria. The newer rack-contact audit can reject these captures; see the quickstart before using them for training.
 
-Default HIL194 replays now load available per-episode pickup configs automatically. See [pickup layouts and live search status](docs/PICKUP_LAYOUTS.md); use `--scene-layout visual` to inspect the original image-based placement.
+Default HIL194 replays now load available per-episode pickup configs automatically. Use `--scene-layout visual` to inspect the original image-based placement.
 
-A runnable, offline MuJoCo environment. `./run.sh` defaults to `jren313/g1-pipette-3view-hil194`, a verified pickup example selected from the current world-lift manifest, dynamic physics, and low-level command replay. It loads the matching saved layout; `--episode N` selects a specific episode. Valid indices are 0–193. See [the HIL194 audit and remaining discrepancies](docs/HIL194.md).
+A runnable, offline MuJoCo environment. `./run.sh` defaults to `jren313/g1-pipette-3view-hil194`, a verified pickup example selected from the current world-lift manifest, dynamic physics, and low-level command replay. It loads the matching saved layout; `--episode N` selects a specific episode. Valid indices are 0–193.
 
-The default ONiLAB 0.5–10 µL pipette has an 80 g complete assembly and a contact-based grasp: the wrist weld is disabled. Fingers and palm support the tool through collision/friction forces. Press **G** to command the right fingers open (the finger rest may still hang on the palm). See [product reconstruction and grasp limits](docs/ONILAB_PIPETTE.md).
+The default ONiLAB 0.5–10 µL pipette has an 80 g complete assembly and a contact-based grasp: the wrist weld is disabled. Fingers and palm support the tool through collision/friction forces. Press **G** to command the right fingers open (the finger rest may still hang on the palm).
 
 ```bash
 cd ~/Projects/g1_pipette_sim
@@ -25,11 +25,11 @@ The robot's pelvis is supported by default, like a fixed test stand. `--free-bas
 
 ## Per-episode object placement
 
-Default HIL194 replay loads a cached visual layout for the selected episode, or estimates one from its initial images. Rack position/yaw and the active tip can differ between episodes; the lid's unannotated pose remains explicitly assumed. Use `--scene-layout fixed` to keep the configured layout, and `--refresh-scene` to recompute. Estimates that fail confidence checks are rejected with correction instructions. [Review overlays, edit landmarks, and see coverage/limitations](docs/EPISODE_SCENES.md).
+Default HIL194 replay loads a cached visual layout for the selected episode, or estimates one from its initial images. Rack position/yaw and the active tip can differ between episodes; the lid's unannotated pose remains explicitly assumed. Use `--scene-layout fixed` to keep the configured layout, and `--refresh-scene` to recompute. Estimates that fail confidence checks are rejected with correction instructions.
 
 ## Calibrated recorded-command replay
 
-Episode 53 now completes attachment, release and disposal with unchanged **low-level motor commands**, identified PD gains and an effective wrist payload. It does not replay observed joint positions into the live robot. Photo-derived object dimensions remain unchanged. See [calibration results and limits](docs/CALIBRATION.md).
+Episode 53 now completes attachment, release and disposal with unchanged **low-level motor commands**, identified PD gains and an effective wrist payload. It does not replay observed joint positions into the live robot. Photo-derived object dimensions remain unchanged.
 
 ```bash
 cd ~/Projects/g1_pipette_sim
@@ -41,11 +41,11 @@ cd ~/Projects/g1_pipette_sim
 
 These older calibrated profiles require the older dataset explicitly. The original demo settings remain available as `config/workspace.json`. `config/episode53-calibrated.json` freezes the successful scene; omit `--fit-layout` with that file. `config/calibrated-physics.json` shares gains and payload across episodes. Its layout still needs initialization. Improved joint tracking does not establish matched object dynamics or guarantee pickup/disposal in another episode. `--source action` bypasses the unmodelled high-level-to-low-level controller and is not equivalent to the calibrated motor replay.
 
-[Successful episode 53 video](outputs/calibrated-episode53/simulation.mp4) · [final image](outputs/calibrated-episode53/final.png)
+Replay videos and snapshots are generated locally under `outputs/`; historical recordings are not included in a clone.
 
 ## Run on this machine
 
-No installation is needed: `run.sh` uses the existing `lerobot-act` Python environment, and the local robot assets have been prepared.
+Complete [installation](README_SETUP.md) first. `run.sh` uses `G1_SIM_PYTHON` when set, otherwise an existing `lerobot-act` environment or `python` on PATH. The commands below require the older dataset at the specified location.
 
 ```bash
 cd ~/Projects/g1_pipette_sim
@@ -60,7 +60,7 @@ cd ~/Projects/g1_pipette_sim
 ./run.sh --dataset ~/Datasets/g1-pipette-3view-20260819-plus21 --config config/workspace.json --episode 77 --fit-layout --camera rgb
 ```
 
-Interactive runs also open a **three-camera monitor** showing `rgb`, `wrist_right`, and `wrist_left` side by side, labeled with their configured physical roles. Each view keeps the dataset aspect ratio; all three render the same simulation state at up to 15 updates/second (actual rate depends on rendering speed). The monitor stays responsive while paused and is independent of the main viewer's mouse-controlled camera. Space/R/E/G/C/F also work when the monitor has keyboard focus. Escape or its window close button closes only the monitor. Both windows close when the run ends. Use `--no-camera-window` to open only the main viewer; `--headless` never opens either window. The monitor uses Tkinter/Pillow, available in the configured `lerobot-act` environment.
+Interactive runs also open a **camera monitor** showing synchronized real and simulated `rgb`, `wrist_right`, and `wrist_left` views during replay (simulation views only during demos), labeled with their configured physical roles. Each view keeps the dataset aspect ratio; all three render the same simulation state at up to 15 updates/second (actual rate depends on rendering speed). The monitor stays responsive while paused and is independent of the main viewer's mouse-controlled camera. Space/R/E/G/C/F also work when the monitor has keyboard focus. Escape or its window close button closes only the monitor. Both windows close when the run ends. Use `--no-camera-window` to open only the main viewer; `--headless` never opens either window. The monitor uses Tkinter/Pillow, available in the configured `lerobot-act` environment.
 
 The viewer closes when the episode/demo finishes. Space pauses/resumes, **R** resets, **E** ejects an attached tip, **G** releases the pipette grip in dynamic mode, **C** cycles the camera presets, and **F** returns to the free overview. Close the window to exit. Reset is disabled during video recording to keep the video timeline consistent. The overview now starts as a free camera: **left-drag** orbits, **right-drag** pans, and the **scroll wheel** zooms. Hold Shift while dragging to change the movement axis. Press Space to pause the task while exploring. The `rgb` and wrist presets are fixed sensor views; press F to return to mouse navigation. Camera navigation works while paused. Interactive video export follows your mouse-controlled view; headless exports keep their specified camera.
 
@@ -128,7 +128,7 @@ All dimensions are metres, angles in `yaw_deg` are degrees, other joint angles a
 
 ## How robot actions are generated
 
-The simulator does not run GPT, a learned policy, or the original G1 whole-body controller at runtime.
+The `run.sh` demo/replay entry point does not run a learned policy or the G1 whole-body controller.
 
 | Selection | Source of robot target |
 |---|---|
@@ -235,7 +235,7 @@ Copy this project including `assets/robot/`, and make the dataset available loca
 ```bash
 python -m venv .venv
 .venv/bin/pip install -r requirements.txt
-G1_SIM_PYTHON="$PWD/.venv/bin/python" ./run.sh --dataset ~/Datasets/g1-pipette-3view-20260819-plus21 --config config/workspace.json --episode 53 --mode demo --dataset /path/to/dataset
+G1_SIM_PYTHON="$PWD/.venv/bin/python" ./run.sh --dataset ~/Datasets/g1-pipette-3view-20260819-plus21 --config config/workspace.json --episode 53 --mode demo
 ```
 
 The tested MuJoCo version is 3.8.1. If assets are absent, `prepare_assets.py --source /path/to/g1_inspire_model.xml` can copy them from an existing local model with a sibling `meshes` folder. `assets/robot/provenance.json` records source paths and mesh checksums. The copied upstream robot assets retain their original terms; this project does not grant a new license to them.
@@ -250,9 +250,9 @@ Tests exercise named joint mapping and timing, layout initialization across reco
 
 ## September 9 photo-based object update
 
-The default workspace now uses the photos in `assets/Media`: a ribbed transparent box with 96 round open wells, a lid-shaped receiving tray, a profiled green tip (about 33 mm long), and a revised white/blue pipette. Dimensions are approximate ruler estimates, not a calibrated scan. Gravity and collision remain enabled; visual meshes and contact proxies are separate. The box uses a fixed constraint to approximate the tape visible in the photos (`rack.taped_to_table: true`; set false for a loose box). The lid remains an independent body without a hinge, and the obscured pipette mount remains estimated.
+The default workspace now uses the photos in `assets/Media`: a ribbed transparent box with 96 round open wells, a lid-shaped receiving tray, a profiled green tip (about 33 mm long), and a revised white/blue pipette. Dimensions are approximate ruler estimates, not a calibrated scan. Gravity and collision remain enabled; visual meshes and contact proxies are separate. The box uses a fixed constraint to approximate the tape visible in the photos (`rack.taped_to_table: true`; set false for a loose box). The HIL194 profile uses a passive lid hinge; the obscured pipette mount remains estimated.
 
-See [photo measurements and limitations](assets/objects/PHOTO_NOTES.md) and [object preview](outputs/photo-assets/objects.png). Run `./run.sh --dataset ~/Datasets/g1-pipette-3view-20260819-plus21 --config config/workspace.json --episode 53 --mode demo` for generated IK motion, or `./run.sh --dataset ~/Datasets/g1-pipette-3view-20260819-plus21 --config config/workspace.json --episode 53 --fit-layout` for dataset target replay. Omit older `--config` exports to use the new dimensions. To regenerate the close-up preview, run `~/miniconda3/envs/lerobot-act/bin/python tools/preview_objects.py`.
+Run `./run.sh --dataset ~/Datasets/g1-pipette-3view-20260819-plus21 --config config/workspace.json --episode 53 --mode demo` for generated IK motion, or `./run.sh --dataset ~/Datasets/g1-pipette-3view-20260819-plus21 --config config/workspace.json --episode 53 --fit-layout` for dataset target replay. Omit older `--config` exports to use the new dimensions. To regenerate the close-up preview, run `~/miniconda3/envs/lerobot-act/bin/python tools/preview_objects.py`.
 
 ## GR00T camera observations
 
@@ -263,8 +263,8 @@ See [photo measurements and limitations](assets/objects/PHOTO_NOTES.md) and [obj
   --episode 46 --native-resolution --duration 5 --output outputs/camera-streams
 ```
 
-Camera configs now accept an optional `parent_body` for head/torso/wrist mounting; positions and quaternions then use the parent frame. The HIL194 profile has two fixed views and one camera on the right wrist, with separate approximate references for each capture session. Use native resolution to preserve the dataset camera aspects. See [checkpoint action semantics, camera ordering, rendering and calibration](docs/CAMERAS_AND_GROOT.md).
+Camera configs now accept an optional `parent_body` for head/torso/wrist mounting; positions and quaternions then use the parent frame. The HIL194 profile has two fixed views and one camera on the right wrist, with separate approximate references for each capture session. Use native resolution to preserve the dataset camera aspects.
 
-The default HIL194 tip-box lid is connected by a passive hinge and can open beyond 180 degrees to rest on the table. See [lid geometry, parameters, and current episode-15 limitations](docs/BOX_HINGE.md).
+The default HIL194 tip-box lid is connected by a passive hinge and can open beyond 180 degrees to rest on the table.
 
-HIL194 ego views now use the corrected camera pose by default for both recording sessions, in `run.sh` and the camera-stream exporter. Use `--camera-pose config` to retain the selected config’s poses. See [camera correction and failure-review recordings](docs/FAILURE_ANALYSIS.md#corrected-ego-camera-default).
+HIL194 ego views now use the corrected camera pose by default for both recording sessions, in `run.sh` and the camera-stream exporter. Use `--camera-pose config` to retain the selected config’s poses.

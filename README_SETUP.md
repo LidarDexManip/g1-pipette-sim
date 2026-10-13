@@ -5,7 +5,7 @@ Linux, Python 3.12, and MuJoCo 3.8.1 are the tested baseline. Install system pac
 and captions. Interactive playback needs a desktop; headless rendering uses EGL.
 
 ```bash
-git clone https://github.com/yi-shiuan-tung/g1-pipette-sim.git
+git clone https://github.com/LidarDexManip/g1-pipette-sim.git
 cd g1-pipette-sim
 python3.12 -m venv .venv
 source .venv/bin/activate
@@ -68,7 +68,7 @@ The generated recipe contains three rack/well configurations, a joint approach
 perturbation, and an elbow pulse. Increase proposals and adjust recipes to collect
 more variations; acceptance is not guaranteed. Method support includes `well_only`,
 `local_cartesian`, `retarget_well`, `cartesian`, `joint_approach`, `elbow_pulse`, and
-explicitly enabled `joint_persistent`. See [pipeline details](AUGMENTATION_PIPELINE.md).
+explicitly enabled `joint_persistent`.
 Existing historical recipes under `config/augmentation/` retain their old input
 paths; use the locally generated recipe for a fresh clone.
 

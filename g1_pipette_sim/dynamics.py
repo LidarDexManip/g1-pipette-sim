@@ -19,6 +19,10 @@ DEFAULT_PHYSICS = {
     'wrist_kp': 45., 'wrist_kv': 3., 'wrist_torque_limit': 5.,
     'grasp_mode': 'weld', 'grasp_friction': 1.2,
     'hand_kp': 3., 'hand_kv': .12, 'hand_torque_limit': 1.,
+    # Simulation estimates, not identified hardware parameters. The imported
+    # model applies arm-sized armature/friction to tiny finger joints.
+    'hand_armature': .00001, 'hand_joint_damping': .005,
+    'hand_joint_frictionloss': .001, 'contact_noslip_iterations': 5,
     'ejector_kp': 150., 'ejector_kv': 1., 'ejector_force_limit': 3.,
     'gravity_compensation': True, 'constraint_time_constant': .008, 'timestep': .0005,
     'rack_contact_time_constant': .002,
@@ -51,6 +55,21 @@ def _rescale_mass(body, mass):
 def build_dynamic_xml(config, free_base=False):
     root=ET.fromstring(build_xml(config));world=root.find('worldbody')
     settings=physics_config(config);pelvis=world.find("body[@name='pelvis']")
+    if settings['grasp_mode']=='contact':
+        for joint in pelvis.iter('joint'):
+            if joint.get('name','').startswith(('R_', 'L_')):
+                joint.set('armature',str(settings['hand_armature']))
+                joint.set('damping',str(settings['hand_joint_damping']))
+                joint.set('frictionloss',str(settings['hand_joint_frictionloss']))
+        # Friction-constrained solver refinement, not a weld or pose clamp.
+        # This option applies to all active contacts in the dynamic scene.
+        root.find('option').set('noslip_iterations',str(settings['contact_noslip_iterations']))
+        # Hollow tip/rack meshes can create hundreds of simultaneous contacts.
+        # The friction refinement needs more arena memory than MuJoCo's default;
+        # running out would drop constraints, including real tip collisions.
+        size=root.find('size')
+        if size is None:size=element(root,'size')
+        size.set('memory','128M')
     if free_base:element(pelvis,'freejoint',name='robot_base')
     # Collision bits: props/ground=1, robot=2, held tool=4, tip=8.
     # Visual duplicates never collide. Collision meshes stay in hidden group 3.
@@ -130,6 +149,8 @@ def build_dynamic_xml(config, free_base=False):
         else:category='body'
         bound=settings[f'{category}_torque_limit']
         servo=settings.get('joint_servos',{}).get(name,{})
+        bound=servo.get('torque_limit',bound)
+        if 'torque_limit' in servo:j.set('actuatorfrcrange',vec([-bound,bound]))
         element(actuator,'position',name=f'servo_{name}',joint=name,kp=servo.get('kp',settings[f'{category}_kp']),kv=servo.get('kv',settings[f'{category}_kv']),forcerange=[-bound,bound])
     bound=settings['ejector_force_limit']
     element(actuator,'position',name='servo_ejector',joint='ejector_slide',kp=settings['ejector_kp'],kv=settings['ejector_kv'],forcerange=[-bound,bound])
@@ -142,7 +163,9 @@ def build_dynamic_xml(config, free_base=False):
 
 class DynamicSimulation:
     physics='dynamic'
-    def __init__(self,config,episode,mode='replay',source='state',free_base=False):
+    def __init__(self,config,episode,mode='replay',source='state',free_base=False,control_mode='replay'):
+        if control_mode not in ('replay','external'):raise ValueError(control_mode)
+        self.control_mode=control_mode
         from .profiles import for_episode
         config=for_episode(config,episode)
         self.config=config;self.episode=episode;self.mode=mode;self.source=source;self.free_base=free_base
@@ -219,6 +242,14 @@ class DynamicSimulation:
         self._apply_controller()
         self.initial_objects={n:self.data.body(n).xpos.copy() for n in ['table_body','rack','waste','pipette']}
 
+    def set_motor_targets(self, names, targets):
+        """Set held motor references; physics never replaces externally owned targets."""
+        if self.control_mode != 'external':raise RuntimeError('External control is not enabled')
+        targets=np.asarray(targets,dtype=float)
+        if targets.shape != (len(names),) or not np.isfinite(targets).all():raise ValueError('Invalid motor targets')
+        indices=[self.model.actuator('servo_'+name).id for name in names]
+        self.desired[indices]=targets
+
     def _capture_weld(self,eq_id,body1,body2):
         first=self.data.body(body1);second=self.data.body(body2);R=first.xmat.reshape(3,3)
         self.model.eq_data[eq_id,3:6]=R.T@(second.xpos-first.xpos)
@@ -236,7 +267,9 @@ class DynamicSimulation:
         self.state=state;self.events.append({'time':round(self.time,4),'state':state,'nozzle_position':self.data.site('nozzle').xpos.tolist()})
 
     def step(self):
-        dt=self.model.opt.timestep;self._reference(self.time);self._apply_controller()
+        dt=self.model.opt.timestep
+        if self.control_mode=='replay':self._reference(self.time)
+        self._apply_controller()
         a=self.config['attachment'];nozzle=self.data.site('nozzle').xpos
         tip=self.data.body('tip');R=tip.xmat.reshape(3,3)
         mouth=tip.xpos+R@np.array([0,0,self.config['pipette']['tip_length']/2])

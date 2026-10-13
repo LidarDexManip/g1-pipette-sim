@@ -62,5 +62,34 @@
   "session_evidence": {
     "20260904": "outputs/episode14-ego-fix/ego-landmarks.json",
     "20260909": "outputs/ego-default-fix/session46-candidates.json"
+  },
+  "dataset_profiles": {
+    "/home/ytung34/.cache/huggingface/hub/datasets--jren313--g1-pipette-3view-hil293/snapshots/0d2a8f9f3a9e16db79a58e6192631699334cc198": {
+      "episodes": {},
+      "sessions": [
+        {
+          "name": "20260909",
+          "start": 46,
+          "end": 293,
+          "views": {
+            "rgb": {
+              "position": [
+                0.08885744602688456,
+                0.054932074292087865,
+                1.1754516313783048
+              ],
+              "quaternion": [
+                0.6882646804256017,
+                0.2215499089764928,
+                -0.23467136407163178,
+                -0.649720492516522
+              ],
+              "fovy": 60
+            }
+          }
+        }
+      ],
+      "note": "HIL293 inherits corrected September 4 ego default for 0-45 and corrected September 9 ego for 46-292; September 10 inherits September 9."
+    }
   }
 }

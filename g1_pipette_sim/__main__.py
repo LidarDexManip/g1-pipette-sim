@@ -52,7 +52,7 @@ def main():
     parser.add_argument('--fit-layout',action='store_true',help='Initialize rack/table from low nozzle positions. A kinematic guess, not calibrated reconstruction.')
     parser.add_argument('--show-collisions',action='store_true',help='Show collision meshes in the main viewer and exports for geometry inspection.')
     parser.add_argument('--headless',action='store_true')
-    parser.add_argument('--no-camera-window',action='store_true',help='Disable the separate live three-camera window (shown by default with the interactive viewer; never opened in headless mode).')
+    parser.add_argument('--no-camera-window',action='store_true',help='Disable the separate camera window (replay: synchronized real/sim views; demo: sim views only; never opened in headless mode).')
     parser.add_argument('--duration',type=float,help='Maximum simulation seconds, capped at episode/demo duration.')
     parser.add_argument('--speed',type=float,default=1)
     parser.add_argument('--camera-pose',choices=['corrected','config'],default='corrected',help='corrected: apply dataset/session camera-view corrections, including with --config (default). config: preserve the camera poses in the selected config.')
@@ -169,7 +169,7 @@ def main():
             if not args.no_camera_window:
                 from .camera_window import CameraWindow
                 resolutions={name:tuple(episode.info['features'][f'observation.images.{name}']['shape'][1::-1]) for name in ['rgb','wrist_left','wrist_right']}
-                camera_window=CameraWindow(sim.model,cfg,resolutions,events)
+                camera_window=CameraWindow(sim.model,cfg,resolutions,events,episode=episode if args.mode=='replay' else None)
             print('Space: pause/resume | R: reset | E: eject attached tip | G: release pipette grip (dynamic) | C: camera presets | F: free overview | Mouse: left orbit, right pan, wheel zoom',flush=True)
         def render_frame():
             import cv2

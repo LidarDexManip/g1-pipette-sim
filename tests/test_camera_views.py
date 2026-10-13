@@ -75,3 +75,48 @@ def test_augmentation_applies_cameras_after_importing_seed(tmp_path,monkeypatch)
     result=runner.execute_task({'source':'unused','source_contract':source,'recipe':{},'seed':1})
     assert result['generation_rejected']
     assert json.loads(cfg.read_text())==old
+
+
+def test_hil293_defaults_sessions_and_stale_export_guard(tmp_path):
+    from g1_pipette_sim.camera_views import OVERRIDES,assert_camera_views
+    from g1_pipette_sim.augmentation.export import assert_catalog_cameras
+    import pytest
+    spec=json.loads(OVERRIDES.read_text())
+    root=Path(next(k for k in spec['dataset_profiles'] if 'hil293' in k))
+    old={'cameras':{'rgb':{'position':[.473,.088,1.162],'quaternion':[1,0,0,0],'fovy':60},'wrist_left':{'role':'unchanged'}},'table':{'top_z':.648}}
+    for index in [0,11,45,46,193,194,275,292]:
+        ep=SimpleNamespace(root=root,index=index)
+        expected=spec['defaults']['rgb'] if index<46 else spec['dataset_profiles'][str(root)]['sessions'][0]['views']['rgb']
+        fixed=apply_camera_views(old,ep)
+        assert fixed['cameras']['rgb']==expected
+        assert fixed['table']==old['table'] and fixed['cameras']['wrist_left']==old['cameras']['wrist_left']
+        with pytest.raises(ValueError,match='Stale camera'):assert_camera_views(old,ep)
+        assert_camera_views(fixed,ep)
+    folder=tmp_path/'capture';folder.mkdir();(folder/'config.json').write_text(json.dumps(old))
+    value={'entries':[{'folder':str(folder),'candidate':{'dataset_snapshot':str(root),'parent_episode':11}}]}
+    with pytest.raises(ValueError,match='Stale camera'):assert_catalog_cameras(value)
+    (folder/'config.json').write_text(json.dumps(apply_camera_views(old,SimpleNamespace(root=root,index=11))))
+    assert_catalog_cameras(value)
+
+
+def test_recorder_rejects_stale_hil293_before_simulation():
+    import pytest
+    from g1_pipette_sim.camera_views import OVERRIDES
+    from tools.collect_pickup_augmentations import RecordedSimulation
+    spec=json.loads(OVERRIDES.read_text())
+    root=Path(next(k for k in spec['dataset_profiles'] if 'hil293' in k))
+    old={'cameras':{'rgb':{'position':[.473,.088,1.162],'quaternion':[1,0,0,0],'fovy':60}}}
+    with pytest.raises(ValueError,match='Stale camera'):
+        RecordedSimulation(old,SimpleNamespace(root=root,index=11),{'folder':'unused'})
+
+
+def test_hil293_correction_survives_hf_cache_relocation():
+    from g1_pipette_sim.camera_views import OVERRIDES
+    spec=json.loads(OVERRIDES.read_text())
+    root=Path(next(k for k in spec['dataset_profiles'] if 'hil293' in k))
+    relocated=Path('/different/machine/hub')/root.parent.parent.name/'snapshots'/root.name
+    old={'cameras':{'rgb':{}}}
+    corrected=apply_camera_views(old,SimpleNamespace(root=relocated,index=11))
+    assert corrected['cameras']['rgb']==spec['defaults']['rgb']
+    # Another dataset/revision must not accidentally inherit this calibration.
+    assert apply_camera_views(old,SimpleNamespace(root=relocated.parent/'different-revision',index=11)) is old

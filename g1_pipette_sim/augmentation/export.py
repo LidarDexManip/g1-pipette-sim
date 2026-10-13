@@ -12,10 +12,15 @@ CAPTURE_FILES = ['accepted.json', 'config.json', 'commands.npz', 'verification.j
                  'camera-poses.json', 'rgb.mp4', 'wrist_right.mp4', 'wrist_left.mp4']
 
 
-def catalog(collections):
+def catalog(collections, capture_folders=None):
     entries = []; seen = {}; duplicates = []
-    for collection in sorted(map(lambda p: Path(p).resolve(), collections)):
-        for marker in sorted((collection/'candidates').glob('*/accepted.json')):
+    groups = [(collection, sorted((collection/'candidates').glob('*/accepted.json')))
+              for collection in sorted(map(lambda p: Path(p).resolve(), collections))]
+    if capture_folders is not None:
+        groups += [(folder.parent.parent, [folder/'accepted.json'])
+                   for folder in sorted(Path(p).resolve() for p in capture_folders)]
+    for collection, markers in groups:
+        for marker in markers:
             folder = marker.parent
             c, ep, record = import_seed(folder)
             # New captures must carry the commit-time checksums. Legacy import
@@ -60,10 +65,21 @@ def verify_catalog(value):
                 raise ValueError(f'Real source changed: {path}')
 
 
+def assert_catalog_cameras(value):
+    from types import SimpleNamespace
+    from g1_pipette_sim.camera_views import assert_camera_views
+    for entry in value['entries']:
+        candidate=entry['candidate']
+        config=json.loads((Path(entry['folder'])/'config.json').read_text())
+        episode=SimpleNamespace(root=Path(candidate['dataset_snapshot']),index=candidate['parent_episode'])
+        assert_camera_views(config,episode)
+
+
 def publish(value, output, v3=False):
     from tools.package_pickup_augmentations import _package
     output = Path(output).resolve()
     verify_catalog(value)
+    assert_catalog_cameras(value)
     contract = {'catalog': value, 'dependencies': dependencies(), 'v3': v3}
     if v3:
         converter=Path('/home/ytung34/Projects/lerobot/src/lerobot/scripts/convert_dataset_v21_to_v30.py')
@@ -80,6 +96,10 @@ def publish(value, output, v3=False):
         try:
             _package(None, stage, entries=value['entries'])
             atomic_json(stage/'meta/capture-catalog.json', value)
+            if value.get('dataset_card'):
+                (stage/'README.md').write_text(value['dataset_card'])
+            if value.get('collection_summary'):
+                atomic_json(stage/'meta/collection-summary.json', value['collection_summary'])
             if v3:
                 import subprocess, sys
                 script = Path('/home/ytung34/Projects/lerobot/src/lerobot/scripts/convert_dataset_v21_to_v30.py')

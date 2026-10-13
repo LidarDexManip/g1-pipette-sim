@@ -122,6 +122,7 @@ def validate(candidate,record=False):
 
 class RecordedSimulation(DynamicSimulation):
     def __init__(self,cfg,ep,candidate):
+        assert_camera_views(cfg,ep)
         super().__init__(cfg,ep,source='low_level')
         from g1_pipette_sim.camera_streams import CameraStreams
         import cv2

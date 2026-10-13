@@ -17,3 +17,11 @@ __pycache__/
 !.env.example
 # Relocated configuration and locally generated recipes
 .local/
+
+# Isolated policy-rollout environment
+.venv-policy/
+
+# Local planning, experiment notes, and reports
+/docs/
+# Isolated reinforcement-learning environment
+.venv-rl/

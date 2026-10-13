@@ -70,6 +70,7 @@ class CollisionGeometryTests(unittest.TestCase):
         for i,c in contacts:
             mujoco.mj_contactForce(s.model,s.data,i,force);maximum=max(maximum,force[0])
         self.assertGreater(maximum,0.)
+        self.assertFalse(s.report()['warnings'], 'Dense tip contacts must not exhaust the constraint arena')
         for operation in [s.release_grip,s.eject,s.reset]:
             operation()
             self.assertTrue(np.all(s.model.geom_conaffinity[s.tip_geoms]&4))
