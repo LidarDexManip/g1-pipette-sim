@@ -21,7 +21,7 @@ def build_robot_scene(name='lidar', registration=None):
         asset=copy.deepcopy(asset)
         if asset.get('file'):asset.set('file',str((robot_path.parent/'meshes'/asset.get('file')).resolve()))
         root.find('asset').append(asset)
-    for tag in ('default','actuator','equality','sensor'):
+    for tag in ('default','actuator','equality','sensor','contact'):
         node=robot.find(tag)
         if node is not None:root.append(copy.deepcopy(node))
     pelvis=copy.deepcopy(robot.find("./worldbody/body[@name='pelvis']"))
@@ -32,7 +32,7 @@ def build_robot_scene(name='lidar', registration=None):
     pelvis.set('pos',_vec([*cfg['base_xy'],floor+cfg['pelvis_height_above_floor_m']]))
     pelvis.set('quat',_vec([np.cos(theta),0,0,np.sin(theta)]))
     for geom in pelvis.iter('geom'):
-        if geom.get('group')!='1':geom.set('group','3');geom.set('contype','2');geom.set('conaffinity','1')
+        if geom.get('group')!='1':geom.set('group','3');geom.set('contype','2');geom.set('conaffinity','3')
     root.find('worldbody').append(pelvis)
     ET.indent(root)
     return ET.tostring(root,encoding='unicode')
@@ -49,7 +49,9 @@ class MeasuredReplay:
     def __init__(self,model,data,episode):
         import pyarrow.parquet as pq
         from ..scene import load_config
+        from .episode_scene import apply_episode_scene
         self.model=model;self.data=data;self.episode=episode;self.mapping=load_config()['hand_mapping']
+        self.scene_state=apply_episode_scene(model,episode.root,episode.index)
         path=episode.root/episode.info['data_path'].format(episode_chunk=episode.index//episode.info['chunks_size'],episode_index=episode.index)
         self.hand_sources={}
         for side in ('left','right'):
@@ -60,15 +62,20 @@ class MeasuredReplay:
                     episode.arrays[key]=values;self.hand_sources[side]=key;continue
             self.hand_sources[side]=f'action.hand_{side}'
 
-    def pose(self,t):
-        import mujoco
-        e=self.episode;pose=dict(zip(e.names,e.interpolate('observation.state',t)[:29]));m=self.mapping
+    def targets(self,t,source='state',hand_commands=False):
+        e=self.episode;key={'state':'observation.state','low_level':'action.low_level','action':'action'}[source]
+        pose=dict(zip(e.names,e.interpolate(key,t)[:29]));m=self.mapping
         for side,prefix in [('left','L'),('right','R')]:
-            raw=e.interpolate(self.hand_sources[side],t);u=np.clip(raw/m['register_max'],0,1)
+            key=f'action.hand_{side}' if hand_commands else self.hand_sources[side]
+            raw=e.interpolate(key,t);u=np.clip(raw/m['register_max'],0,1)
             for i,finger in enumerate(['pinky','ring','middle','index']):
                 for segment in ['proximal','intermediate']:pose[f'{prefix}_{finger}_{segment}_joint']=(1-u[i])*m['finger_closed_rad']
             bend=(1-u[4])*m['thumb_bend_closed_rad']
             pose.update({f'{prefix}_thumb_proximal_yaw_joint':u[5]*m['thumb_rotation_max_rad'],
                          f'{prefix}_thumb_proximal_pitch_joint':bend,f'{prefix}_thumb_intermediate_joint':bend*1.6,
                          f'{prefix}_thumb_distal_joint':bend*2.4})
-        apply_joint_pose(self.model,self.data,pose);self.data.time=t;mujoco.mj_forward(self.model,self.data)
+        return pose
+
+    def pose(self,t):
+        import mujoco
+        apply_joint_pose(self.model,self.data,self.targets(t));self.data.time=t;mujoco.mj_forward(self.model,self.data)

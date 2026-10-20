@@ -20,7 +20,7 @@ LAB_IDS = ('lab-open-shelves','lab-wire-racks','lab-mobile-carts','lab-cabinets'
            'lab-mixed-storage','lab-compact-storage','lab-tall-shelves','lab-wide-storage')
 ENVIRONMENTS = {
     'pipette': {'kind':'workspace','description':'Original calibrated G1 pipette workspace'},
-    'lidar': {'kind':'imported','description':'LIDAR Blender scene + G1, calibrated dimensions (measured-state diagnostics)',
+    'lidar': {'kind':'imported','description':'LIDAR lab + fixed-base G1, physical servo replay and movable pipette/tube',
               'asset':ROOT/'assets/environments/lidar/scene.xml',
               'calibration':ROOT/'config/environments/lidar-scene.json'},
     **{key:{'kind':'procedural','description':title+' (visual surroundings)', 'index':i}
@@ -42,7 +42,7 @@ def add_surroundings(root, config):
     spec=specification(config);entry=ENVIRONMENTS[spec['name']]
     if entry['kind']=='workspace':return
     if entry['kind']=='imported':
-        raise ValueError('LIDAR is a standalone calibrated scene. Use ./run.sh --environment lidar for measured-position playback; dynamic task replay is not implemented.')
+        raise ValueError('LIDAR is a standalone scene. Use ./run.sh --environment lidar for physical replay, or add --physics kinematic for measured-position diagnostics.')
     layout=lab_layout(entry['index'],int(spec.get('seed',20260914)),config)
     world=root.find('worldbody')
     backdrop=world.find("geom[@name='backdrop']")

@@ -7,7 +7,8 @@ They are not ten independently calibrated robot tasks.
 ```bash
 ./run.sh --list-environments
 ./run.sh --environment lidar                     # G1 + clean calibrated lab
-./view_lidar.sh --episode 0                      # measured-joint demonstration
+./view_lidar.sh --episode 0                      # physical motor-target replay
+./view_lidar.sh --episode 0 --physics kinematic   # measured-pose diagnostic
 ./view_lidar.sh --episode 126 --speed 2
 ./view_lidar.sh --episode 0 --headless --compare \
   --output outputs/lidar-teleop/comparison
@@ -18,10 +19,29 @@ They are not ten independently calibrated robot tasks.
 Mouse: left drag orbits, right drag pans, wheel zooms. LIDAR supports `--snapshot`,
 `--video`, `--compare`, `--duration`, `--speed`, `--headless`, and
 `--show-collisions`. Video/snapshot exports are 1920×1080; video is 30 fps.
-Without a dataset, the G1 holds its initial pose. With `--dataset`, it plays the
-measured body joints. **LIDAR playback is kinematic with static props**, not a
-physical grasp-success test. `--physics dynamic`, non-state sources, free base,
-and scripted demo mode are rejected for this environment.
+LIDAR now defaults to **dynamic physics and low-level motor targets**. The robot
+starts at the measured pose; force-limited position servos track subsequent targets
+while MuJoCo integrates motion at 1 kHz. Hand servos use recorded hand commands.
+The pipette (80 g) and tube (estimated 15 g) are free bodies with gravity and contact
+friction; the pelvis, table, racks, stand, and centrifuge remain fixed. There is
+no hand/tool weld, attachment trigger, or per-frame pose overwrite. Without a
+dataset, servos hold the configured initial robot pose while props remain physical.
+
+Use `--physics kinematic` for the original exact measured-pose diagnostic with
+static props. Dynamic `--source state` tracks measured positions as servo targets;
+it is not exact playback. `--source action` bypasses the real high-level controller
+and is not equivalent to low-level replay. Free-base and scripted demo modes remain
+unsupported. Physical interaction does not imply a successful or calibrated grasp.
+Controller gains, approximate box inertias, and friction are simulation estimates.
+The report includes contact forces, penetration, tracking error, and prop displacement.
+
+Initial physical validation of episode 0 completed 15,662 steps (15.662 seconds)
+without simulator warnings. Maximum pipette COM rise was 145.8 mm; maximum
+hand/pipette proxy penetration was 1.11 mm, with no grasp weld. First force-bearing
+hand/pipette contact was at 0.089 seconds, earlier than the real approach, so this
+is evidence of working dynamics rather than calibrated task reproduction.
+The maximum penetration across all contacts was 5.54 mm. Initial pipette/stand
+overlap remains 1.63 mm. Results: `outputs/lidar-teleop/physical-episode-000/replay-report.json`.
 
 No environment selection means the original pipette workspace. If its default
 HIL194 cache is absent, the launcher uses HIL293 with a matching saved replay
@@ -67,12 +87,12 @@ bypasses calibration; use `run.sh` or `build_robot_scene()` for the calibrated m
 Physics scope:
 
 - The table has five separate cuboid colliders, preserving open leg space.
-- Other props use static connected-component convex proxies. Concave openings
-  within a component can be filled; these are not validated grasp surfaces.
+- Other props use the repaired convex decompositions described below, including
+  explicit hollow tube and rack openings.
 - The floor collides. No scanned surfaces, unmodeled clutter, or walls are present.
-- The G1 has a fixed pelvis. Joints are prescribed during diagnostics. Props are
-  static; masses, movable-object initialization, and grasp/release physics remain
-  to be implemented and validated for this five-step task.
+- The G1 has a fixed pelvis. Dynamic joints are actuated; only kinematic diagnostics
+  prescribe their positions. Held-object initialization for later task steps and
+  grasp/release success still require calibration and validation.
 
 Regenerate source assets with Blender 5.2 or newer:
 
@@ -110,15 +130,16 @@ Both recorded video views retain their dataset names (`rgb`, `wrist_left`); thos
 names alone do not establish their physical mounts. `--compare` exports the sim
 **overview** at left and synchronized real feeds at right. It is not a calibrated
 camera-pair comparison. The 30 fps inspection video is not a training dataset;
-replay follows the original image-row timestamps and measured joints.
+replay follows the recorded timing. Dynamic mode uses motor-target timestamps when
+available and paired image rows when the recorded command clock is frozen.
 
-Hand feedback is used when it varies. Entirely constant feedback falls back to
+In kinematic mode, hand feedback is used when it varies. Entirely constant feedback falls back to
 that hand's recorded commands, recorded explicitly in `replay-report.json`.
 117 left-hand and 46 right-hand episodes have constant feedback. The mapping from
 registers to Inspire joint angles remains approximate. The pelvis is fixed because
 absolute base translation/yaw is not measured in the dataset.
 
-Initial checks replay all 3,780 recorded frames of the five examples above. Joint
+The historical kinematic checks replay all 3,780 recorded frames of the five examples above. Joint
 assignment matches the measured data exactly, which verifies the playback path,
 **not physical fidelity or task success**. Static objects do not follow the hands;
 `task_success` is explicitly null. Later workflow steps require correct held-object
@@ -152,6 +173,26 @@ diagnostic does not isolate which contributes most. No physical task success
 rate is reported: all props remain static, and other object contacts are not
 included in the table-only check.
 
+The initial broader `tools/audit_lidar_collisions.py` audit checked robot/scene contacts,
+static object overlaps, visual-versus-collision top surfaces, and self contacts
+in a separate diagnostic model. Run it with `--dataset <snapshot directory>`.
+Its default output is `outputs/lidar-teleop/collision-audit/`, containing a
+summary and per-frame contact records for episodes 0, 126, 188, 127, and 1.
+All five have robot/object penetration over 1 mm, including the three that
+passed the table-only check. Outer visual and collision bounds agree, but
+convex hulls fill the tube rack holes, tube opening, and pipette stand opening.
+Static tube/rack and pipette/stand proxies overlap by approximately 39 and
+38 mm, respectively. The tip rack also overlaps the tabletop by 4.4 mm.
+
+All 50 robot mesh colliders match their corresponding visual mesh transforms;
+this does not validate their convex collision surfaces. Robot self collisions
+were disabled by the initial masks. The separate diagnostic enabled them with
+the original robot asset's four exclusions and detected no self penetration
+over 1 mm in these five episodes. The repaired composition now copies those four
+exclusions and enables robot self-collision detection.
+No recorded joint exceeded the modeled limits in these examples. Repair the
+concave object colliders before refining placement or enabling dynamic grasps.
+
 Reports in `outputs/lidar-teleop/`:
 
 - `download-verification.json`: all Parquet row counts and video headers match
@@ -164,14 +205,91 @@ Reports in `outputs/lidar-teleop/`:
   robot/table penetration diagnostics.
 - `calibrated-comparison-000/simulation.mp4`: example with two real video feeds.
 
-Before dynamic task validation: refine object/camera registration per recording
-session, replace unsuitable convex proxies around grasp openings, give pipette
-and tube free bodies with measured mass/friction, initialize held objects for
-later steps, and validate grasps/releases before replaying low-level motor targets.
+Before claiming dynamic task success: refine object/camera registration per recording
+session, identify mass/inertia/friction and servo gains, initialize held objects for
+later steps, and validate grasps/releases. Free-body dynamics and servo replay are
+implemented in `g1_pipette_sim/environments/physical.py`.
 The dataset's 35-value main action is a high-level controller input, not identical
 to its 29-value low-level motor targets.
 
 ## Code organization
+
+Collision-repair tools:
+
+```bash
+# Optional build dependencies, using the simulator's Python environment:
+python -m pip install -r requirements-collision.txt
+python tools/rebuild_lidar_collisions.py --object env_00_cylinder_base
+python tools/rebuild_lidar_collisions.py --object env_00_cylinder_base --apply
+
+# Probe openings, walls, closed bottoms, and table support:
+PYTHONPATH=.:tests python -m unittest test_lidar_collision_repairs
+
+# Inspect all objects and audit measured replay contacts:
+MUJOCO_GL=egl python tools/render_lidar_collision_comparison.py
+python tools/audit_lidar_collisions.py --dataset /path/to/snapshot \
+  --output outputs/lidar-teleop/collision-repair/after
+```
+
+Generated collision assets live in `assets/environments/lidar/meshes/collision_v2/`.
+Each object's JSON record identifies its source visual hashes and generated pieces.
+Visual meshes, scene scale, table height, and object placement are unchanged.
+The table retains its five exact boxes. Thin-wall contacts use `solref=".004 1"`,
+`solimp=".99 .99 .001 .5 2"`, and priority 1; these settings passed small-probe
+checks but are not a real-world friction/contact calibration.
+
+The tube uses explicit hollow elliptical profiles; its open source surface seams
+are closed into solid walls and a bottom. The stand uses angular sectors and
+height bands no larger than 1 mm at runtime, with a 0.2 mm skin on each side of
+surface fragments so zero-thickness base faces remain collidable. The tip rack uses annular pieces and
+convex extrusions of its perforated top surface, because a generic decomposition
+can cap very thin rings even with a small error threshold. Other irregular
+surfaces use CoACD decomposition after correcting face winding in the collision
+builder's working copy. Watertightness alone does not establish consistent winding.
+The centrifuge's single-sided well inserts receive 0.4 mm walls and closed bottoms.
+None of these changes makes props movable or
+turns measured-position playback into a dynamic task rollout.
+
+Compare the saved baseline `outputs/lidar-teleop/collision-repair/before.json`
+with the new `after/report.json`. Penetration depth is **per convex piece**:
+thinner pieces can report smaller depths even when overlap remains. Use the
+opening/wall tests, contact locations, and contact-frame counts as well; do not
+interpret a reduced depth alone as a successful repair or successful task.
+The probe tests cover all 96 tip-rack positions at two depths, all eight centrifuge
+wells, a tube-rack opening, the tube mouth/wall/bottom, the stand bore/wall/base,
+and table support. Re-exporting the Blender scene resets the base collision
+definitions; regenerate and apply the repaired objects afterward.
+
+The repaired meshes are approximate, not an exact surface match. The follow-up
+`tools/check_lidar_surface_error.py` measures Euclidean distance at flagged audit
+examples, because vertical ray differences near cavity edges can be misleading.
+Checked discrepancies reach 2.24 mm on the tube rack and 1.28 mm on the reconstructed
+tube rim; the flagged centrifuge and stand samples are below 0.2 mm. This is a
+sampled check, not a global error bound.
+
+Object poses were deliberately preserved. The contact audit still finds initial
+tube/rack, pipette/stand, and tip-rack/table overlaps of approximately 2.2, 1.6,
+and 4.4 mm respectively. Five measured replay episodes also retain robot/scene
+penetration, including roughly 55–57 mm hand/table penetration. Kinematic replay
+prescribes positions regardless of contact; these results require registration,
+object seating, and replay calibration before physical rollout validation.
+They must not be interpreted as successful dynamic demonstrations.
+
+Measured replay now applies reviewed episode scene presence from
+`config/environments/lidar-episode-scenes.json`. For the pinned two-view dataset,
+episodes 0 and 1 have an empty blue rack in the real recording: the imported tube
+is therefore absent from rendering and collision detection in those replays.
+This is an object-presence correction, not collision suppression for a present
+object or a change to robot/hand joint angles. Other episodes restore the original
+prop properties; overrides only apply when the dataset provenance hash matches.
+The static scene preview without a dataset continues to show all modeled objects.
+The viewer prints the applied review and saves it in `replay-report.json`.
+
+`tools/check_lidar_episode_scenes.py --dataset /path/to/snapshot` compares the
+original and reviewed scene across every frame of episodes 0, 1, and 126. It
+reports initial contacts, full-trajectory tube contacts, and measured-joint
+assignment error. Unreviewed episodes, held-object motion, and alignment remain
+unresolved; do not infer empty-rack initialization from a task label alone.
 
 The largest visual OBJ is committed as `.obj.gz` to stay below GitHub's file-size
 limit. The environment loader extracts it automatically on first use and checks

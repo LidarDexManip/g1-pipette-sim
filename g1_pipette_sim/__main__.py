@@ -27,7 +27,7 @@ def configure_viewer_camera(camera, model, data, config, name):
 def main():
     parser=argparse.ArgumentParser(description='G1/Inspire workspace with gravity, collisions and servo target replay.')
     from .environments import ENVIRONMENTS
-    parser.add_argument('--environment',choices=list(ENVIRONMENTS),default=None,help='Workspace/environment selection. lidar opens the calibrated G1 scene; --dataset enables measured-position diagnostics. lab-* adds visual surroundings to the pipette task.')
+    parser.add_argument('--environment',choices=list(ENVIRONMENTS),default=None,help='Workspace/environment selection. lidar uses fixed-base dynamic servo replay with movable pipette/tube; --physics kinematic restores measured-position diagnostics. lab-* adds visual surroundings to the pipette task.')
     parser.add_argument('--list-environments',action='store_true',help='List environments and exit without loading a dataset.')
     parser.add_argument('--dataset',type=Path,default=None,help='Dataset root or HF cache (default: cached HIL194, or HIL293 with its matching replay config when HIL194 is absent; explicit inputs are never substituted)')
     parser.add_argument('--episode',type=int,default=None,help='Episode index; default: fitted config episode, otherwise a verified HIL194 pickup example for automatic dynamic replay, or 0')
@@ -69,16 +69,18 @@ def main():
         for name,entry in ENVIRONMENTS.items():print(f"{name:24s} {entry['description']}")
         return
     imported=args.environment is not None and ENVIRONMENTS[args.environment]['kind']=='imported'
-    args.physics=args.physics or ('kinematic' if imported else 'dynamic')
-    args.source=args.source or ('state' if imported else 'low_level')
+    args.physics=args.physics or 'dynamic'
+    args.source=args.source or ('state' if imported and args.physics=='kinematic' else 'low_level')
     if args.speed<=0 or (args.duration is not None and args.duration<=0):parser.error('speed and duration must be positive')
     if args.free_base and args.physics!='dynamic':parser.error('--free-base requires --physics dynamic')
     if args.compare and args.mode!='replay':parser.error('--compare requires --mode replay')
     if args.headless:os.environ.setdefault('MUJOCO_GL','egl')
     if not args.headless and not (os.environ.get('DISPLAY') or os.environ.get('WAYLAND_DISPLAY')):parser.error('No display found. Use --headless (optionally --video).')
     if imported:
-        if args.physics!='kinematic' or args.source!='state' or args.mode!='replay' or args.free_base:
-            parser.error('LIDAR currently supports fixed-base measured-state playback only: --physics kinematic --source state --mode replay. Dynamic task replay requires contact/task calibration.')
+        if args.mode!='replay' or args.free_base:
+            parser.error('LIDAR supports fixed-base replay only; demo and free-base control are not implemented.')
+        if args.physics=='kinematic' and args.source!='state':
+            parser.error('LIDAR kinematic diagnostics require --source state; use dynamic physics for motor target replay.')
         if args.camera!='overview':parser.error('LIDAR currently has an overview camera only; policy camera calibration is not yet available.')
         from .environments.viewer import run_imported
         run_imported(args)

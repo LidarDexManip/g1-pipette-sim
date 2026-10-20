@@ -20,6 +20,8 @@ class LidarRobotTests(unittest.TestCase):
             np.testing.assert_array_equal(original.geom_pos[i],model.geom_pos[j])
             np.testing.assert_array_equal(original.geom_size[i],model.geom_size[j])
         self.assertAlmostEqual(model.body('pelvis').pos[0],load_registration()['base_xy'][0])
+        self.assertEqual(model.nexclude,4)
+        self.assertTrue(np.all(model.geom_conaffinity[model.geom_contype==2] & 2))
 
     def test_measured_body_playback_and_frozen_hand_fallback(self):
         root=ROOT/'.cache/huggingface/hub/datasets--jren313--g1-pipette-2view-teleop0925-5task-eerel/snapshots/c7adfc179e5e15ade41b06803542001a24959dda'

@@ -1,0 +1,16 @@
+{
+  "dataset": "jren313/g1-pipette-2view-teleop0925-5task-eerel",
+  "revision": "c7adfc179e5e15ade41b06803542001a24959dda",
+  "source_provenance_sha256": "16deebb494e3c8467bf664a555fd343ec02b8bae26e2e184ae3c1ce0b51c33d9",
+  "episodes": {
+    "0": {
+      "absent_objects": ["env_02_cylinder"],
+      "evidence": "Reviewed real rgb start frame and pipette-pick sequence: blue rack is empty; no sample tube is present."
+    },
+    "1": {
+      "absent_objects": ["env_02_cylinder"],
+      "evidence": "Reviewed real rgb start frame and pipette-return sequence: blue rack is empty; no sample tube is present."
+    }
+  },
+  "limitations": "Only explicitly reviewed episodes are overridden. No inference from task labels; other episodes retain the imported scene and may have incorrect object states. Held-object motion and robot placement are not calibrated by this file."
+}
