@@ -1,0 +1,36 @@
+{
+  "base_xy": [
+    0.48500000000000015,
+    -0.03928157118567614
+  ],
+  "base_yaw_deg": 167.44752860430071,
+  "pelvis_height_above_floor_m": 0.793,
+  "placement_status": "Approximate XY/yaw fit to ten measured-joint hand-closure poses; 9 cm palm proxy, fixed pelvis height; sampled torso/leg table-clearance checked, manipulation contacts unvalidated",
+  "joint_pose": {},
+  "viewer": {
+    "lookat": [
+      0.15,
+      0,
+      0.7
+    ],
+    "distance": 2.5,
+    "azimuth": -45,
+    "elevation": -25
+  },
+  "fit_dataset": {
+    "repo_id": "jren313/g1-pipette-2view-teleop0925-5task-eerel",
+    "revision": "c7adfc179e5e15ade41b06803542001a24959dda",
+    "episodes": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      126,
+      128,
+      130,
+      132,
+      134
+    ]
+  }
+}

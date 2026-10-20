@@ -25,3 +25,8 @@ __pycache__/
 /docs/
 # Isolated reinforcement-learning environment
 .venv-rl/
+
+# Downloaded demonstration datasets
+/.cache/huggingface/
+# Large exported mesh is distributed losslessly as .obj.gz and extracted locally.
+/assets/environments/lidar/meshes/env_00_cylinder_base_visual_0.obj

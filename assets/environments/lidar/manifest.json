@@ -1,0 +1,1690 @@
+{
+  "schema_version": 1,
+  "source": "LIDAR Environment.blend",
+  "source_sha256": "4364660282b65d335f69cbab97aaba78e3f29dcf2b7b35d7011df25c852010ad",
+  "blender_version": "5.2.2 LTS",
+  "unit_scale_m": 1.0,
+  "coordinates": "Blender world XYZ, Z up, meters; transforms baked; no resizing",
+  "bounds_m": [
+    [
+      -0.7680000066757202,
+      0.7680000066757202
+    ],
+    [
+      -1.5360000133514404,
+      1.5360000133514404
+    ],
+    [
+      -0.8149999380111694,
+      1.1545531749725342
+    ]
+  ],
+  "objects": [
+    {
+      "name": "\bCylinder Base",
+      "body": "env_00_cylinder_base",
+      "bounds_m": [
+        [
+          0.08172100782394409,
+          0.5982789993286133
+        ],
+        [
+          -0.5249419808387756,
+          -0.23505799472332
+        ],
+        [
+          0.6288000345230103,
+          0.751230001449585
+        ]
+      ],
+      "dimensions_world_m": [
+        0.5165579915046692,
+        0.2898839861154556,
+        0.12242996692657471
+      ],
+      "vertices": 443778,
+      "triangles": 812032,
+      "visual_parts": 2,
+      "collision_parts": 2,
+      "collision": "connected-component convex hulls; static approximate props"
+    },
+    {
+      "name": "\bPipette",
+      "body": "env_01_pipette",
+      "bounds_m": [
+        [
+          0.33799999952316284,
+          0.4650000035762787
+        ],
+        [
+          0.33959999680519104,
+          0.3904000222682953
+        ],
+        [
+          0.6465531587600708,
+          1.1545531749725342
+        ]
+      ],
+      "dimensions_world_m": [
+        0.12700000405311584,
+        0.05080002546310425,
+        0.5080000162124634
+      ],
+      "vertices": 1318,
+      "triangles": 2548,
+      "visual_parts": 7,
+      "collision_parts": 21,
+      "collision": "connected-component convex hulls; static approximate props"
+    },
+    {
+      "name": "Cylinder",
+      "body": "env_02_cylinder",
+      "bounds_m": [
+        [
+          0.3065750002861023,
+          0.3784250020980835
+        ],
+        [
+          -0.456279993057251,
+          -0.3873039782047272
+        ],
+        [
+          0.6725000143051147,
+          0.9474999904632568
+        ]
+      ],
+      "dimensions_world_m": [
+        0.0718500018119812,
+        0.0689760148525238,
+        0.2749999761581421
+      ],
+      "vertices": 15516,
+      "triangles": 5172,
+      "visual_parts": 2,
+      "collision_parts": 24,
+      "collision": "connected-component convex hulls; static approximate props"
+    },
+    {
+      "name": "Dome_Object_Open_Assembly",
+      "body": "env_03_dome_object_open_assembly",
+      "bounds_m": [
+        [
+          -0.25815996527671814,
+          0.21159997582435608
+        ],
+        [
+          -0.13999998569488525,
+          0.17999997735023499
+        ],
+        [
+          0.625,
+          1.0545519590377808
+        ]
+      ],
+      "dimensions_world_m": [
+        0.4697599411010742,
+        0.31999996304512024,
+        0.42955195903778076
+      ],
+      "vertices": 48224,
+      "triangles": 86068,
+      "visual_parts": 4,
+      "collision_parts": 24,
+      "collision": "connected-component convex hulls; static approximate props"
+    },
+    {
+      "name": "Pin Rack",
+      "body": "env_05_pin_rack",
+      "bounds_m": [
+        [
+          0.43880000710487366,
+          0.6611999869346619
+        ],
+        [
+          -0.09440001100301743,
+          0.22389496862888336
+        ],
+        [
+          0.6161326766014099,
+          0.7199945449829102
+        ]
+      ],
+      "dimensions_world_m": [
+        0.2223999798297882,
+        0.3182949796319008,
+        0.10386186838150024
+      ],
+      "vertices": 26028,
+      "triangles": 40764,
+      "visual_parts": 138,
+      "collision_parts": 134,
+      "collision": "connected-component convex hulls; static approximate props"
+    },
+    {
+      "name": "Pipette Stand",
+      "body": "env_06_pipette_stand",
+      "bounds_m": [
+        [
+          0.30671295523643494,
+          0.47624891996383667
+        ],
+        [
+          0.27905771136283875,
+          0.44164612889289856
+        ],
+        [
+          0.625,
+          0.8550000190734863
+        ]
+      ],
+      "dimensions_world_m": [
+        0.16953596472740173,
+        0.16258841753005981,
+        0.23000001907348633
+      ],
+      "vertices": 28094,
+      "triangles": 43240,
+      "visual_parts": 2,
+      "collision_parts": 1,
+      "collision": "connected-component convex hulls; static approximate props"
+    },
+    {
+      "name": "Table_new",
+      "body": "env_07_table_new",
+      "bounds_m": [
+        [
+          -0.7680000066757202,
+          0.7680000066757202
+        ],
+        [
+          -1.5360000133514404,
+          1.5360000133514404
+        ],
+        [
+          -0.8149999380111694,
+          0.625
+        ]
+      ],
+      "dimensions_world_m": [
+        1.5360000133514404,
+        3.072000026702881,
+        1.4399999380111694
+      ],
+      "vertices": 120,
+      "triangles": 60,
+      "visual_parts": 1,
+      "collision_parts": 5,
+      "collision": "five exact cuboid table parts"
+    }
+  ],
+  "excluded_objects": [
+    {
+      "name": "Environment_original",
+      "reason": "Raw scan omitted; use separately modeled object meshes."
+    }
+  ],
+  "floor": {
+    "z_m": -0.8149999380111694,
+    "method": "Lowest point of retained modeled meshes; no object transforms changed"
+  },
+  "limitations": [
+    "Static furniture/props; no articulated lids or movable pipette in this scene asset.",
+    "Prop collisions are convex hulls of disconnected mesh components, not validated contact surfaces.",
+    "Raw room scan and its embedded furniture/robot imagery are excluded; no unmodeled room clutter or walls are inferred.",
+    "Principled base colors and directly linked image textures exported; complex Blender shaders are not reproduced."
+  ],
+  "artifacts": {
+    "meshes/env_00_cylinder_base_collision_0.obj": {
+      "bytes": 159586,
+      "sha256": "664c81584c2b289a3badbfca97f243c308b27a8e85280a43b17ce1fa9e7d6105"
+    },
+    "meshes/env_00_cylinder_base_collision_1.obj": {
+      "bytes": 881,
+      "sha256": "5759e2a2766d8a1bba1abb6edbeb808095c6242ef7949728408ee3bf7d39a485"
+    },
+    "meshes/env_00_cylinder_base_visual_0.obj": {
+      "bytes": 114648724,
+      "sha256": "deaa48b596fb596524a79ee8e73ff5a617c7a9646f1fe62eb73e240e1bdd9eca"
+    },
+    "meshes/env_00_cylinder_base_visual_1.obj": {
+      "bytes": 406327,
+      "sha256": "ba2a205fefe84e53be25dac096e87a31be4acc12eb4b589a6970a9993b002dbd"
+    },
+    "meshes/env_01_pipette_collision_0.obj": {
+      "bytes": 2250,
+      "sha256": "13ef1a37762d48faa819433f2b753137b8f0377b8347e0ee6dc7407692885a41"
+    },
+    "meshes/env_01_pipette_collision_1.obj": {
+      "bytes": 11933,
+      "sha256": "f996bba3842c809a4642c342c2e4fc6a4ba9b9b95c4802b31f86a96c2b910671"
+    },
+    "meshes/env_01_pipette_collision_10.obj": {
+      "bytes": 396,
+      "sha256": "b85f0e423a4b7f9e8fe198bde184480259029e9b3a822350b60ffd2c0ee952f2"
+    },
+    "meshes/env_01_pipette_collision_11.obj": {
+      "bytes": 396,
+      "sha256": "924324a3f6bcc692d4a044caca4edeede745c55f10de8708ab7350e65f6c275f"
+    },
+    "meshes/env_01_pipette_collision_12.obj": {
+      "bytes": 396,
+      "sha256": "65c0b20df0a2984525f02232f24171031220da776fdf269e388b6753b1c4827b"
+    },
+    "meshes/env_01_pipette_collision_13.obj": {
+      "bytes": 400,
+      "sha256": "c43f0f16236b95c4cef29910ff5799bba00b407bdf68d652eee1983114f4be9b"
+    },
+    "meshes/env_01_pipette_collision_14.obj": {
+      "bytes": 400,
+      "sha256": "cd282ce70772533fc72705ff59ec9f235524322776d9c3646976d297661ff0f1"
+    },
+    "meshes/env_01_pipette_collision_15.obj": {
+      "bytes": 396,
+      "sha256": "94745e72a8e170b3ca3ad81eaf2e636647eef086b6dff4a19bccd2505da9adda"
+    },
+    "meshes/env_01_pipette_collision_16.obj": {
+      "bytes": 376,
+      "sha256": "dfafeb1d3e4fb205290898e560c38dd9a07e82a255392396e145964156bdc956"
+    },
+    "meshes/env_01_pipette_collision_17.obj": {
+      "bytes": 400,
+      "sha256": "59c857ae9c698c715a6c69fe2f9ad6eae4b0a3a866aa532674241ebec317cba8"
+    },
+    "meshes/env_01_pipette_collision_18.obj": {
+      "bytes": 400,
+      "sha256": "5ccbacc840e2fad65471eae0d91975806d7ce4ac261f78cbde149a48091069f8"
+    },
+    "meshes/env_01_pipette_collision_19.obj": {
+      "bytes": 1299,
+      "sha256": "6375b04f2dd934bf507bec52ee9e1512d208f2ede0b79b5ab8089b0801e7a964"
+    },
+    "meshes/env_01_pipette_collision_2.obj": {
+      "bytes": 1669,
+      "sha256": "8c1e34ed583454756fbce3b3e7cda6e05693b41776f1b4d7f001ec46222a91f4"
+    },
+    "meshes/env_01_pipette_collision_20.obj": {
+      "bytes": 1768,
+      "sha256": "7a776be8537115f941e95743988b2498d7e4284a6b71bb92e8795c3bc9aa2d35"
+    },
+    "meshes/env_01_pipette_collision_3.obj": {
+      "bytes": 5551,
+      "sha256": "cca13dea4d7501ff662b8fc61b6ff5cfe78ed6581c4915d91e23b784f070e9c4"
+    },
+    "meshes/env_01_pipette_collision_4.obj": {
+      "bytes": 5355,
+      "sha256": "397caac84d64e492eed86e0cc7815216b0b288bc7c583a546da31e07cd539264"
+    },
+    "meshes/env_01_pipette_collision_5.obj": {
+      "bytes": 3643,
+      "sha256": "1c1da33121ea2a23be5d8ae896465dfdafc4a0f7165981218c7b72c5194b7334"
+    },
+    "meshes/env_01_pipette_collision_6.obj": {
+      "bytes": 400,
+      "sha256": "b7c60fdefdc7a20f00d22e7447ceef41985584e3dde3a63dd536691273af34ec"
+    },
+    "meshes/env_01_pipette_collision_7.obj": {
+      "bytes": 396,
+      "sha256": "547f5ba22baa45b9c9eeb0aaa11a9e8b041e4c73f9cee5df1004f503dcaa3ea9"
+    },
+    "meshes/env_01_pipette_collision_8.obj": {
+      "bytes": 392,
+      "sha256": "b889b2789cc5c43391905cc3f95a30c75413424f89c6d9ef8ede19897791b297"
+    },
+    "meshes/env_01_pipette_collision_9.obj": {
+      "bytes": 396,
+      "sha256": "d7a4c5f28f49447b7c3e29b727fbf1e4854a0fa11e74747da9ee5c8138efb45a"
+    },
+    "meshes/env_01_pipette_visual_0.obj": {
+      "bytes": 19668,
+      "sha256": "098c677de1d985967286769f287ee6dffc2abb607399c92550e2124e325d65a4"
+    },
+    "meshes/env_01_pipette_visual_1.obj": {
+      "bytes": 5154,
+      "sha256": "dbfded3d764b6e32d23d12853d46508173593d72149e1daaeb0620504f998e75"
+    },
+    "meshes/env_01_pipette_visual_2.obj": {
+      "bytes": 17784,
+      "sha256": "12ba12ea587ab3e898898b1b60fe31f064b2fe7f1254e9130c5f4bce8e5c3324"
+    },
+    "meshes/env_01_pipette_visual_3.obj": {
+      "bytes": 15278,
+      "sha256": "bd0ee516d8d4bcc461bb7a3e46b774b1456a5318c4668403d51ac4acf31bd864"
+    },
+    "meshes/env_01_pipette_visual_4.obj": {
+      "bytes": 19483,
+      "sha256": "22e8bdac94ce3a4dd577449a275cb9ac09cb1c40d4bbdc23ed50777687f4d91d"
+    },
+    "meshes/env_01_pipette_visual_5.obj": {
+      "bytes": 400,
+      "sha256": "522ce2d22e572dcf657171eb1d2e92cd87d44fba77587218df28d77360dcaebb"
+    },
+    "meshes/env_01_pipette_visual_6.obj": {
+      "bytes": 5135,
+      "sha256": "ea70837419233f22ae18b88a2fc1dad6769aeeab8a809298af0a318fa7e81b27"
+    },
+    "meshes/env_02_cylinder_collision_0.obj": {
+      "bytes": 23287,
+      "sha256": "3784d2ab3ea0bd40ebcc68ad3ea1c60b26b237e517340bdef3c02a0be47725ca"
+    },
+    "meshes/env_02_cylinder_collision_1.obj": {
+      "bytes": 23017,
+      "sha256": "dff6d86a9e54df752b79c2eb85509ce3e2fcf3117f1bac4bb7b6213d62dabf65"
+    },
+    "meshes/env_02_cylinder_collision_10.obj": {
+      "bytes": 408,
+      "sha256": "170000c0cf2300a3a2332c1638333c9e2e8c9b5616c655b69b4b44e97b90c6e3"
+    },
+    "meshes/env_02_cylinder_collision_11.obj": {
+      "bytes": 408,
+      "sha256": "59da460be583b55f6ef1032864136c9ede12603715f97d342f810b5c63926f47"
+    },
+    "meshes/env_02_cylinder_collision_12.obj": {
+      "bytes": 408,
+      "sha256": "a6bc2ba7bc96b1741aff984365c42055d1268dfe18f257b757be151888558590"
+    },
+    "meshes/env_02_cylinder_collision_13.obj": {
+      "bytes": 408,
+      "sha256": "bf49252f7149be58ffedd1b6f6920fb79f18f7095d533d1bb080f7d2ba030c18"
+    },
+    "meshes/env_02_cylinder_collision_14.obj": {
+      "bytes": 408,
+      "sha256": "663551abd9cea26d1d6017cf77c2ffa606bc2321fad25db60480fdaf67e7fa09"
+    },
+    "meshes/env_02_cylinder_collision_15.obj": {
+      "bytes": 408,
+      "sha256": "3e862983ba5dbf181f5bbca190d38aa85899f605f1606744127781c3d1b429ba"
+    },
+    "meshes/env_02_cylinder_collision_16.obj": {
+      "bytes": 408,
+      "sha256": "9fd84e03c975103481f51478f50038d624f6b1d0fe7f0dedf364d81f017e2fa6"
+    },
+    "meshes/env_02_cylinder_collision_17.obj": {
+      "bytes": 408,
+      "sha256": "089facd1833f417f9cbe56304ab56ef0a1bcebfe034a489fdadd876d0fd325bc"
+    },
+    "meshes/env_02_cylinder_collision_18.obj": {
+      "bytes": 404,
+      "sha256": "87ac227a6733b8d638c13e2d837b3046dba09632c3466940f9a8de06c139f089"
+    },
+    "meshes/env_02_cylinder_collision_19.obj": {
+      "bytes": 408,
+      "sha256": "ec8d032575e14f6aaf5667113be5e96d01ccbfba3d3c6461d3215e758bcb91bb"
+    },
+    "meshes/env_02_cylinder_collision_2.obj": {
+      "bytes": 20631,
+      "sha256": "84ebb3e3ffef5dea24e64b9fe41b8002a18698fb03d5b2d91167cfedd2e254f5"
+    },
+    "meshes/env_02_cylinder_collision_20.obj": {
+      "bytes": 408,
+      "sha256": "fbee16fc6957fd6c47a7ab5d8ee98586621597224ea9dc360697fd07f845f13d"
+    },
+    "meshes/env_02_cylinder_collision_21.obj": {
+      "bytes": 400,
+      "sha256": "ba442f7d12a3a3d10d5cabbdd8dc6e35781b0e78c040cbcd7a8f992e32d980c9"
+    },
+    "meshes/env_02_cylinder_collision_22.obj": {
+      "bytes": 408,
+      "sha256": "43bfecf99aea4602a7f4794610f1a5ed22e45bf209a4a3692f6a6232cbce4757"
+    },
+    "meshes/env_02_cylinder_collision_23.obj": {
+      "bytes": 408,
+      "sha256": "7bb391fccdcf12ad5f56a638746309938a45951d0bd33703dc31254986490690"
+    },
+    "meshes/env_02_cylinder_collision_3.obj": {
+      "bytes": 20686,
+      "sha256": "6ed9fd7bea4e2c8d0b06c3fbf79521d8615a9b219606d621cf9341dd79028171"
+    },
+    "meshes/env_02_cylinder_collision_4.obj": {
+      "bytes": 20680,
+      "sha256": "b1632d251d945ac9baacccc48b71c781dcfdaae9d42711353a30cebec6c243db"
+    },
+    "meshes/env_02_cylinder_collision_5.obj": {
+      "bytes": 408,
+      "sha256": "750aa8d37d15237e0256c6fb963c6482e3fc8b231c8f8c4dc090b13061a3b26b"
+    },
+    "meshes/env_02_cylinder_collision_6.obj": {
+      "bytes": 408,
+      "sha256": "9bc64be6b645cb76b683e3d6f5fef112ad5de2635087d57e73ddaf14258c9191"
+    },
+    "meshes/env_02_cylinder_collision_7.obj": {
+      "bytes": 408,
+      "sha256": "ec01418dcadbf148e33b6982b1a053880b6ce821beca6f505e253177e82c2ab2"
+    },
+    "meshes/env_02_cylinder_collision_8.obj": {
+      "bytes": 408,
+      "sha256": "e05ffe0ad52fc9f06c816582c7ccebf5ff5e0f3b3d2bbbc26de54e578f50f583"
+    },
+    "meshes/env_02_cylinder_collision_9.obj": {
+      "bytes": 408,
+      "sha256": "0e4bb4e1a70f0b9123853635b9363865898a7e6ac04060b5e7e7b9c7218939bd"
+    },
+    "meshes/env_02_cylinder_visual_0.obj": {
+      "bytes": 658419,
+      "sha256": "fa29badba2808cc30abf34d00298e39314b7e9c74d4b1784a5f1df474085bd27"
+    },
+    "meshes/env_02_cylinder_visual_1.obj": {
+      "bytes": 29706,
+      "sha256": "7ad31070011919358a4d7d909e14b93f1978e27553260aa964898e1de490ac37"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_0.obj": {
+      "bytes": 86485,
+      "sha256": "77e4a5f472608e0b0f128e2ad406f931719ac8322e30797e39fe3aeec21c6374"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_1.obj": {
+      "bytes": 42455,
+      "sha256": "a13a25111321cbb533ad12e12eed345a0145570780cafabb3865bf1563f2f5f1"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_10.obj": {
+      "bytes": 8095,
+      "sha256": "a8f253e775b124632795472d9ad6984de0177744e48edbafcf6e15f28197c5f1"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_11.obj": {
+      "bytes": 8105,
+      "sha256": "15bdd40d38ae60c0c9ab3e4573509ff703e4776859a1584ac33a32662f61bbb9"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_12.obj": {
+      "bytes": 7954,
+      "sha256": "21700e1f96a90802db33222deace8098a9861df78fbd9ce3081eef17caf55f33"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_13.obj": {
+      "bytes": 7847,
+      "sha256": "3ad727d470f6670a20b057727faeb67ae39990a0cfe00e0ae574a8a421e37d8f"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_14.obj": {
+      "bytes": 7849,
+      "sha256": "d18169e71db24fa44b45387d09ea55496ab67241767670139725289351b1d75b"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_15.obj": {
+      "bytes": 7827,
+      "sha256": "f0ce9f0469c810413a99c19e86e64cb329bad36a6d64c3a5f36278ed73edebc6"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_16.obj": {
+      "bytes": 7976,
+      "sha256": "813303710580af4a865fa79514ccd15fcf5018ef409d786ea51697cd00f1d045"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_17.obj": {
+      "bytes": 19046,
+      "sha256": "f5487758b43a1e1f875b0ca9e1e832b2d049885a88bbcc01103adcf4322237dd"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_18.obj": {
+      "bytes": 12296,
+      "sha256": "5ce1c195886106a55598af8184bb5a29239a15ef7d0a727fe43df54754969044"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_19.obj": {
+      "bytes": 412,
+      "sha256": "765dd5530491b31158fc5903e1fa3008bb881ae842a5833a142a65ff10cdf859"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_2.obj": {
+      "bytes": 420,
+      "sha256": "bb917a2fa9ae812605cf9973dc7d546065eb325587c499706d607bc6c34374d2"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_20.obj": {
+      "bytes": 400,
+      "sha256": "804f6966ba000ef424639e4768e56a8e3de10cf8b3faa062d57b601915100ef3"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_21.obj": {
+      "bytes": 412,
+      "sha256": "c42b858b2c83c369736070a2b7b6499aadf67965d8b00abd8df10480b34a8050"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_22.obj": {
+      "bytes": 408,
+      "sha256": "0ff391c0ff3c1b1aa8ba26bec750bc2a219a090c33de3bc3a1918d49d5e80a11"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_23.obj": {
+      "bytes": 375035,
+      "sha256": "730fa07fd89f9420894612cc3c59dd717d3d44311aaf3853c675998a58689fda"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_3.obj": {
+      "bytes": 428,
+      "sha256": "4ab049fb91e5085bf173a06a12e86f539157d8526b3dc982d79f03eb0b62e76c"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_4.obj": {
+      "bytes": 4812,
+      "sha256": "c5aff0450edfc723993a9d3c70d5c7cea61d1b034c6abe81c5402aa0ada24965"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_5.obj": {
+      "bytes": 4896,
+      "sha256": "594e053384add3ea7621c0f88bb9bea62efbc1516c8c3f7cf717f5ef7bc12437"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_6.obj": {
+      "bytes": 42993,
+      "sha256": "85fd970f3ab5830441885deb035c28fb4ada6ddfc2e3a40a737143a8232fe22b"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_7.obj": {
+      "bytes": 58000,
+      "sha256": "96f9e63e00c299568af23991a1ed9e81833942c595d7c67491292b7238bbc110"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_8.obj": {
+      "bytes": 663916,
+      "sha256": "80970dc52464c60cceb98815ac8f225eecb2d4fe1a427606651ae4572a4fe6f7"
+    },
+    "meshes/env_03_dome_object_open_assembly_collision_9.obj": {
+      "bytes": 8029,
+      "sha256": "abf73346bc3d233947da6e96fcb2a6c0f3da1d3e23a5dc4893797c4534bea34f"
+    },
+    "meshes/env_03_dome_object_open_assembly_visual_0.obj": {
+      "bytes": 177574,
+      "sha256": "abf242d881743d142792ff2587e657e33f9109fb0b3893be86eb54040f60a438"
+    },
+    "meshes/env_03_dome_object_open_assembly_visual_1.obj": {
+      "bytes": 2548919,
+      "sha256": "1fb4776e0a582827e98ee5e40d49a5f75d3719b2cc3af35c47f5bdf68c53bd98"
+    },
+    "meshes/env_03_dome_object_open_assembly_visual_2.obj": {
+      "bytes": 4246,
+      "sha256": "8fabf348f5d5e895dde37b6d09f336bd1383234dc291288ed4590110196b1a08"
+    },
+    "meshes/env_03_dome_object_open_assembly_visual_3.obj": {
+      "bytes": 771001,
+      "sha256": "62ebfb6b216f748b909a8a0da0ab404a940f0f1d4eccb737f49035c8777cfd0f"
+    },
+    "meshes/env_05_pin_rack_collision_0.obj": {
+      "bytes": 410,
+      "sha256": "27ad1a82b023caa58236fa06dc01c027ad2ce254e0c83f6a331a5ffdd3984332"
+    },
+    "meshes/env_05_pin_rack_collision_1.obj": {
+      "bytes": 408,
+      "sha256": "ef94a5f3bfbbfa7b0a669a84db34c5fcf7a3f80c81efd42b7efd7a6a03a83f0e"
+    },
+    "meshes/env_05_pin_rack_collision_10.obj": {
+      "bytes": 408,
+      "sha256": "678cdd80b43f32f073c1114d75bdc41fefd07c7cdfd7685283347ff97f4bdc85"
+    },
+    "meshes/env_05_pin_rack_collision_100.obj": {
+      "bytes": 2819,
+      "sha256": "1e85dd8eb5a121fc9b92db05109a4cb30b9eaf2f1a7955f74fd48d2b59650313"
+    },
+    "meshes/env_05_pin_rack_collision_101.obj": {
+      "bytes": 2853,
+      "sha256": "a29ca3e1f87ba4118fd6036c02b95345a22081b7d768f142cee00644772b5995"
+    },
+    "meshes/env_05_pin_rack_collision_102.obj": {
+      "bytes": 2851,
+      "sha256": "abb72e40ddef73e1c333b97a3790f9594c33333b1a6e549825e25ff4d95f7a5f"
+    },
+    "meshes/env_05_pin_rack_collision_103.obj": {
+      "bytes": 2809,
+      "sha256": "63b246fc5ab78c8eb81208679da863ec2829af6ab1ba6c87f6cba738f26bbf8c"
+    },
+    "meshes/env_05_pin_rack_collision_104.obj": {
+      "bytes": 2815,
+      "sha256": "0e80c08806f753b7b5b8a3f27fe2013b4f2bd388f2edffec4885ee21d0d1d8d6"
+    },
+    "meshes/env_05_pin_rack_collision_105.obj": {
+      "bytes": 2845,
+      "sha256": "d6c1d6f3ae678ed56cf41e81d5de01e3e188cff1e88bc19f101c800236d93cc5"
+    },
+    "meshes/env_05_pin_rack_collision_106.obj": {
+      "bytes": 2843,
+      "sha256": "e5bd739d3f96771b145eeb9004b4d4709fe94c0ee8c7cf3f7c3580aad635e7b7"
+    },
+    "meshes/env_05_pin_rack_collision_107.obj": {
+      "bytes": 2813,
+      "sha256": "3e992c8974fa1d24493c92f06e9a09b05717168cecc2ea3b42e66dcd7de83828"
+    },
+    "meshes/env_05_pin_rack_collision_108.obj": {
+      "bytes": 2811,
+      "sha256": "e79d8257ab986009d806ea6208f5f56414c2faf5996ad1c8eae94f4ddd967b78"
+    },
+    "meshes/env_05_pin_rack_collision_109.obj": {
+      "bytes": 2841,
+      "sha256": "a87bbaf0e6a298649e61fef9bf45797c15f1482610b199c69d3bffd6472b6c1b"
+    },
+    "meshes/env_05_pin_rack_collision_11.obj": {
+      "bytes": 408,
+      "sha256": "07daf3667f78bc8f869a1437311aca8a24e498f01f2d1485cdf0c19a2a7ab759"
+    },
+    "meshes/env_05_pin_rack_collision_110.obj": {
+      "bytes": 2813,
+      "sha256": "176a75809b3ed419da98386f0ce1be6c4ed4e220a37f57768a77bc82b481806a"
+    },
+    "meshes/env_05_pin_rack_collision_111.obj": {
+      "bytes": 2847,
+      "sha256": "16a89367ac7618825e5f8fd0cd8c6f701fec4e84c0b6ad26936ee5f617332f90"
+    },
+    "meshes/env_05_pin_rack_collision_112.obj": {
+      "bytes": 2823,
+      "sha256": "dfe181f9dcfb05d5202af9c4b3e31d0870ac352827a0847659c1bc8fa22688fe"
+    },
+    "meshes/env_05_pin_rack_collision_113.obj": {
+      "bytes": 2859,
+      "sha256": "a65460ac4f4f60b12f18cc587e24c3e08576ed1e7d8aa096a036b8c15073b1b8"
+    },
+    "meshes/env_05_pin_rack_collision_114.obj": {
+      "bytes": 2859,
+      "sha256": "4d3cc0f922615420659d1875bf4b353e5e9a34074cc2eebff59cb258276f9b5e"
+    },
+    "meshes/env_05_pin_rack_collision_115.obj": {
+      "bytes": 2819,
+      "sha256": "248b91205a5ab2f33b9919a85082ce58c048150bf2833456dcb4b0ac6990f8e1"
+    },
+    "meshes/env_05_pin_rack_collision_116.obj": {
+      "bytes": 2825,
+      "sha256": "46ff293515a37c045f109e5a6314820a2660af5cfeb5abf7c3adf35146603d2c"
+    },
+    "meshes/env_05_pin_rack_collision_117.obj": {
+      "bytes": 2819,
+      "sha256": "0dfd96073eda83341f062848a2bffbcca8c759204218c303ca3cd7b39158b450"
+    },
+    "meshes/env_05_pin_rack_collision_118.obj": {
+      "bytes": 2853,
+      "sha256": "787be3c1c9df42956d26f05b6f93f3b03ec844583c6ebb036034d428ca180370"
+    },
+    "meshes/env_05_pin_rack_collision_119.obj": {
+      "bytes": 2823,
+      "sha256": "44e0c0c03079d5938ebcab9aaf5fc6d80c9bfa864334e25c548fc2a9e2f96cc0"
+    },
+    "meshes/env_05_pin_rack_collision_12.obj": {
+      "bytes": 408,
+      "sha256": "f8aa1f699a8e89657caf80620aec76f04d75e624b6cb7127605a4cb52b1dd036"
+    },
+    "meshes/env_05_pin_rack_collision_120.obj": {
+      "bytes": 2819,
+      "sha256": "c2f3a5a68f568f853c1c82547a131777d304ea24e0b326b0d99429c734a9bd3e"
+    },
+    "meshes/env_05_pin_rack_collision_121.obj": {
+      "bytes": 2859,
+      "sha256": "5988b22dcb226aa04ba2899292ea4ebb02b40c697691dd9eba9048483e896c87"
+    },
+    "meshes/env_05_pin_rack_collision_122.obj": {
+      "bytes": 2823,
+      "sha256": "7f7b43e9dd50efcf47e40fc932b24d2394ab2f2e364fc123d57ad0b152405580"
+    },
+    "meshes/env_05_pin_rack_collision_123.obj": {
+      "bytes": 2855,
+      "sha256": "e5dc1cc905c9cef1fad49a4c6720421b7395956fea6f3082166d07cf3a77f258"
+    },
+    "meshes/env_05_pin_rack_collision_124.obj": {
+      "bytes": 50745,
+      "sha256": "349e68ec5dec1d412b3b2fffde9bdc0f49896a2343d7aba11a612eef1bd77457"
+    },
+    "meshes/env_05_pin_rack_collision_125.obj": {
+      "bytes": 50552,
+      "sha256": "b7daea48d5c2a9f2089816188612e0beabb1b3daae9394bc23fb9945a198653b"
+    },
+    "meshes/env_05_pin_rack_collision_126.obj": {
+      "bytes": 5759,
+      "sha256": "bcdcc8526fe7a42d0b23dcfb60b21e17b03e9fa76bafd32dc51eb56f9c711be1"
+    },
+    "meshes/env_05_pin_rack_collision_127.obj": {
+      "bytes": 5747,
+      "sha256": "c400a256cba30437f9752b56618e99b7756ccb80f48d19b9c8e1a923061cdc59"
+    },
+    "meshes/env_05_pin_rack_collision_128.obj": {
+      "bytes": 400,
+      "sha256": "df42c75d9f00ef58a94b87437f46372d127709951c3cbbc8c596974c5192daee"
+    },
+    "meshes/env_05_pin_rack_collision_129.obj": {
+      "bytes": 402,
+      "sha256": "a5c6ff4fc30c1e25f57b4b7f588adaa77e3b559d9381b4993bf513d2d79d8424"
+    },
+    "meshes/env_05_pin_rack_collision_13.obj": {
+      "bytes": 408,
+      "sha256": "c6973e8b56c119a68796026261d414e2db29a6aa3acde24e0ce56a599809fa7e"
+    },
+    "meshes/env_05_pin_rack_collision_130.obj": {
+      "bytes": 404,
+      "sha256": "f528295e842e8f1c0e8cc3cda7c62359f45afcb2cc88fd601b96b8624a442b3d"
+    },
+    "meshes/env_05_pin_rack_collision_131.obj": {
+      "bytes": 398,
+      "sha256": "09be679b4257a27614e6a96c3bbbd8893bceda37ee486b410791cc52268ef872"
+    },
+    "meshes/env_05_pin_rack_collision_132.obj": {
+      "bytes": 406,
+      "sha256": "8e655a847894fd5e019f8629ea7fac6036f69894fff504b72a8b26a2e7457102"
+    },
+    "meshes/env_05_pin_rack_collision_133.obj": {
+      "bytes": 400,
+      "sha256": "02aa6775f0d21389d1a1bd74a302901f7b13065f50efaa451a949e833e348501"
+    },
+    "meshes/env_05_pin_rack_collision_14.obj": {
+      "bytes": 408,
+      "sha256": "a1fa0afee97bb74a5ad906c9b8a721ac1874c4c07694e864c3258d3dea147de3"
+    },
+    "meshes/env_05_pin_rack_collision_15.obj": {
+      "bytes": 408,
+      "sha256": "3bfad53838df20e92dfe960f12011a97dbff5a10c009db9494553c01e8327325"
+    },
+    "meshes/env_05_pin_rack_collision_16.obj": {
+      "bytes": 404,
+      "sha256": "5c2ec72a1a91a9cdb4d3383749f710d3e0f6ea1b3d230aaaaf4b5a50870c0ffc"
+    },
+    "meshes/env_05_pin_rack_collision_17.obj": {
+      "bytes": 408,
+      "sha256": "edad00bab5f762b2493134ca01b937e9ae0caefa24c2df7f7206f9f51a3159d2"
+    },
+    "meshes/env_05_pin_rack_collision_18.obj": {
+      "bytes": 416,
+      "sha256": "7cd9534893fbff6ddb18a77e067ec35231ebdeec63a50904744d0fb4b661af19"
+    },
+    "meshes/env_05_pin_rack_collision_19.obj": {
+      "bytes": 416,
+      "sha256": "1c14640bb9b52933e8a61ee4d24208ad1538cd8e74adee610be99381bfff6f3b"
+    },
+    "meshes/env_05_pin_rack_collision_2.obj": {
+      "bytes": 412,
+      "sha256": "72c900601fd83778263c3ce7c83b2c51d134bbb601564d810e2325fb2cee961f"
+    },
+    "meshes/env_05_pin_rack_collision_20.obj": {
+      "bytes": 416,
+      "sha256": "1290769d65c9d43db83d77c894bfe5e5528f368f33d11a913cb58c36bad47e15"
+    },
+    "meshes/env_05_pin_rack_collision_21.obj": {
+      "bytes": 416,
+      "sha256": "10d3ba6374b21839b49c66ad4c8573adf3cc925a48951ef1228ccf55dbf814da"
+    },
+    "meshes/env_05_pin_rack_collision_22.obj": {
+      "bytes": 416,
+      "sha256": "34ab7dbc1fc50f11d33694f22780026bda301da03e65d1512371af8561d862bf"
+    },
+    "meshes/env_05_pin_rack_collision_23.obj": {
+      "bytes": 416,
+      "sha256": "dd6b4a77be92fd2a9b97fd5c8e8378c71d3f745fdff363aaf224e16706890195"
+    },
+    "meshes/env_05_pin_rack_collision_24.obj": {
+      "bytes": 416,
+      "sha256": "5aaf2612877fdf24faf93cde430a1b4b1f99557bcf89a51902d1bd8e81855e06"
+    },
+    "meshes/env_05_pin_rack_collision_25.obj": {
+      "bytes": 412,
+      "sha256": "f259129d4c603594890138f5c4e78eadff653ec4b791fca9232b356fd39b0586"
+    },
+    "meshes/env_05_pin_rack_collision_26.obj": {
+      "bytes": 414,
+      "sha256": "951b8ee762040a7173d989d398a8e7c33f8cfd74b8884d2e801273ec7db519c3"
+    },
+    "meshes/env_05_pin_rack_collision_27.obj": {
+      "bytes": 643,
+      "sha256": "4e64ee87cdff983d912e93ad53ca94e286d1cabace91d43a0bc9d7a965139909"
+    },
+    "meshes/env_05_pin_rack_collision_28.obj": {
+      "bytes": 2767,
+      "sha256": "5564f3ad2c3d120fc166e677a7f4c9d7657bf62f28b6d79ea978ccefe6f93f06"
+    },
+    "meshes/env_05_pin_rack_collision_29.obj": {
+      "bytes": 2803,
+      "sha256": "3f679ad486785696a847241f795c585afe020c834c296828021e71568c3b25dc"
+    },
+    "meshes/env_05_pin_rack_collision_3.obj": {
+      "bytes": 408,
+      "sha256": "102660aaabe702b8835e6dde0cb6ecbff3d1c04e9b100b7d32fa40d093f13ccc"
+    },
+    "meshes/env_05_pin_rack_collision_30.obj": {
+      "bytes": 2767,
+      "sha256": "780729aad3377226b882ab66902493fc6e7c9f67e77632cbe95fe9288bad83be"
+    },
+    "meshes/env_05_pin_rack_collision_31.obj": {
+      "bytes": 2767,
+      "sha256": "47f5bac43cf420eba33ff04d137c9b7750d732bd197571634c65f379c29ce0f9"
+    },
+    "meshes/env_05_pin_rack_collision_32.obj": {
+      "bytes": 2769,
+      "sha256": "29bd67957c0b054bedc4c31fee3495d61be003e874b0f5650504c29bb8ef6938"
+    },
+    "meshes/env_05_pin_rack_collision_33.obj": {
+      "bytes": 2803,
+      "sha256": "d4e7ebab895033b0183ff405a36298f95a05c8c207cc03427a9e9cd805647c86"
+    },
+    "meshes/env_05_pin_rack_collision_34.obj": {
+      "bytes": 2761,
+      "sha256": "4c2f3a48c99f2c9daaae88d0a92eb7be2bdb4d86bab05ca1018a04c5338d0fae"
+    },
+    "meshes/env_05_pin_rack_collision_35.obj": {
+      "bytes": 2773,
+      "sha256": "7c96ec8f5bf17eba2d4a967821a3174e7907f1886b7758e48a922b4146e4e00d"
+    },
+    "meshes/env_05_pin_rack_collision_36.obj": {
+      "bytes": 2771,
+      "sha256": "751bdb420535fc9fd5f7a92e1ecc6379ec3fd2027d097899a84a7801597d6be6"
+    },
+    "meshes/env_05_pin_rack_collision_37.obj": {
+      "bytes": 2787,
+      "sha256": "0a71ac417abc01fde357dab0814dcd946970e67e20cf48d639089e7b56a613db"
+    },
+    "meshes/env_05_pin_rack_collision_38.obj": {
+      "bytes": 2799,
+      "sha256": "8fcbf1f1f56d500a0975b6d4a0a1b9a51764a1ddb4353115d25a02d6bc7be2b1"
+    },
+    "meshes/env_05_pin_rack_collision_39.obj": {
+      "bytes": 2795,
+      "sha256": "93adcc89229b0030e23ac2e31d3a0578698cc8c826f3d9a581283904d1a5d415"
+    },
+    "meshes/env_05_pin_rack_collision_4.obj": {
+      "bytes": 414,
+      "sha256": "a5b96e9fb098e662a4fbf66f2b996ea937ae2925974dc6c4eb643184ae3852b2"
+    },
+    "meshes/env_05_pin_rack_collision_40.obj": {
+      "bytes": 2763,
+      "sha256": "ce915fde8cee8feb736a1032b325770251590c05d45c7334ac3a4cc09b31044b"
+    },
+    "meshes/env_05_pin_rack_collision_41.obj": {
+      "bytes": 2795,
+      "sha256": "9136d5ab1e1d63d31e42679b9247acc0aece88508f177f655a380d4318e59584"
+    },
+    "meshes/env_05_pin_rack_collision_42.obj": {
+      "bytes": 2763,
+      "sha256": "1d210c735a1570fff5d04cb4a58708c86afdc3330a6e674b393768a869e0af5f"
+    },
+    "meshes/env_05_pin_rack_collision_43.obj": {
+      "bytes": 2765,
+      "sha256": "3f349b6e6dada74d57315980bb112c27db1e7222bb52018b7ae07b2dfc69d1fc"
+    },
+    "meshes/env_05_pin_rack_collision_44.obj": {
+      "bytes": 2745,
+      "sha256": "40662694d160bd01fc8ff15ebd1e341f21550b397dea87bf3eecbeff0b13f5ca"
+    },
+    "meshes/env_05_pin_rack_collision_45.obj": {
+      "bytes": 2779,
+      "sha256": "72130b77124e64dbda221d5d7af8b7018b6e4c33c5cb563ed3f5112cd27808eb"
+    },
+    "meshes/env_05_pin_rack_collision_46.obj": {
+      "bytes": 2777,
+      "sha256": "aabe0d96d191a41f82f39ebb375da43ba521d8f1270538d39c0e9a37b86d3cc1"
+    },
+    "meshes/env_05_pin_rack_collision_47.obj": {
+      "bytes": 2751,
+      "sha256": "8d850f386aabb70acc103130d8b4345b420e5293070c3fba1f2d06a74d13776a"
+    },
+    "meshes/env_05_pin_rack_collision_48.obj": {
+      "bytes": 2751,
+      "sha256": "f34c4a247c92f7c19b8fec11ca2026409771f2a09517dc1ae5527a6901db3e6e"
+    },
+    "meshes/env_05_pin_rack_collision_49.obj": {
+      "bytes": 2771,
+      "sha256": "36e296538d8e2c520f84e06596e15492e4d81ab539d9c5d18e45dedd031c7996"
+    },
+    "meshes/env_05_pin_rack_collision_5.obj": {
+      "bytes": 404,
+      "sha256": "45ccf4e0ee4f2f2af22ae017e18c242972399ccbac5d3c85f4af9cc2b42bc46e"
+    },
+    "meshes/env_05_pin_rack_collision_50.obj": {
+      "bytes": 2799,
+      "sha256": "8f46376cdb5b0a2dcab69de7360c1e420e3ca6dcfcbb8c045f3eb3308ae3656f"
+    },
+    "meshes/env_05_pin_rack_collision_51.obj": {
+      "bytes": 2807,
+      "sha256": "7a9cad3180c2da22e3da7aef044856dab82c7c45d6d1771b6bfe8afbdfa7e9a3"
+    },
+    "meshes/env_05_pin_rack_collision_52.obj": {
+      "bytes": 2823,
+      "sha256": "89a866415683a7840aab8a176dec8dbb7059e095ec5c2e196f99b914d2c96f1e"
+    },
+    "meshes/env_05_pin_rack_collision_53.obj": {
+      "bytes": 2867,
+      "sha256": "010c84e32cb8586126612d0743b47d7b3e7dbf270bdea55f978f04017091c34b"
+    },
+    "meshes/env_05_pin_rack_collision_54.obj": {
+      "bytes": 2831,
+      "sha256": "c553862f347de12be5e023fcd2bc3ee22c539fda16c70ca49e03effb501524d5"
+    },
+    "meshes/env_05_pin_rack_collision_55.obj": {
+      "bytes": 2827,
+      "sha256": "f20e63b7ead118ce324d25e3db07cd25bdfe78413d3e8adecd9e1e66ac85ef65"
+    },
+    "meshes/env_05_pin_rack_collision_56.obj": {
+      "bytes": 2823,
+      "sha256": "287527a5c2db32180aafbb81936c050ae33fac253aaefce9fd8817a2bbd17cde"
+    },
+    "meshes/env_05_pin_rack_collision_57.obj": {
+      "bytes": 2851,
+      "sha256": "d93594457d0e3053b1b3eec3f88a38973b31286270cbd6930fdec4ff298a72cb"
+    },
+    "meshes/env_05_pin_rack_collision_58.obj": {
+      "bytes": 2849,
+      "sha256": "c8bef3f42ec2695d2ab2ca6b444698d81ef94a9ef6d48b4735f66b488ad7c108"
+    },
+    "meshes/env_05_pin_rack_collision_59.obj": {
+      "bytes": 2819,
+      "sha256": "5814d2a23981cea11924d2a1066e60c803cbab1a46ece86a37d68cb360752feb"
+    },
+    "meshes/env_05_pin_rack_collision_6.obj": {
+      "bytes": 410,
+      "sha256": "86dbe44c73acc3784cdbd8b6f43337e170dee1498d292bd74c9380ff5412cc65"
+    },
+    "meshes/env_05_pin_rack_collision_60.obj": {
+      "bytes": 2819,
+      "sha256": "0bc4731a6beaac5e913f1b0cd4bc680193ab6a8b49580117a433c4ba51308b3b"
+    },
+    "meshes/env_05_pin_rack_collision_61.obj": {
+      "bytes": 2839,
+      "sha256": "8813d5ff5ad54889577a528983c233a03ce419c366e5b84ad6297f9a58ea622b"
+    },
+    "meshes/env_05_pin_rack_collision_62.obj": {
+      "bytes": 2819,
+      "sha256": "4b68bab3263d95e929451a3df849871c821e7804049e13dcf37e1b709874c94c"
+    },
+    "meshes/env_05_pin_rack_collision_63.obj": {
+      "bytes": 2861,
+      "sha256": "cfff94815ef5dc5b9f2e91e0d8b673d17291f1260ad781f268608a99f82a6c62"
+    },
+    "meshes/env_05_pin_rack_collision_64.obj": {
+      "bytes": 2845,
+      "sha256": "4d0a690f6bfc3f0b6da6ce9fa48443faf9ec719665ea23f283ea84dd9e93c258"
+    },
+    "meshes/env_05_pin_rack_collision_65.obj": {
+      "bytes": 2881,
+      "sha256": "c77e40c211f8864a1e2d40a4db447f3ad925dc4538fdf1e41059a892c39e09b5"
+    },
+    "meshes/env_05_pin_rack_collision_66.obj": {
+      "bytes": 2833,
+      "sha256": "e0d84f2106bf70e032a0ec5157e98f7366ba2882e424984bfccf79fce0840da8"
+    },
+    "meshes/env_05_pin_rack_collision_67.obj": {
+      "bytes": 2813,
+      "sha256": "b334bfa0fdac4e8b653e0dfcc4ad69c761dae1dea4856395ff32d78c7ac61614"
+    },
+    "meshes/env_05_pin_rack_collision_68.obj": {
+      "bytes": 2819,
+      "sha256": "9d632cf9067e68a056e73214705e837f08eeb914de381da1dcfaa92f450c94df"
+    },
+    "meshes/env_05_pin_rack_collision_69.obj": {
+      "bytes": 2849,
+      "sha256": "70d68ed4d5191736919953537e0b1a4378d038d94daf49ca4b53afa9e7e74610"
+    },
+    "meshes/env_05_pin_rack_collision_7.obj": {
+      "bytes": 404,
+      "sha256": "fc4dbe5c935b2d13253bec722c47aa4ecf76f9ceac230f89873658e78df4f097"
+    },
+    "meshes/env_05_pin_rack_collision_70.obj": {
+      "bytes": 2843,
+      "sha256": "0ef12f7e8498ce29dd1d7032bfed6562fa737cf1020528e7d4899925d8c94374"
+    },
+    "meshes/env_05_pin_rack_collision_71.obj": {
+      "bytes": 2809,
+      "sha256": "ed2254f9ce4d7e1bcf0905d1fd96510900fb647958d9bdc989bfe758601b7106"
+    },
+    "meshes/env_05_pin_rack_collision_72.obj": {
+      "bytes": 2809,
+      "sha256": "91baff320e014a273248913a97c32a7627a13a92bd0ff8338493c3d6f292217f"
+    },
+    "meshes/env_05_pin_rack_collision_73.obj": {
+      "bytes": 2841,
+      "sha256": "b43d01b211f1cfcd34a9c5c34ea7149173209f1d72495dc4d37b220e1bdaeb2f"
+    },
+    "meshes/env_05_pin_rack_collision_74.obj": {
+      "bytes": 2873,
+      "sha256": "1ba5610cf8940440ddfe782957eac7b776837fb9e69dbeff514e8d6445a642f6"
+    },
+    "meshes/env_05_pin_rack_collision_75.obj": {
+      "bytes": 2869,
+      "sha256": "0a1179c08e52f5b521d2418aa28a8f46d08c48a29d1dad3fc6097b23f01d2199"
+    },
+    "meshes/env_05_pin_rack_collision_76.obj": {
+      "bytes": 2811,
+      "sha256": "851033890d06042bc1878df9cddeaef0a4765dbd31fce39e17293f4b946473ac"
+    },
+    "meshes/env_05_pin_rack_collision_77.obj": {
+      "bytes": 2855,
+      "sha256": "83ddb01ccfa28b1a342bc40dae62b5bb5623f1485704a4d1853dd2872132cf3e"
+    },
+    "meshes/env_05_pin_rack_collision_78.obj": {
+      "bytes": 2855,
+      "sha256": "ee5df23aa1869a6fb0bf91c95efa92d62a954ebd108954f48145c1e3862566db"
+    },
+    "meshes/env_05_pin_rack_collision_79.obj": {
+      "bytes": 2793,
+      "sha256": "d2a58c8e38701f0cfd0524a2eb5c2d5d161dda50b79ce3c3d658845b2614695a"
+    },
+    "meshes/env_05_pin_rack_collision_8.obj": {
+      "bytes": 414,
+      "sha256": "993db6d6682b2ef171f42b0cc8b91c03d2e3741900e0abc23c0b454bce78f6ae"
+    },
+    "meshes/env_05_pin_rack_collision_80.obj": {
+      "bytes": 2801,
+      "sha256": "8c6f3af19da3e70085b0a08a577d34b6177ed81f002a97a624fc5c246496bb11"
+    },
+    "meshes/env_05_pin_rack_collision_81.obj": {
+      "bytes": 2831,
+      "sha256": "a96f035d6e7dc3d5d203b101d508a72d20bd19d8d81b41290ede302edd489fb6"
+    },
+    "meshes/env_05_pin_rack_collision_82.obj": {
+      "bytes": 2829,
+      "sha256": "8d0a114db87e0d53f682268602c8e5ee92c638fa8b9dab31a718254fe930c341"
+    },
+    "meshes/env_05_pin_rack_collision_83.obj": {
+      "bytes": 2795,
+      "sha256": "1b89f962337bec2a6a60feaf0c77a8b28d2b6ac40042012081e063999f80d944"
+    },
+    "meshes/env_05_pin_rack_collision_84.obj": {
+      "bytes": 2795,
+      "sha256": "cc8f8fc7c220a3c77b53e8ad039e6fc4f20804289beb167efe0a236886ffd55e"
+    },
+    "meshes/env_05_pin_rack_collision_85.obj": {
+      "bytes": 2827,
+      "sha256": "8a97ecd0de82040eda54f77f472b6aab5d7aa745497f5f6922af8c76045efc07"
+    },
+    "meshes/env_05_pin_rack_collision_86.obj": {
+      "bytes": 2819,
+      "sha256": "e73f8d24886b10237f678258e3e7438399ca4798df58141f2c6efe8b8891e576"
+    },
+    "meshes/env_05_pin_rack_collision_87.obj": {
+      "bytes": 2851,
+      "sha256": "ca7326b2e2e693913fab1106ee2fed77165f3d2cc10a20250512a1268e63a016"
+    },
+    "meshes/env_05_pin_rack_collision_88.obj": {
+      "bytes": 2815,
+      "sha256": "6cd4148f08f144cf837f2d47fbe46e878d29b1f90c8faf9ab459b83c21db4a3e"
+    },
+    "meshes/env_05_pin_rack_collision_89.obj": {
+      "bytes": 2855,
+      "sha256": "c243ec3b307345a257be28a72efca025f68c96bd34c484b7149c3a49503eb480"
+    },
+    "meshes/env_05_pin_rack_collision_9.obj": {
+      "bytes": 408,
+      "sha256": "074091ad4716f340898771b7d0b21a1012a5e36aca2162d67d2870e4dd09bb89"
+    },
+    "meshes/env_05_pin_rack_collision_90.obj": {
+      "bytes": 2855,
+      "sha256": "8e52baf8ff53337e8efeaff5593820f5189ad3955f8a96881c34a89e76554ed8"
+    },
+    "meshes/env_05_pin_rack_collision_91.obj": {
+      "bytes": 2815,
+      "sha256": "d03f11daa4f690634732c20de31c2315651c15be78a67ba904c1ebd15e6933c2"
+    },
+    "meshes/env_05_pin_rack_collision_92.obj": {
+      "bytes": 2817,
+      "sha256": "908ebdbed24065a5e39af252d3a9436a1a6b0d7b3072875d5ddbe49cedb75f18"
+    },
+    "meshes/env_05_pin_rack_collision_93.obj": {
+      "bytes": 2847,
+      "sha256": "9a94ceee5e6bfbc6d37ab2dc49584d5ead210a325a81700f73d26dc55990b166"
+    },
+    "meshes/env_05_pin_rack_collision_94.obj": {
+      "bytes": 2845,
+      "sha256": "8824475739b91909eeeee4a1d692c11be69fa4f2ab05900f13eedb7777627010"
+    },
+    "meshes/env_05_pin_rack_collision_95.obj": {
+      "bytes": 2815,
+      "sha256": "e8d7fbd0a191445a765c158fe96cd9a15c8fbf711709dc3dea8faea64813a82e"
+    },
+    "meshes/env_05_pin_rack_collision_96.obj": {
+      "bytes": 2815,
+      "sha256": "707afac51b2e865e8f8eb2dc78210123c54ea83705dda408a3893a31c9151653"
+    },
+    "meshes/env_05_pin_rack_collision_97.obj": {
+      "bytes": 2835,
+      "sha256": "d08e38cc4e3fe62e15866a6812d1a27aa155b398673a73d0b30f94ca81e3ca59"
+    },
+    "meshes/env_05_pin_rack_collision_98.obj": {
+      "bytes": 2815,
+      "sha256": "cc6e78467be0849281eed6c637991d70f9f399b283f6fabe1b25230cf6c23593"
+    },
+    "meshes/env_05_pin_rack_collision_99.obj": {
+      "bytes": 2847,
+      "sha256": "a4ac19e02ef7748306420412d91fe7d50177d26be63d8993762e90f23ca589f2"
+    },
+    "meshes/env_05_pin_rack_visual_0.obj": {
+      "bytes": 410,
+      "sha256": "5ac1b8eae5666c1692c4daff2ec2037a66d231bd2d78f040cc405a135a928730"
+    },
+    "meshes/env_05_pin_rack_visual_1.obj": {
+      "bytes": 408,
+      "sha256": "1825407536bdae64c63b9b40528120dadec9f3a49ef405d80b99be7eb51b6f2f"
+    },
+    "meshes/env_05_pin_rack_visual_10.obj": {
+      "bytes": 408,
+      "sha256": "18b93c219f0e00d94497a73a26873958feefd2ceca4373c657c99c2f3a525208"
+    },
+    "meshes/env_05_pin_rack_visual_100.obj": {
+      "bytes": 6874,
+      "sha256": "bae9dce04a0956b024bd893a8ab8c406093a17a898877359e4df155808c8820c"
+    },
+    "meshes/env_05_pin_rack_visual_101.obj": {
+      "bytes": 6835,
+      "sha256": "9f367915c3fc2b6ba588b5ee63f617d44a56bb91d59716651ba07bb712e6791c"
+    },
+    "meshes/env_05_pin_rack_visual_102.obj": {
+      "bytes": 6878,
+      "sha256": "4cfd0bc0473025cf200a0a0e79f618073e5e2052c69debd9017a8b91ccabda88"
+    },
+    "meshes/env_05_pin_rack_visual_103.obj": {
+      "bytes": 6882,
+      "sha256": "159d115dfd4ed6c0842f6f4d65459d535adac869b694c7ee61e9f403b833bfc8"
+    },
+    "meshes/env_05_pin_rack_visual_104.obj": {
+      "bytes": 6888,
+      "sha256": "ec5d9cb461a17ee02ad31b50722f7d2c7fbf4288c48857c22c869f80bf0c9857"
+    },
+    "meshes/env_05_pin_rack_visual_105.obj": {
+      "bytes": 6888,
+      "sha256": "ec6867af6c0eea3e29829deec6b75d6c7e2f14d09fd532fe12984757e5ae60ba"
+    },
+    "meshes/env_05_pin_rack_visual_106.obj": {
+      "bytes": 6882,
+      "sha256": "b93e150e3afb19e2b1fe4fef6ed7513f277a99643213903b507b9b437b43665a"
+    },
+    "meshes/env_05_pin_rack_visual_107.obj": {
+      "bytes": 6874,
+      "sha256": "0c9bbebcbbe123fc4dc669ffc5843e52e8fca32e27709fa932bebc9f8b6dbb90"
+    },
+    "meshes/env_05_pin_rack_visual_108.obj": {
+      "bytes": 6863,
+      "sha256": "dbd8ddcb9e45b1b57e7c9dd1c1ef92aac0fd1e912c51b277751d0e11a71cfb96"
+    },
+    "meshes/env_05_pin_rack_visual_109.obj": {
+      "bytes": 6803,
+      "sha256": "64407e0fa9d31f149bdaaa85090e4bf68c2272d1f922b9632773a50a4d701c7c"
+    },
+    "meshes/env_05_pin_rack_visual_11.obj": {
+      "bytes": 408,
+      "sha256": "a34cdbb1b2a5cf18b3523c86efe4fcc0ecec95ca907a8223cdf16438cf7a610d"
+    },
+    "meshes/env_05_pin_rack_visual_110.obj": {
+      "bytes": 6823,
+      "sha256": "9d2e75ea4aee165a28f8cc0f676ef3ff0a697128c785893192e92b4ce8ec383a"
+    },
+    "meshes/env_05_pin_rack_visual_111.obj": {
+      "bytes": 6861,
+      "sha256": "08a7bad2375411bd3f64e439dd04445910494165cbf1d6ca360f4c37e77b0ea0"
+    },
+    "meshes/env_05_pin_rack_visual_112.obj": {
+      "bytes": 6879,
+      "sha256": "e4eb82de386eb8471ae4e1fa24c2c9b791a32910e3c77f3aaebad76e7c0c53a0"
+    },
+    "meshes/env_05_pin_rack_visual_113.obj": {
+      "bytes": 6858,
+      "sha256": "c1b3edb63fda8735b8f3d0aa0e73cb6864a8344bd863d169a22a0e863a5fdaaa"
+    },
+    "meshes/env_05_pin_rack_visual_114.obj": {
+      "bytes": 6874,
+      "sha256": "8c2173c387b9ea50209398c3aea441b9441055f6325dc585eb62658d681f3cf4"
+    },
+    "meshes/env_05_pin_rack_visual_115.obj": {
+      "bytes": 6872,
+      "sha256": "d2c3b810bc0bbffef12e7282b5a3d287a116cabf43b4776189369d9bb04dd5ca"
+    },
+    "meshes/env_05_pin_rack_visual_116.obj": {
+      "bytes": 6878,
+      "sha256": "a7af938236f2bba024ba59ae84abb17b04d51bd085215f45ee056ba5cebece7f"
+    },
+    "meshes/env_05_pin_rack_visual_117.obj": {
+      "bytes": 6878,
+      "sha256": "dbf8ace0fbaca3dd59b33521e6b3a2d496cc6728b36d171e8eda69138eb91bb1"
+    },
+    "meshes/env_05_pin_rack_visual_118.obj": {
+      "bytes": 6872,
+      "sha256": "7f5890c877e26bf383af8050e03a523493545afd53981660a882d3e3b5e27bbb"
+    },
+    "meshes/env_05_pin_rack_visual_119.obj": {
+      "bytes": 6868,
+      "sha256": "77fa30d8e9829491c1da5a2de5f8f2012abefbf1648e69d3bb6304d70d6e4a17"
+    },
+    "meshes/env_05_pin_rack_visual_12.obj": {
+      "bytes": 408,
+      "sha256": "37ba0d50ad04b9b78f633e536ec9320863a75b2a96ce8efd3fe86fd318c8943f"
+    },
+    "meshes/env_05_pin_rack_visual_120.obj": {
+      "bytes": 6880,
+      "sha256": "e8148519db408f6b12a64b8940c4c68b75853b3888a4a6b34a960c354f8880d1"
+    },
+    "meshes/env_05_pin_rack_visual_121.obj": {
+      "bytes": 6844,
+      "sha256": "1346f741180e51b77aa1d56852ff1859f29936b68c29ba33a8de96725f97e66a"
+    },
+    "meshes/env_05_pin_rack_visual_122.obj": {
+      "bytes": 6866,
+      "sha256": "de0680ed4a1ba74e9a8a63bea611bf00d9d8ee9bf9207afbb2983e12a38af2e3"
+    },
+    "meshes/env_05_pin_rack_visual_123.obj": {
+      "bytes": 6878,
+      "sha256": "b8cb823165a53409a44366bd4e6524c9039fd50a68a916989dfcbb38b8ca6ce0"
+    },
+    "meshes/env_05_pin_rack_visual_124.obj": {
+      "bytes": 6872,
+      "sha256": "0d5b1d35e07eb63fdb1f034e2e0cfc2fa587a1bc4eeb1136c671e71a93ee9aa0"
+    },
+    "meshes/env_05_pin_rack_visual_125.obj": {
+      "bytes": 6874,
+      "sha256": "610dee27f033032b2a892672b4161ebe4cf09cb05c0aaeba0684f280a3968b29"
+    },
+    "meshes/env_05_pin_rack_visual_126.obj": {
+      "bytes": 6874,
+      "sha256": "d7abe9984d2ddd524f2b1d023b3e226126a7b8ba97b84cf3522af770204c1323"
+    },
+    "meshes/env_05_pin_rack_visual_127.obj": {
+      "bytes": 6882,
+      "sha256": "9037d45f46aa5271bdc0b5d180d25fa576469b7cfc68daf21da71455ed8afdbe"
+    },
+    "meshes/env_05_pin_rack_visual_128.obj": {
+      "bytes": 54659,
+      "sha256": "1f5d769d75fe3d5623d696ab308bf109e0d14f9756ee3926b58387ee67a147b9"
+    },
+    "meshes/env_05_pin_rack_visual_129.obj": {
+      "bytes": 54457,
+      "sha256": "13abbb130405e71656c3d793789393a1af82b85ae53651eeb52a817b6f0228c2"
+    },
+    "meshes/env_05_pin_rack_visual_13.obj": {
+      "bytes": 408,
+      "sha256": "f99c620fc1bbfbee79a9a44de69e16578861f143470a014c9a58be7f745f15fc"
+    },
+    "meshes/env_05_pin_rack_visual_130.obj": {
+      "bytes": 5878,
+      "sha256": "1b7d3e03cf369831dbb9939c39535d4ecfbddcec3f71e2660c6315250dba5e63"
+    },
+    "meshes/env_05_pin_rack_visual_131.obj": {
+      "bytes": 5863,
+      "sha256": "e1e4e78addbc030da155c82835a3e36d5618ae94640a1efb9e8e437d0fb67c9c"
+    },
+    "meshes/env_05_pin_rack_visual_132.obj": {
+      "bytes": 400,
+      "sha256": "9351befb50ce381e21650ecd8fdead5c13f8b7662d1002deefa73c7c225bf5cc"
+    },
+    "meshes/env_05_pin_rack_visual_133.obj": {
+      "bytes": 403,
+      "sha256": "e1c6aab91c2342720b425bc1dd5beaa911527bc87f9112ce572d1fe2fdd5b01a"
+    },
+    "meshes/env_05_pin_rack_visual_134.obj": {
+      "bytes": 404,
+      "sha256": "e5135a8ad9c625ac038eae227e1198506643ac7cac43c663274c03c8d1cbfffa"
+    },
+    "meshes/env_05_pin_rack_visual_135.obj": {
+      "bytes": 398,
+      "sha256": "f77557b72fd4235f9c1ca35400a29fb5c03c7d250608dd79890057e32cb59d99"
+    },
+    "meshes/env_05_pin_rack_visual_136.obj": {
+      "bytes": 406,
+      "sha256": "2b28af530931b9797450f07a0eeb5cbc8261418d21924dd614fb76dee31badc2"
+    },
+    "meshes/env_05_pin_rack_visual_137.obj": {
+      "bytes": 400,
+      "sha256": "6949f0fba1e9f94b7dbcdc8a1006f56a588317fe35667dbc38ff9767511d3d0a"
+    },
+    "meshes/env_05_pin_rack_visual_14.obj": {
+      "bytes": 406,
+      "sha256": "8ddb50a3c83791b3093d23555bfb06af097b5b2da4ba1798dd556ef32c4263d0"
+    },
+    "meshes/env_05_pin_rack_visual_15.obj": {
+      "bytes": 404,
+      "sha256": "4041e2345c0c08ef66495e42f92d06561cd46f6e755d94852c628f717586b7dd"
+    },
+    "meshes/env_05_pin_rack_visual_16.obj": {
+      "bytes": 400,
+      "sha256": "ca3c31ed4b5099ba5a5538d7c518376e6a1d96c91e5e0e506bcb7716bf51d70c"
+    },
+    "meshes/env_05_pin_rack_visual_17.obj": {
+      "bytes": 404,
+      "sha256": "cce43dc7818f13fea49012d526f0cce10d570d45b56117b39ca0cb914fb7cab5"
+    },
+    "meshes/env_05_pin_rack_visual_18.obj": {
+      "bytes": 416,
+      "sha256": "d74f0cb936725170f2aaff412d1479922df16601348af6e83f321378dc2c6799"
+    },
+    "meshes/env_05_pin_rack_visual_19.obj": {
+      "bytes": 416,
+      "sha256": "86e10045d081032334f38153f284a1290b82a3775219d93f8412ff74f4534ba5"
+    },
+    "meshes/env_05_pin_rack_visual_2.obj": {
+      "bytes": 412,
+      "sha256": "a4697c7fc5287ccb0821ed295e42f12c620536a0f01342f9b83acd855e2b2792"
+    },
+    "meshes/env_05_pin_rack_visual_20.obj": {
+      "bytes": 416,
+      "sha256": "d47f08ad84a004ab0728e2f35cd2210d16607734499d8a8b209fe57a0bad7225"
+    },
+    "meshes/env_05_pin_rack_visual_21.obj": {
+      "bytes": 416,
+      "sha256": "cae6b72704150d834fd233dac601158e4f8eb8a7fe36b20f610619375ff02db0"
+    },
+    "meshes/env_05_pin_rack_visual_22.obj": {
+      "bytes": 416,
+      "sha256": "9a6fbfca778017762a915b0e75756bfece53216adec68d0674f0905f785e5307"
+    },
+    "meshes/env_05_pin_rack_visual_23.obj": {
+      "bytes": 416,
+      "sha256": "01ef05ce6275b98c08c797a17253ba52466e90bc3192a9f610217f874cf4bec7"
+    },
+    "meshes/env_05_pin_rack_visual_24.obj": {
+      "bytes": 416,
+      "sha256": "d0f9162f97a68714e544f987c6f89c3eb66bfbf3d3743f41d1fcc6e268a76e1e"
+    },
+    "meshes/env_05_pin_rack_visual_25.obj": {
+      "bytes": 412,
+      "sha256": "6fe8bf0c36e1bba554386e755183f8cc72b48930dd6f3220071037b12cbbcb16"
+    },
+    "meshes/env_05_pin_rack_visual_26.obj": {
+      "bytes": 414,
+      "sha256": "defec7ffefe1b9658deeef9bf807e6a65539c60d34567075209b667478c7ecf7"
+    },
+    "meshes/env_05_pin_rack_visual_27.obj": {
+      "bytes": 804949,
+      "sha256": "bc74c31c7871402f52b16d18187b5f1a29eccc926b9a7fbc19d97780539037fe"
+    },
+    "meshes/env_05_pin_rack_visual_28.obj": {
+      "bytes": 404,
+      "sha256": "000b43521865459df9532816811d734c3dfdfdab328ea53b67d6cc6a697daa6e"
+    },
+    "meshes/env_05_pin_rack_visual_29.obj": {
+      "bytes": 412,
+      "sha256": "096215f0ce82754e21ed25f8f4cea60dc0d22ed6c4e092723fc4b76532f807b7"
+    },
+    "meshes/env_05_pin_rack_visual_3.obj": {
+      "bytes": 406,
+      "sha256": "12b45a922142aa8704a7e678dd7b7aaa505d30bd0d41c2ccef053ac20b4d1731"
+    },
+    "meshes/env_05_pin_rack_visual_30.obj": {
+      "bytes": 404,
+      "sha256": "246180f576c44c3797955d0a2c20112eb4bd42465b22fec8ea45118662e4a82a"
+    },
+    "meshes/env_05_pin_rack_visual_31.obj": {
+      "bytes": 408,
+      "sha256": "dbf08f4622fa1fdeedef3f7718dcf1ed0120a425e672716369663c7773969567"
+    },
+    "meshes/env_05_pin_rack_visual_32.obj": {
+      "bytes": 6754,
+      "sha256": "42a5457c12f7918b1096372b4567861382632c7f057ecbdf252db429756c2bcd"
+    },
+    "meshes/env_05_pin_rack_visual_33.obj": {
+      "bytes": 6754,
+      "sha256": "09b06c4a87ba84625ab2ef07e22880a1481b76bebb84d56aa014a7c41077a45c"
+    },
+    "meshes/env_05_pin_rack_visual_34.obj": {
+      "bytes": 6748,
+      "sha256": "ea2c6b3f509b3b131e1073704a6acaf0fbd6ec108c4b59222c10caa4b5e1cbe3"
+    },
+    "meshes/env_05_pin_rack_visual_35.obj": {
+      "bytes": 6746,
+      "sha256": "e8d8835fc82677f4d541911e877af5733cb3504ac7f598ee87a1594277bd132d"
+    },
+    "meshes/env_05_pin_rack_visual_36.obj": {
+      "bytes": 6754,
+      "sha256": "e41eeb9da64e31cbfa52372e854160b9e81eaaae90355e5334a31fd9d291e2e9"
+    },
+    "meshes/env_05_pin_rack_visual_37.obj": {
+      "bytes": 6720,
+      "sha256": "f8dcfe5277399d156c43e9c1a31499906bb3d4070af0d3b2c6c997d014f546b9"
+    },
+    "meshes/env_05_pin_rack_visual_38.obj": {
+      "bytes": 6744,
+      "sha256": "b00baee0450786a1502751b6ffc0bf46d192d99fddc70c292ec42cc494aeebba"
+    },
+    "meshes/env_05_pin_rack_visual_39.obj": {
+      "bytes": 6768,
+      "sha256": "b519b5b52ab7f27a7c35274a6e0380e4c350b0c37ef167476b7c277cd86df6e2"
+    },
+    "meshes/env_05_pin_rack_visual_4.obj": {
+      "bytes": 416,
+      "sha256": "56879c64af449a0e70739f76cdfc9dbc0c47fc45123f468682da4e5c03ed0cfe"
+    },
+    "meshes/env_05_pin_rack_visual_40.obj": {
+      "bytes": 6770,
+      "sha256": "7ad10746d06b60421a0b72de3f6a04cdbfa5352aa8199b4bc64dfe24aa487c80"
+    },
+    "meshes/env_05_pin_rack_visual_41.obj": {
+      "bytes": 6730,
+      "sha256": "8946723c9ac64ea04c4e9930732e767d06311bbc196d58a896b1906002326b47"
+    },
+    "meshes/env_05_pin_rack_visual_42.obj": {
+      "bytes": 6760,
+      "sha256": "e47f81a141308dc4abb6392fa697dc40fba61f113ae172aae504af4307222513"
+    },
+    "meshes/env_05_pin_rack_visual_43.obj": {
+      "bytes": 6756,
+      "sha256": "df6d578cf76d21b3f53614e8141b00d078163dd459894edd1a5c35a843ae8877"
+    },
+    "meshes/env_05_pin_rack_visual_44.obj": {
+      "bytes": 6743,
+      "sha256": "bbbf6019325f152678d12a6eef034e5712073e52cdef0d5e92ea08dbca34c872"
+    },
+    "meshes/env_05_pin_rack_visual_45.obj": {
+      "bytes": 6742,
+      "sha256": "69dfb5f3f15d8075615143773c3593004b912a5537edf73c9f74db8924935624"
+    },
+    "meshes/env_05_pin_rack_visual_46.obj": {
+      "bytes": 6748,
+      "sha256": "4c73a0054b9535d0da9ccfafc180a97bd41b9350f7cbbbc190cb6ae0092e796c"
+    },
+    "meshes/env_05_pin_rack_visual_47.obj": {
+      "bytes": 6748,
+      "sha256": "ab519a9911989d79b7962fd955355be44d96df45c1cb5240caa872f27aa5a458"
+    },
+    "meshes/env_05_pin_rack_visual_48.obj": {
+      "bytes": 6770,
+      "sha256": "93cef7c4bc79432bc20ecccf3a5656534898f5934c3c6e7f668ebc6dee3d4d5f"
+    },
+    "meshes/env_05_pin_rack_visual_49.obj": {
+      "bytes": 6729,
+      "sha256": "e1be88e73f04d79a03e239fcec97e70ac9319c9fa977d4aca474b5576db2716f"
+    },
+    "meshes/env_05_pin_rack_visual_5.obj": {
+      "bytes": 404,
+      "sha256": "293e728639237a76c890450262b4149df73ffd17a2c63d6bace4ec77d9cbfb9a"
+    },
+    "meshes/env_05_pin_rack_visual_50.obj": {
+      "bytes": 6730,
+      "sha256": "8f307c4a8a8c2eb61c5034ed25fa5ae84b0ce6d6a5b43a1fe7e9310d62f7aa50"
+    },
+    "meshes/env_05_pin_rack_visual_51.obj": {
+      "bytes": 6730,
+      "sha256": "5d4d90257bdc9d1511dae73de29f7a11ce8526723856a153d66088b2d6212d0b"
+    },
+    "meshes/env_05_pin_rack_visual_52.obj": {
+      "bytes": 6762,
+      "sha256": "e62322de88627292cd621ae21c2d614f776c4db8499a7ff3da78236da1ce108d"
+    },
+    "meshes/env_05_pin_rack_visual_53.obj": {
+      "bytes": 6709,
+      "sha256": "bbaa83aaae8aeb105af9ff2b1dba9620fea5f700ca5e7ab6bda5542f39dae6b3"
+    },
+    "meshes/env_05_pin_rack_visual_54.obj": {
+      "bytes": 6749,
+      "sha256": "aa41b3f4945e245a5f68aa7d37059bbaae6e3a01cf4437e8d65538945267f9ee"
+    },
+    "meshes/env_05_pin_rack_visual_55.obj": {
+      "bytes": 6746,
+      "sha256": "9b44e9285f71e12c271bbee9554b4a8db13974d129b497f9271098231a45dfbf"
+    },
+    "meshes/env_05_pin_rack_visual_56.obj": {
+      "bytes": 6904,
+      "sha256": "ceefe87317d1c2117cd3b168a12b0031293a414d32886421f454716bf3ba4c2a"
+    },
+    "meshes/env_05_pin_rack_visual_57.obj": {
+      "bytes": 6909,
+      "sha256": "4b3881630d7c349b653e39f115f94c9b5158591fcfc6155897c63aae4c72139b"
+    },
+    "meshes/env_05_pin_rack_visual_58.obj": {
+      "bytes": 6889,
+      "sha256": "2a9a5b6406c6d9b3a1808a0538a68f20bee234d7063b58740faa6545b10ae13b"
+    },
+    "meshes/env_05_pin_rack_visual_59.obj": {
+      "bytes": 6883,
+      "sha256": "d1c432fc31f96b4c9efe5934433afe8ba7b6a8084774d05555d9c5781a29d596"
+    },
+    "meshes/env_05_pin_rack_visual_6.obj": {
+      "bytes": 412,
+      "sha256": "e6d1a37c93dce616e393cad3e3a4a90952fd572c63d4820e346ab78170847704"
+    },
+    "meshes/env_05_pin_rack_visual_60.obj": {
+      "bytes": 6899,
+      "sha256": "8011ec4fa313a05616e09480bae61735b2337437fb81b01f9fd0574f0377215e"
+    },
+    "meshes/env_05_pin_rack_visual_61.obj": {
+      "bytes": 6872,
+      "sha256": "1fef868f315e0a18ef34bd7eee6070579c9739e1c567c3e129cb0e39a750001b"
+    },
+    "meshes/env_05_pin_rack_visual_62.obj": {
+      "bytes": 6892,
+      "sha256": "a9d4872851406104824d0cf485eb1bb395f145b390bb5e7a729c1b6558417dbb"
+    },
+    "meshes/env_05_pin_rack_visual_63.obj": {
+      "bytes": 6887,
+      "sha256": "d44f505df71a757e7a145e69dffc322e637e1d62612525d3ec521cc0e271456c"
+    },
+    "meshes/env_05_pin_rack_visual_64.obj": {
+      "bytes": 6896,
+      "sha256": "005262f4af70974927ed29ca5386b220e50d63d81a813b70c208aa90cd25cbbb"
+    },
+    "meshes/env_05_pin_rack_visual_65.obj": {
+      "bytes": 6866,
+      "sha256": "0fd0ad217bb7ea9cca0f855fe254c48a4e9cd82128c88ebc5cc79b88d1c24d18"
+    },
+    "meshes/env_05_pin_rack_visual_66.obj": {
+      "bytes": 6907,
+      "sha256": "a340d28e948c1ec0a6fc36aac5e8ebb7f54cf1925498b584816f830f18c800fb"
+    },
+    "meshes/env_05_pin_rack_visual_67.obj": {
+      "bytes": 6904,
+      "sha256": "3cf2da8fe19507c16d028c49fff1f96810ddab5958c71fe9e96581299730462f"
+    },
+    "meshes/env_05_pin_rack_visual_68.obj": {
+      "bytes": 6922,
+      "sha256": "1afbeb602af11c467257da831ba109f8e6e3476ce66a9489b7c41a5cd49e30d8"
+    },
+    "meshes/env_05_pin_rack_visual_69.obj": {
+      "bytes": 6922,
+      "sha256": "8f6e6f52df2395c8927a997021b22deb1e2de4a17a4f22495aca6871a254fe38"
+    },
+    "meshes/env_05_pin_rack_visual_7.obj": {
+      "bytes": 408,
+      "sha256": "451eec7a713562790e92e75339e7c0abb87c4fea4e5398e1e41702d996342c3c"
+    },
+    "meshes/env_05_pin_rack_visual_70.obj": {
+      "bytes": 6920,
+      "sha256": "29ad156c15a06e669f83a878ab2b8d2a017d5aa8830e62cfd9d91d95c927bde1"
+    },
+    "meshes/env_05_pin_rack_visual_71.obj": {
+      "bytes": 6903,
+      "sha256": "2d072db3bdef91252b5061789dfc11deaa240596c82f3969563724350b215926"
+    },
+    "meshes/env_05_pin_rack_visual_72.obj": {
+      "bytes": 6929,
+      "sha256": "a60afb809e1b72db6b9e1a7a77c82e89b0664f6d11359fd29cc47e12090ba622"
+    },
+    "meshes/env_05_pin_rack_visual_73.obj": {
+      "bytes": 6900,
+      "sha256": "c2929f92e1158cdd11c2f20168784dcfa68a08035aa1e7e693bec09eac498a03"
+    },
+    "meshes/env_05_pin_rack_visual_74.obj": {
+      "bytes": 6903,
+      "sha256": "b89e274a28a0d2d95884c074f2f9c41ddd75e1d19f31f419b3a3f3515ea3e8c3"
+    },
+    "meshes/env_05_pin_rack_visual_75.obj": {
+      "bytes": 6927,
+      "sha256": "d004ed040cb8df2f5f2e9e117725702110abced8317741cbcc3e61bbbd98981d"
+    },
+    "meshes/env_05_pin_rack_visual_76.obj": {
+      "bytes": 6937,
+      "sha256": "9e1650d7a38c74c5f8f1edfe0b58e2eaed5f03df44e6b313dc64446c9af59d8f"
+    },
+    "meshes/env_05_pin_rack_visual_77.obj": {
+      "bytes": 6881,
+      "sha256": "4064fc5bd39982a8b6e3dbfe3550a4fbf78a359ce7ea15d87d377201b1b11341"
+    },
+    "meshes/env_05_pin_rack_visual_78.obj": {
+      "bytes": 6932,
+      "sha256": "a81f75128b46d17816a58fcc6868a9385e4a08f9a7b04800ad6dfde9b1f7abf2"
+    },
+    "meshes/env_05_pin_rack_visual_79.obj": {
+      "bytes": 6927,
+      "sha256": "8551fa067a7bc98fa22c3f4eac69ae971cdc3dd78d525d52df32fdfdf42900bf"
+    },
+    "meshes/env_05_pin_rack_visual_8.obj": {
+      "bytes": 414,
+      "sha256": "66c715e7d0d117a6baa962992e9f056efe2ce22894f37922a4883553063c6563"
+    },
+    "meshes/env_05_pin_rack_visual_80.obj": {
+      "bytes": 6873,
+      "sha256": "56a67ab01b7726a7261a1cb942508cb7411320252cae7f0d59da5f02a4640232"
+    },
+    "meshes/env_05_pin_rack_visual_81.obj": {
+      "bytes": 6888,
+      "sha256": "a1a86fcc12782e7ecd44f6b887b90af87ea214b64f8bb848ada0e84e75a9f1e3"
+    },
+    "meshes/env_05_pin_rack_visual_82.obj": {
+      "bytes": 6882,
+      "sha256": "73fbf15353e046c960d87b51979739618eafc35d9e830a91297cea8dd59b2121"
+    },
+    "meshes/env_05_pin_rack_visual_83.obj": {
+      "bytes": 6873,
+      "sha256": "b4880f668c491355107c6707af36df13df37e024388d8a92596f752231acf9e0"
+    },
+    "meshes/env_05_pin_rack_visual_84.obj": {
+      "bytes": 6879,
+      "sha256": "b90c7118553e58019b110e591280ec88a245a1d8dc738d3ac1ad5c3589ed733d"
+    },
+    "meshes/env_05_pin_rack_visual_85.obj": {
+      "bytes": 6830,
+      "sha256": "a09ab98cbd0ae44e81783c8b40a861a7d8d80a9a46316d9e44efb6eb21a4eece"
+    },
+    "meshes/env_05_pin_rack_visual_86.obj": {
+      "bytes": 6839,
+      "sha256": "79bba9c4705226938dd721f89197206e3cc978a86cf36667c1ebddbab8847c63"
+    },
+    "meshes/env_05_pin_rack_visual_87.obj": {
+      "bytes": 6876,
+      "sha256": "e54af4faad394c8698ac16767c0259eb098dea11679cdd435a64da7e8656b11e"
+    },
+    "meshes/env_05_pin_rack_visual_88.obj": {
+      "bytes": 6875,
+      "sha256": "898c5a8d2686fd54611f97c1ed295d7991ebb2ea1b08f18ee0a4cdb0f76d5491"
+    },
+    "meshes/env_05_pin_rack_visual_89.obj": {
+      "bytes": 6842,
+      "sha256": "68ae2314104fc3ecd1add978cdbee38dc66ca90a0f623bd268f7c7170cb24bca"
+    },
+    "meshes/env_05_pin_rack_visual_9.obj": {
+      "bytes": 408,
+      "sha256": "5e6feb81225d015be4a21b701f38d6ff98748899c7353e29ca5e1777e48a5160"
+    },
+    "meshes/env_05_pin_rack_visual_90.obj": {
+      "bytes": 6874,
+      "sha256": "3f7bbe4f7e28134aba3f8ce2dc6b0d6546f4a5f6628f459cfece1aab1eb61b62"
+    },
+    "meshes/env_05_pin_rack_visual_91.obj": {
+      "bytes": 6871,
+      "sha256": "f19b9efbd3f749746387acc5017e52d541f1f60d20952ff6c512dd0df59bac39"
+    },
+    "meshes/env_05_pin_rack_visual_92.obj": {
+      "bytes": 6876,
+      "sha256": "6949933a51c68899c01a07130d4073fb656e847cbf1f70d05677645cd99587a4"
+    },
+    "meshes/env_05_pin_rack_visual_93.obj": {
+      "bytes": 6866,
+      "sha256": "a527bcf8e774ee4da459da4e4d02b401e9ae7082b61e3642425bb7168863f0bf"
+    },
+    "meshes/env_05_pin_rack_visual_94.obj": {
+      "bytes": 6854,
+      "sha256": "bbaad25b0c61879b28c8fdd2964af9c67d15b9894acce080e28cd33b58b665a3"
+    },
+    "meshes/env_05_pin_rack_visual_95.obj": {
+      "bytes": 6859,
+      "sha256": "80ba1fd3efe74449c4e3ff136eed5a4c2eebe3ab694e543468f77e8c596c7c83"
+    },
+    "meshes/env_05_pin_rack_visual_96.obj": {
+      "bytes": 6884,
+      "sha256": "f2f9d7f5bf2b03f17e842deca40496f21c0cf9dd32aaa3270ed8bda303e6812c"
+    },
+    "meshes/env_05_pin_rack_visual_97.obj": {
+      "bytes": 6852,
+      "sha256": "8f8af6fb26de7753df360571f71d347ac561f300fea6b5feedb06f2722d35896"
+    },
+    "meshes/env_05_pin_rack_visual_98.obj": {
+      "bytes": 6866,
+      "sha256": "6933a51dd49b87389ced732bb9c58dd4690a874e398738ed09292b5ef5e2cae1"
+    },
+    "meshes/env_05_pin_rack_visual_99.obj": {
+      "bytes": 6879,
+      "sha256": "e6d6f1fef0f13bba79501fc7deeb5d8adb7d01e7d40422b3df3ada0674633a08"
+    },
+    "meshes/env_06_pipette_stand_collision_0.obj": {
+      "bytes": 18555,
+      "sha256": "ea872824930180e25e3cda0ea96dbd031f54c1984bba228cc3cd172f65581686"
+    },
+    "meshes/env_06_pipette_stand_visual_0.obj": {
+      "bytes": 1815591,
+      "sha256": "2106b3c588f6a855c431cd7e8791d149236323406723b7888b9fb92e7ae5fb28"
+    },
+    "meshes/env_06_pipette_stand_visual_1.obj": {
+      "bytes": 4121261,
+      "sha256": "79f53322634e2cf8e0989b97735d6f7cc6c5f21d677e20ff7bd85d84ff726692"
+    },
+    "meshes/env_07_table_new_visual_0.obj": {
+      "bytes": 5213,
+      "sha256": "bc749a1d25923ee31b4743aa3979e7284090d4a078186468c49865f827a8fd26"
+    },
+    "scene.xml": {
+      "bytes": 117011,
+      "sha256": "13087160b3bee44cead86ff5d867936aa5e3ec694ee89c459f3f159ebbe1d40c"
+    }
+  }
+}

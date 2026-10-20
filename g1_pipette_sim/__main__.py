@@ -26,16 +26,19 @@ def configure_viewer_camera(camera, model, data, config, name):
 
 def main():
     parser=argparse.ArgumentParser(description='G1/Inspire workspace with gravity, collisions and servo target replay.')
-    parser.add_argument('--dataset',type=Path,default=None,help='Dataset root or HF cache (default: jren313/g1-pipette-3view-hil194; a fitted config retains its recorded dataset unless overridden)')
+    from .environments import ENVIRONMENTS
+    parser.add_argument('--environment',choices=list(ENVIRONMENTS),default=None,help='Workspace/environment selection. lidar opens the calibrated G1 scene; --dataset enables measured-position diagnostics. lab-* adds visual surroundings to the pipette task.')
+    parser.add_argument('--list-environments',action='store_true',help='List environments and exit without loading a dataset.')
+    parser.add_argument('--dataset',type=Path,default=None,help='Dataset root or HF cache (default: cached HIL194, or HIL293 with its matching replay config when HIL194 is absent; explicit inputs are never substituted)')
     parser.add_argument('--episode',type=int,default=None,help='Episode index; default: fitted config episode, otherwise a verified HIL194 pickup example for automatic dynamic replay, or 0')
     parser.add_argument('--mode',choices=['replay','demo'],default='replay',help=(
         'Motion generation (default: replay). replay: follow the selected dataset episode using --source. '
         'demo: generate a 10-second scripted approach/attach/lift/eject trajectory using inverse kinematics, '
         'seeded from the episode initial pose; does not replay its recorded trajectory and ignores --source. '
         'Neither mode runs a learned policy or guarantees task success.'))
-    parser.add_argument('--physics',choices=['dynamic','kinematic'],default='dynamic',help='Dynamic: torque-limited servo tracking and rigid-body objects. Kinematic: original exact-pose preview.')
+    parser.add_argument('--physics',choices=['dynamic','kinematic'],default=None,help='Dynamic: torque-limited servo tracking and rigid-body objects. Kinematic: original exact-pose preview.')
     parser.add_argument('--free-base',action='store_true',help='Remove pelvis support in dynamic mode. No balance controller is included.')
-    parser.add_argument('--source',choices=['state','action','low_level'],default='low_level',help=(
+    parser.add_argument('--source',choices=['state','action','low_level'],default=None,help=(
         'Robot joint trajectory for replay (default: low_level; ignored in demo). '
         'state: measured joint positions, i.e. where the robot actually was. '
         'action: recorded high-level joint/mimic targets, applied directly to servos; this bypasses the TWIST2 controller and is not equivalent to motor replay. '
@@ -62,19 +65,38 @@ def main():
     parser.add_argument('--compare',action='store_true',help='Render three real/sim view pairs; implies --video. Use with replay.')
     parser.add_argument('--output',type=Path,default=Path('outputs/latest'))
     args=parser.parse_args()
+    if args.list_environments:
+        for name,entry in ENVIRONMENTS.items():print(f"{name:24s} {entry['description']}")
+        return
+    imported=args.environment is not None and ENVIRONMENTS[args.environment]['kind']=='imported'
+    args.physics=args.physics or ('kinematic' if imported else 'dynamic')
+    args.source=args.source or ('state' if imported else 'low_level')
     if args.speed<=0 or (args.duration is not None and args.duration<=0):parser.error('speed and duration must be positive')
     if args.free_base and args.physics!='dynamic':parser.error('--free-base requires --physics dynamic')
     if args.compare and args.mode!='replay':parser.error('--compare requires --mode replay')
     if args.headless:os.environ.setdefault('MUJOCO_GL','egl')
     if not args.headless and not (os.environ.get('DISPLAY') or os.environ.get('WAYLAND_DISPLAY')):parser.error('No display found. Use --headless (optionally --video).')
+    if imported:
+        if args.physics!='kinematic' or args.source!='state' or args.mode!='replay' or args.free_base:
+            parser.error('LIDAR currently supports fixed-base measured-state playback only: --physics kinematic --source state --mode replay. Dynamic task replay requires contact/task calibration.')
+        if args.camera!='overview':parser.error('LIDAR currently has an overview camera only; policy camera calibration is not yet available.')
+        from .environments.viewer import run_imported
+        run_imported(args)
+        return
     import mujoco
     import numpy as np
     from .dataset import Episode,DEFAULT_DATASET,resolve_dataset_root
     from .scene import load_config,fit_layout
     from .simulation import Simulation
+    from .replay_defaults import configure_default_replay
+    try:default_note=configure_default_replay(args)
+    except (FileNotFoundError,ValueError) as error:parser.error(str(error))
+    if default_note:print(default_note,flush=True)
     local_config=Path(__file__).resolve().parents[1]/'.local/hil194.json'
     cfg=load_config(args.config or (local_config if local_config.exists() else None))
-    args.dataset=args.dataset or cfg.get('layout_search',{}).get('dataset') or DEFAULT_DATASET
+    args.dataset=args.dataset or cfg.get('layout_search',{}).get('dataset') or cfg.get('replay_audit_setup',{}).get('dataset') or DEFAULT_DATASET
+    try:args.dataset=resolve_dataset_root(args.dataset)
+    except FileNotFoundError as error:parser.error(str(error))
     if args.episode is None:
         args.episode=cfg.get('layout_search',{}).get('episode',0)
         if (args.config is None and args.scene_layout=='auto' and not args.refresh_scene and not args.fit_layout
@@ -131,6 +153,8 @@ def main():
     if args.physics=='dynamic':
         from .dynamics import physics_config
         cfg['physics']=physics_config(cfg)
+    if args.environment is not None:
+        cfg['environment']={'name':args.environment}
     args.output.mkdir(parents=True,exist_ok=True)
     (args.output/'workspace.json').write_text(json.dumps(cfg,indent=2)+'\n')
     print(f'Loading G1/Inspire: {args.mode}, episode {args.episode}, {args.clock} clock',flush=True)

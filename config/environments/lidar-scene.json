@@ -1,0 +1,6 @@
+{
+  "uniform_scale": 0.5,
+  "floor_to_zero": true,
+  "provenance": "Original modeled pipette height 0.508 m versus user-measured 10 inches (0.254 m). Common factor 0.5 also yields a 0.72 m table and is checked against measured-joint pickup poses.",
+  "status": "Metric scale anchored by pipette measurement; object placement remains approximate and requires session-specific validation."
+}

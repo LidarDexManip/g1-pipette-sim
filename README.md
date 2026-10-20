@@ -268,3 +268,12 @@ Camera configs now accept an optional `parent_body` for head/torso/wrist mountin
 The default HIL194 tip-box lid is connected by a passive hinge and can open beyond 180 degrees to rest on the table.
 
 HIL194 ego views now use the corrected camera pose by default for both recording sessions, in `run.sh` and the camera-stream exporter. Use `--camera-pose config` to retain the selected config’s poses.
+
+## Multiple environments
+
+Use `./run.sh --list-environments` to list the two base scenes and eight visual
+lab variants. `./run.sh --environment lidar` opens the converted Blender scene
+with its calibrated dimensions and G1 robot (`./view_lidar.sh --episode 0` plays measured joints). Existing pipette replay keeps the calibrated
+workspace by default; `--environment lab-open-shelves` adds procedural visual
+surroundings. See [ENVIRONMENTS.md](ENVIRONMENTS.md) for conversion, collision
+limitations, architecture, and run commands.

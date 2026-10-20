@@ -53,16 +53,8 @@ def build_xml(config, robot_path=None):
     element(visual,'headlight',ambient=[.35,.35,.35],diffuse=[.65,.65,.65],specular=[.15,.15,.15])
     element(visual,'quality',shadowsize=2048)
     asset=root.find('asset')
-    element(asset,'texture',name='floor_tex',type='2d',builtin='checker',rgb1=[.11,.14,.17],rgb2=[.14,.17,.20],width=256,height=256)
-    element(asset,'material',name='floor_mat',texture='floor_tex',texrepeat=[8,8],texuniform='true')
-    element(world,'light',pos=[.4,-.5,2],dir=[0,0,-1],diffuse=[.8,.8,.8],directional='true')
-    element(world,'geom',name='floor',type='plane',size=[3,3,.02],material='floor_mat',friction=[.8,.005,.0001])
-    element(world,'geom',name='backdrop',type='box',pos=[2.5,0,1.2],size=[.02,3,1.2],rgba=[.035,.055,.075,1])
-    t=config['table'];cx,cy=t['center_xy'];sx,sy=np.asarray(t['size_xy'])/2;top=t['top_z'];th=t['thickness']
-    element(world,'geom',name='table',type='box',pos=[cx,cy,top-th/2],size=[sx,sy,th/2],rgba=[.57,.43,.25,1],friction=[.8,.005,.0001])
-    for dx in [-sx+.04,sx-.04]:
-        for dy in [-sy+.04,sy-.04]:
-            element(world,'geom',type='box',pos=[cx+dx,cy+dy,(top-th)/2],size=[.018,.018,(top-th)/2],rgba=[.22,.24,.26,1])
+    from .environments.workspace import add_workspace
+    add_workspace(root, config)
     payload=config.get('effective_wrist_payload')
     if payload:
         wrist=pelvis.find(".//body[@name='right_wrist_yaw_link']")
@@ -78,6 +70,8 @@ def build_xml(config, robot_path=None):
         parent=world if parent_name is None else world.find(f".//body[@name='{parent_name}']")
         if parent is None: raise ValueError(f'Unknown camera parent body: {parent_name}')
         element(parent,'camera',**attrs)
+    from .environments import add_surroundings
+    add_surroundings(root, config)
     ET.indent(root)
     return ET.tostring(root,encoding='unicode')
 

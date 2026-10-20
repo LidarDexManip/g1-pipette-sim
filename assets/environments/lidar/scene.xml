@@ -1,0 +1,914 @@
+<mujoco model="LIDAR Blender environment">
+  <compiler angle="radian" meshdir="meshes" texturedir="textures" />
+  <option gravity="0 0 -9.81" timestep="0.002" />
+  <visual>
+    <global offwidth="1920" offheight="1080" />
+    <headlight ambient=".45 .45 .45" diffuse=".7 .7 .7" />
+  </visual>
+  <asset>
+    <mesh name="env_00_cylinder_base_visual_0" file="env_00_cylinder_base_visual_0.obj" />
+    <material name="env_material_0" rgba="0.0149999997 0.075000003 0.720000029 1.0" specular=".2" shininess="0.7199999988079071" />
+    <mesh name="env_00_cylinder_base_visual_1" file="env_00_cylinder_base_visual_1.obj" />
+    <material name="env_material_1" rgba="0.959999979 0.970000029 0.970000029 1.0" specular=".2" shininess="0.2799999713897705" />
+    <mesh name="env_00_cylinder_base_collision_0" file="env_00_cylinder_base_collision_0.obj" />
+    <mesh name="env_00_cylinder_base_collision_1" file="env_00_cylinder_base_collision_1.obj" />
+    <mesh name="env_01_pipette_visual_0" file="env_01_pipette_visual_0.obj" />
+    <material name="env_material_2" rgba="0.920000017 0.949999988 0.959999979 1.0" specular=".2" shininess="0.3162277936935425" />
+    <mesh name="env_01_pipette_visual_1" file="env_01_pipette_visual_1.obj" />
+    <material name="env_material_3" rgba="0.720000029 0.180000007 0.189999998 1.0" specular=".2" shininess="0.24494898319244385" />
+    <mesh name="env_01_pipette_visual_2" file="env_01_pipette_visual_2.obj" />
+    <material name="env_material_4" rgba="0.140000001 0.360000014 0.550000012 1.0" specular=".2" shininess="0.2828426957130432" />
+    <mesh name="env_01_pipette_visual_3" file="env_01_pipette_visual_3.obj" />
+    <material name="env_material_5" rgba="0.0199999996 0.0250000004 0.0299999993 1.0" specular=".2" shininess="0.18708288669586182" />
+    <mesh name="env_01_pipette_visual_4" file="env_01_pipette_visual_4.obj" />
+    <material name="env_material_6" rgba="0.100000001 0.289999992 0.439999998 1.0" specular=".2" shininess="0.30000001192092896" />
+    <mesh name="env_01_pipette_visual_5" file="env_01_pipette_visual_5.obj" />
+    <material name="env_material_7" rgba="0.0350000001 0.0450000018 0.0500000007 1.0" specular=".2" shininess="0.2121320366859436" />
+    <mesh name="env_01_pipette_visual_6" file="env_01_pipette_visual_6.obj" />
+    <material name="env_material_8" rgba="0.779999971 0.819999993 0.829999983 1.0" specular=".2" shininess="0.15811389684677124" />
+    <mesh name="env_01_pipette_collision_0" file="env_01_pipette_collision_0.obj" />
+    <mesh name="env_01_pipette_collision_1" file="env_01_pipette_collision_1.obj" />
+    <mesh name="env_01_pipette_collision_2" file="env_01_pipette_collision_2.obj" />
+    <mesh name="env_01_pipette_collision_3" file="env_01_pipette_collision_3.obj" />
+    <mesh name="env_01_pipette_collision_4" file="env_01_pipette_collision_4.obj" />
+    <mesh name="env_01_pipette_collision_5" file="env_01_pipette_collision_5.obj" />
+    <mesh name="env_01_pipette_collision_6" file="env_01_pipette_collision_6.obj" />
+    <mesh name="env_01_pipette_collision_7" file="env_01_pipette_collision_7.obj" />
+    <mesh name="env_01_pipette_collision_8" file="env_01_pipette_collision_8.obj" />
+    <mesh name="env_01_pipette_collision_9" file="env_01_pipette_collision_9.obj" />
+    <mesh name="env_01_pipette_collision_10" file="env_01_pipette_collision_10.obj" />
+    <mesh name="env_01_pipette_collision_11" file="env_01_pipette_collision_11.obj" />
+    <mesh name="env_01_pipette_collision_12" file="env_01_pipette_collision_12.obj" />
+    <mesh name="env_01_pipette_collision_13" file="env_01_pipette_collision_13.obj" />
+    <mesh name="env_01_pipette_collision_14" file="env_01_pipette_collision_14.obj" />
+    <mesh name="env_01_pipette_collision_15" file="env_01_pipette_collision_15.obj" />
+    <mesh name="env_01_pipette_collision_16" file="env_01_pipette_collision_16.obj" />
+    <mesh name="env_01_pipette_collision_17" file="env_01_pipette_collision_17.obj" />
+    <mesh name="env_01_pipette_collision_18" file="env_01_pipette_collision_18.obj" />
+    <mesh name="env_01_pipette_collision_19" file="env_01_pipette_collision_19.obj" />
+    <mesh name="env_01_pipette_collision_20" file="env_01_pipette_collision_20.obj" />
+    <mesh name="env_02_cylinder_visual_0" file="env_02_cylinder_visual_0.obj" />
+    <material name="env_material_9" rgba="0.75999999 0.899999976 0.970000029 0.2199999988079071" specular=".2" shininess="0.880000002682209" />
+    <mesh name="env_02_cylinder_visual_1" file="env_02_cylinder_visual_1.obj" />
+    <material name="env_material_10" rgba="0.0250000004 0.0549999997 0.0799999982 0.8199999928474426" specular=".2" shininess="0.5999999940395355" />
+    <mesh name="env_02_cylinder_collision_0" file="env_02_cylinder_collision_0.obj" />
+    <mesh name="env_02_cylinder_collision_1" file="env_02_cylinder_collision_1.obj" />
+    <mesh name="env_02_cylinder_collision_2" file="env_02_cylinder_collision_2.obj" />
+    <mesh name="env_02_cylinder_collision_3" file="env_02_cylinder_collision_3.obj" />
+    <mesh name="env_02_cylinder_collision_4" file="env_02_cylinder_collision_4.obj" />
+    <mesh name="env_02_cylinder_collision_5" file="env_02_cylinder_collision_5.obj" />
+    <mesh name="env_02_cylinder_collision_6" file="env_02_cylinder_collision_6.obj" />
+    <mesh name="env_02_cylinder_collision_7" file="env_02_cylinder_collision_7.obj" />
+    <mesh name="env_02_cylinder_collision_8" file="env_02_cylinder_collision_8.obj" />
+    <mesh name="env_02_cylinder_collision_9" file="env_02_cylinder_collision_9.obj" />
+    <mesh name="env_02_cylinder_collision_10" file="env_02_cylinder_collision_10.obj" />
+    <mesh name="env_02_cylinder_collision_11" file="env_02_cylinder_collision_11.obj" />
+    <mesh name="env_02_cylinder_collision_12" file="env_02_cylinder_collision_12.obj" />
+    <mesh name="env_02_cylinder_collision_13" file="env_02_cylinder_collision_13.obj" />
+    <mesh name="env_02_cylinder_collision_14" file="env_02_cylinder_collision_14.obj" />
+    <mesh name="env_02_cylinder_collision_15" file="env_02_cylinder_collision_15.obj" />
+    <mesh name="env_02_cylinder_collision_16" file="env_02_cylinder_collision_16.obj" />
+    <mesh name="env_02_cylinder_collision_17" file="env_02_cylinder_collision_17.obj" />
+    <mesh name="env_02_cylinder_collision_18" file="env_02_cylinder_collision_18.obj" />
+    <mesh name="env_02_cylinder_collision_19" file="env_02_cylinder_collision_19.obj" />
+    <mesh name="env_02_cylinder_collision_20" file="env_02_cylinder_collision_20.obj" />
+    <mesh name="env_02_cylinder_collision_21" file="env_02_cylinder_collision_21.obj" />
+    <mesh name="env_02_cylinder_collision_22" file="env_02_cylinder_collision_22.obj" />
+    <mesh name="env_02_cylinder_collision_23" file="env_02_cylinder_collision_23.obj" />
+    <mesh name="env_03_dome_object_open_assembly_visual_0" file="env_03_dome_object_open_assembly_visual_0.obj" />
+    <material name="env_material_11" rgba="0.910000026 0.899999976 0.839999974 1.0" specular=".2" shininess="0.5800000131130219" />
+    <mesh name="env_03_dome_object_open_assembly_visual_1" file="env_03_dome_object_open_assembly_visual_1.obj" />
+    <material name="env_material_12" rgba="0.0179999992 0.0219999999 0.0299999993 1.0" specular=".2" shininess="0.7299999892711639" />
+    <mesh name="env_03_dome_object_open_assembly_visual_2" file="env_03_dome_object_open_assembly_visual_2.obj" />
+    <material name="env_material_13" rgba="0.0350000001 0.0649999976 0.0900000036 1.0" specular=".2" shininess="0.7999999970197678" />
+    <mesh name="env_03_dome_object_open_assembly_visual_3" file="env_03_dome_object_open_assembly_visual_3.obj" />
+    <material name="env_material_14" rgba="0.0179999992 0.0450000018 0.109999999 0.5799999833106995" specular=".2" shininess="0.8400000035762787" />
+    <mesh name="env_03_dome_object_open_assembly_collision_0" file="env_03_dome_object_open_assembly_collision_0.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_1" file="env_03_dome_object_open_assembly_collision_1.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_2" file="env_03_dome_object_open_assembly_collision_2.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_3" file="env_03_dome_object_open_assembly_collision_3.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_4" file="env_03_dome_object_open_assembly_collision_4.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_5" file="env_03_dome_object_open_assembly_collision_5.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_6" file="env_03_dome_object_open_assembly_collision_6.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_7" file="env_03_dome_object_open_assembly_collision_7.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_8" file="env_03_dome_object_open_assembly_collision_8.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_9" file="env_03_dome_object_open_assembly_collision_9.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_10" file="env_03_dome_object_open_assembly_collision_10.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_11" file="env_03_dome_object_open_assembly_collision_11.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_12" file="env_03_dome_object_open_assembly_collision_12.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_13" file="env_03_dome_object_open_assembly_collision_13.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_14" file="env_03_dome_object_open_assembly_collision_14.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_15" file="env_03_dome_object_open_assembly_collision_15.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_16" file="env_03_dome_object_open_assembly_collision_16.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_17" file="env_03_dome_object_open_assembly_collision_17.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_18" file="env_03_dome_object_open_assembly_collision_18.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_19" file="env_03_dome_object_open_assembly_collision_19.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_20" file="env_03_dome_object_open_assembly_collision_20.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_21" file="env_03_dome_object_open_assembly_collision_21.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_22" file="env_03_dome_object_open_assembly_collision_22.obj" />
+    <mesh name="env_03_dome_object_open_assembly_collision_23" file="env_03_dome_object_open_assembly_collision_23.obj" />
+    <mesh name="env_05_pin_rack_visual_0" file="env_05_pin_rack_visual_0.obj" />
+    <material name="env_material_15" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_1" file="env_05_pin_rack_visual_1.obj" />
+    <material name="env_material_16" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_2" file="env_05_pin_rack_visual_2.obj" />
+    <material name="env_material_17" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_3" file="env_05_pin_rack_visual_3.obj" />
+    <material name="env_material_18" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_4" file="env_05_pin_rack_visual_4.obj" />
+    <material name="env_material_19" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_5" file="env_05_pin_rack_visual_5.obj" />
+    <material name="env_material_20" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_6" file="env_05_pin_rack_visual_6.obj" />
+    <material name="env_material_21" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_7" file="env_05_pin_rack_visual_7.obj" />
+    <material name="env_material_22" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_8" file="env_05_pin_rack_visual_8.obj" />
+    <material name="env_material_23" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_9" file="env_05_pin_rack_visual_9.obj" />
+    <material name="env_material_24" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_10" file="env_05_pin_rack_visual_10.obj" />
+    <material name="env_material_25" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_11" file="env_05_pin_rack_visual_11.obj" />
+    <material name="env_material_26" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_12" file="env_05_pin_rack_visual_12.obj" />
+    <material name="env_material_27" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_13" file="env_05_pin_rack_visual_13.obj" />
+    <material name="env_material_28" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_14" file="env_05_pin_rack_visual_14.obj" />
+    <material name="env_material_29" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_15" file="env_05_pin_rack_visual_15.obj" />
+    <material name="env_material_30" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_16" file="env_05_pin_rack_visual_16.obj" />
+    <material name="env_material_31" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_17" file="env_05_pin_rack_visual_17.obj" />
+    <material name="env_material_32" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_18" file="env_05_pin_rack_visual_18.obj" />
+    <material name="env_material_33" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_19" file="env_05_pin_rack_visual_19.obj" />
+    <material name="env_material_34" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_20" file="env_05_pin_rack_visual_20.obj" />
+    <material name="env_material_35" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_21" file="env_05_pin_rack_visual_21.obj" />
+    <material name="env_material_36" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_22" file="env_05_pin_rack_visual_22.obj" />
+    <material name="env_material_37" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_23" file="env_05_pin_rack_visual_23.obj" />
+    <material name="env_material_38" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_24" file="env_05_pin_rack_visual_24.obj" />
+    <material name="env_material_39" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_25" file="env_05_pin_rack_visual_25.obj" />
+    <material name="env_material_40" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_26" file="env_05_pin_rack_visual_26.obj" />
+    <material name="env_material_41" rgba="0.779999971 0.870000005 0.889999986 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_27" file="env_05_pin_rack_visual_27.obj" />
+    <material name="env_material_42" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_28" file="env_05_pin_rack_visual_28.obj" />
+    <material name="env_material_43" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_29" file="env_05_pin_rack_visual_29.obj" />
+    <material name="env_material_44" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_30" file="env_05_pin_rack_visual_30.obj" />
+    <material name="env_material_45" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_31" file="env_05_pin_rack_visual_31.obj" />
+    <material name="env_material_46" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_32" file="env_05_pin_rack_visual_32.obj" />
+    <material name="env_material_47" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_33" file="env_05_pin_rack_visual_33.obj" />
+    <material name="env_material_48" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_34" file="env_05_pin_rack_visual_34.obj" />
+    <material name="env_material_49" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_35" file="env_05_pin_rack_visual_35.obj" />
+    <material name="env_material_50" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_36" file="env_05_pin_rack_visual_36.obj" />
+    <material name="env_material_51" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_37" file="env_05_pin_rack_visual_37.obj" />
+    <material name="env_material_52" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_38" file="env_05_pin_rack_visual_38.obj" />
+    <material name="env_material_53" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_39" file="env_05_pin_rack_visual_39.obj" />
+    <material name="env_material_54" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_40" file="env_05_pin_rack_visual_40.obj" />
+    <material name="env_material_55" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_41" file="env_05_pin_rack_visual_41.obj" />
+    <material name="env_material_56" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_42" file="env_05_pin_rack_visual_42.obj" />
+    <material name="env_material_57" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_43" file="env_05_pin_rack_visual_43.obj" />
+    <material name="env_material_58" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_44" file="env_05_pin_rack_visual_44.obj" />
+    <material name="env_material_59" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_45" file="env_05_pin_rack_visual_45.obj" />
+    <material name="env_material_60" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_46" file="env_05_pin_rack_visual_46.obj" />
+    <material name="env_material_61" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_47" file="env_05_pin_rack_visual_47.obj" />
+    <material name="env_material_62" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_48" file="env_05_pin_rack_visual_48.obj" />
+    <material name="env_material_63" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_49" file="env_05_pin_rack_visual_49.obj" />
+    <material name="env_material_64" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_50" file="env_05_pin_rack_visual_50.obj" />
+    <material name="env_material_65" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_51" file="env_05_pin_rack_visual_51.obj" />
+    <material name="env_material_66" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_52" file="env_05_pin_rack_visual_52.obj" />
+    <material name="env_material_67" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_53" file="env_05_pin_rack_visual_53.obj" />
+    <material name="env_material_68" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_54" file="env_05_pin_rack_visual_54.obj" />
+    <material name="env_material_69" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_55" file="env_05_pin_rack_visual_55.obj" />
+    <material name="env_material_70" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_56" file="env_05_pin_rack_visual_56.obj" />
+    <material name="env_material_71" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_57" file="env_05_pin_rack_visual_57.obj" />
+    <material name="env_material_72" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_58" file="env_05_pin_rack_visual_58.obj" />
+    <material name="env_material_73" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_59" file="env_05_pin_rack_visual_59.obj" />
+    <material name="env_material_74" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_60" file="env_05_pin_rack_visual_60.obj" />
+    <material name="env_material_75" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_61" file="env_05_pin_rack_visual_61.obj" />
+    <material name="env_material_76" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_62" file="env_05_pin_rack_visual_62.obj" />
+    <material name="env_material_77" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_63" file="env_05_pin_rack_visual_63.obj" />
+    <material name="env_material_78" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_64" file="env_05_pin_rack_visual_64.obj" />
+    <material name="env_material_79" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_65" file="env_05_pin_rack_visual_65.obj" />
+    <material name="env_material_80" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_66" file="env_05_pin_rack_visual_66.obj" />
+    <material name="env_material_81" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_67" file="env_05_pin_rack_visual_67.obj" />
+    <material name="env_material_82" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_68" file="env_05_pin_rack_visual_68.obj" />
+    <material name="env_material_83" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_69" file="env_05_pin_rack_visual_69.obj" />
+    <material name="env_material_84" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_70" file="env_05_pin_rack_visual_70.obj" />
+    <material name="env_material_85" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_71" file="env_05_pin_rack_visual_71.obj" />
+    <material name="env_material_86" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_72" file="env_05_pin_rack_visual_72.obj" />
+    <material name="env_material_87" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_73" file="env_05_pin_rack_visual_73.obj" />
+    <material name="env_material_88" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_74" file="env_05_pin_rack_visual_74.obj" />
+    <material name="env_material_89" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_75" file="env_05_pin_rack_visual_75.obj" />
+    <material name="env_material_90" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_76" file="env_05_pin_rack_visual_76.obj" />
+    <material name="env_material_91" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_77" file="env_05_pin_rack_visual_77.obj" />
+    <material name="env_material_92" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_78" file="env_05_pin_rack_visual_78.obj" />
+    <material name="env_material_93" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_79" file="env_05_pin_rack_visual_79.obj" />
+    <material name="env_material_94" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_80" file="env_05_pin_rack_visual_80.obj" />
+    <material name="env_material_95" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_81" file="env_05_pin_rack_visual_81.obj" />
+    <material name="env_material_96" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_82" file="env_05_pin_rack_visual_82.obj" />
+    <material name="env_material_97" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_83" file="env_05_pin_rack_visual_83.obj" />
+    <material name="env_material_98" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_84" file="env_05_pin_rack_visual_84.obj" />
+    <material name="env_material_99" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_85" file="env_05_pin_rack_visual_85.obj" />
+    <material name="env_material_100" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_86" file="env_05_pin_rack_visual_86.obj" />
+    <material name="env_material_101" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_87" file="env_05_pin_rack_visual_87.obj" />
+    <material name="env_material_102" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_88" file="env_05_pin_rack_visual_88.obj" />
+    <material name="env_material_103" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_89" file="env_05_pin_rack_visual_89.obj" />
+    <material name="env_material_104" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_90" file="env_05_pin_rack_visual_90.obj" />
+    <material name="env_material_105" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_91" file="env_05_pin_rack_visual_91.obj" />
+    <material name="env_material_106" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_92" file="env_05_pin_rack_visual_92.obj" />
+    <material name="env_material_107" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_93" file="env_05_pin_rack_visual_93.obj" />
+    <material name="env_material_108" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_94" file="env_05_pin_rack_visual_94.obj" />
+    <material name="env_material_109" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_95" file="env_05_pin_rack_visual_95.obj" />
+    <material name="env_material_110" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_96" file="env_05_pin_rack_visual_96.obj" />
+    <material name="env_material_111" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_97" file="env_05_pin_rack_visual_97.obj" />
+    <material name="env_material_112" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_98" file="env_05_pin_rack_visual_98.obj" />
+    <material name="env_material_113" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_99" file="env_05_pin_rack_visual_99.obj" />
+    <material name="env_material_114" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_100" file="env_05_pin_rack_visual_100.obj" />
+    <material name="env_material_115" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_101" file="env_05_pin_rack_visual_101.obj" />
+    <material name="env_material_116" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_102" file="env_05_pin_rack_visual_102.obj" />
+    <material name="env_material_117" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_103" file="env_05_pin_rack_visual_103.obj" />
+    <material name="env_material_118" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_104" file="env_05_pin_rack_visual_104.obj" />
+    <material name="env_material_119" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_105" file="env_05_pin_rack_visual_105.obj" />
+    <material name="env_material_120" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_106" file="env_05_pin_rack_visual_106.obj" />
+    <material name="env_material_121" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_107" file="env_05_pin_rack_visual_107.obj" />
+    <material name="env_material_122" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_108" file="env_05_pin_rack_visual_108.obj" />
+    <material name="env_material_123" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_109" file="env_05_pin_rack_visual_109.obj" />
+    <material name="env_material_124" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_110" file="env_05_pin_rack_visual_110.obj" />
+    <material name="env_material_125" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_111" file="env_05_pin_rack_visual_111.obj" />
+    <material name="env_material_126" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_112" file="env_05_pin_rack_visual_112.obj" />
+    <material name="env_material_127" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_113" file="env_05_pin_rack_visual_113.obj" />
+    <material name="env_material_128" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_114" file="env_05_pin_rack_visual_114.obj" />
+    <material name="env_material_129" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_115" file="env_05_pin_rack_visual_115.obj" />
+    <material name="env_material_130" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_116" file="env_05_pin_rack_visual_116.obj" />
+    <material name="env_material_131" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_117" file="env_05_pin_rack_visual_117.obj" />
+    <material name="env_material_132" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_118" file="env_05_pin_rack_visual_118.obj" />
+    <material name="env_material_133" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_119" file="env_05_pin_rack_visual_119.obj" />
+    <material name="env_material_134" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_120" file="env_05_pin_rack_visual_120.obj" />
+    <material name="env_material_135" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_121" file="env_05_pin_rack_visual_121.obj" />
+    <material name="env_material_136" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_122" file="env_05_pin_rack_visual_122.obj" />
+    <material name="env_material_137" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_123" file="env_05_pin_rack_visual_123.obj" />
+    <material name="env_material_138" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_124" file="env_05_pin_rack_visual_124.obj" />
+    <material name="env_material_139" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_125" file="env_05_pin_rack_visual_125.obj" />
+    <material name="env_material_140" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_126" file="env_05_pin_rack_visual_126.obj" />
+    <material name="env_material_141" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_127" file="env_05_pin_rack_visual_127.obj" />
+    <material name="env_material_142" rgba="0.939999998 0.790000021 0.0599999987 1.0" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_128" file="env_05_pin_rack_visual_128.obj" />
+    <material name="env_material_143" rgba="0.75 0.850000024 0.879999995 0.6499999761581421" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_129" file="env_05_pin_rack_visual_129.obj" />
+    <material name="env_material_144" rgba="0.75 0.850000024 0.879999995 0.6499999761581421" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_130" file="env_05_pin_rack_visual_130.obj" />
+    <material name="env_material_145" rgba="0.800000012 0.879999995 0.899999976 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_131" file="env_05_pin_rack_visual_131.obj" />
+    <material name="env_material_146" rgba="0.800000012 0.879999995 0.899999976 0.6000000238418579" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_132" file="env_05_pin_rack_visual_132.obj" />
+    <material name="env_material_147" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_133" file="env_05_pin_rack_visual_133.obj" />
+    <material name="env_material_148" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_134" file="env_05_pin_rack_visual_134.obj" />
+    <material name="env_material_149" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_135" file="env_05_pin_rack_visual_135.obj" />
+    <material name="env_material_150" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_136" file="env_05_pin_rack_visual_136.obj" />
+    <material name="env_material_151" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_visual_137" file="env_05_pin_rack_visual_137.obj" />
+    <material name="env_material_152" rgba="0.730000019 0.839999974 0.879999995 0.3199999928474426" specular=".2" shininess="0.0" />
+    <mesh name="env_05_pin_rack_collision_0" file="env_05_pin_rack_collision_0.obj" />
+    <mesh name="env_05_pin_rack_collision_1" file="env_05_pin_rack_collision_1.obj" />
+    <mesh name="env_05_pin_rack_collision_2" file="env_05_pin_rack_collision_2.obj" />
+    <mesh name="env_05_pin_rack_collision_3" file="env_05_pin_rack_collision_3.obj" />
+    <mesh name="env_05_pin_rack_collision_4" file="env_05_pin_rack_collision_4.obj" />
+    <mesh name="env_05_pin_rack_collision_5" file="env_05_pin_rack_collision_5.obj" />
+    <mesh name="env_05_pin_rack_collision_6" file="env_05_pin_rack_collision_6.obj" />
+    <mesh name="env_05_pin_rack_collision_7" file="env_05_pin_rack_collision_7.obj" />
+    <mesh name="env_05_pin_rack_collision_8" file="env_05_pin_rack_collision_8.obj" />
+    <mesh name="env_05_pin_rack_collision_9" file="env_05_pin_rack_collision_9.obj" />
+    <mesh name="env_05_pin_rack_collision_10" file="env_05_pin_rack_collision_10.obj" />
+    <mesh name="env_05_pin_rack_collision_11" file="env_05_pin_rack_collision_11.obj" />
+    <mesh name="env_05_pin_rack_collision_12" file="env_05_pin_rack_collision_12.obj" />
+    <mesh name="env_05_pin_rack_collision_13" file="env_05_pin_rack_collision_13.obj" />
+    <mesh name="env_05_pin_rack_collision_14" file="env_05_pin_rack_collision_14.obj" />
+    <mesh name="env_05_pin_rack_collision_15" file="env_05_pin_rack_collision_15.obj" />
+    <mesh name="env_05_pin_rack_collision_16" file="env_05_pin_rack_collision_16.obj" />
+    <mesh name="env_05_pin_rack_collision_17" file="env_05_pin_rack_collision_17.obj" />
+    <mesh name="env_05_pin_rack_collision_18" file="env_05_pin_rack_collision_18.obj" />
+    <mesh name="env_05_pin_rack_collision_19" file="env_05_pin_rack_collision_19.obj" />
+    <mesh name="env_05_pin_rack_collision_20" file="env_05_pin_rack_collision_20.obj" />
+    <mesh name="env_05_pin_rack_collision_21" file="env_05_pin_rack_collision_21.obj" />
+    <mesh name="env_05_pin_rack_collision_22" file="env_05_pin_rack_collision_22.obj" />
+    <mesh name="env_05_pin_rack_collision_23" file="env_05_pin_rack_collision_23.obj" />
+    <mesh name="env_05_pin_rack_collision_24" file="env_05_pin_rack_collision_24.obj" />
+    <mesh name="env_05_pin_rack_collision_25" file="env_05_pin_rack_collision_25.obj" />
+    <mesh name="env_05_pin_rack_collision_26" file="env_05_pin_rack_collision_26.obj" />
+    <mesh name="env_05_pin_rack_collision_27" file="env_05_pin_rack_collision_27.obj" />
+    <mesh name="env_05_pin_rack_collision_28" file="env_05_pin_rack_collision_28.obj" />
+    <mesh name="env_05_pin_rack_collision_29" file="env_05_pin_rack_collision_29.obj" />
+    <mesh name="env_05_pin_rack_collision_30" file="env_05_pin_rack_collision_30.obj" />
+    <mesh name="env_05_pin_rack_collision_31" file="env_05_pin_rack_collision_31.obj" />
+    <mesh name="env_05_pin_rack_collision_32" file="env_05_pin_rack_collision_32.obj" />
+    <mesh name="env_05_pin_rack_collision_33" file="env_05_pin_rack_collision_33.obj" />
+    <mesh name="env_05_pin_rack_collision_34" file="env_05_pin_rack_collision_34.obj" />
+    <mesh name="env_05_pin_rack_collision_35" file="env_05_pin_rack_collision_35.obj" />
+    <mesh name="env_05_pin_rack_collision_36" file="env_05_pin_rack_collision_36.obj" />
+    <mesh name="env_05_pin_rack_collision_37" file="env_05_pin_rack_collision_37.obj" />
+    <mesh name="env_05_pin_rack_collision_38" file="env_05_pin_rack_collision_38.obj" />
+    <mesh name="env_05_pin_rack_collision_39" file="env_05_pin_rack_collision_39.obj" />
+    <mesh name="env_05_pin_rack_collision_40" file="env_05_pin_rack_collision_40.obj" />
+    <mesh name="env_05_pin_rack_collision_41" file="env_05_pin_rack_collision_41.obj" />
+    <mesh name="env_05_pin_rack_collision_42" file="env_05_pin_rack_collision_42.obj" />
+    <mesh name="env_05_pin_rack_collision_43" file="env_05_pin_rack_collision_43.obj" />
+    <mesh name="env_05_pin_rack_collision_44" file="env_05_pin_rack_collision_44.obj" />
+    <mesh name="env_05_pin_rack_collision_45" file="env_05_pin_rack_collision_45.obj" />
+    <mesh name="env_05_pin_rack_collision_46" file="env_05_pin_rack_collision_46.obj" />
+    <mesh name="env_05_pin_rack_collision_47" file="env_05_pin_rack_collision_47.obj" />
+    <mesh name="env_05_pin_rack_collision_48" file="env_05_pin_rack_collision_48.obj" />
+    <mesh name="env_05_pin_rack_collision_49" file="env_05_pin_rack_collision_49.obj" />
+    <mesh name="env_05_pin_rack_collision_50" file="env_05_pin_rack_collision_50.obj" />
+    <mesh name="env_05_pin_rack_collision_51" file="env_05_pin_rack_collision_51.obj" />
+    <mesh name="env_05_pin_rack_collision_52" file="env_05_pin_rack_collision_52.obj" />
+    <mesh name="env_05_pin_rack_collision_53" file="env_05_pin_rack_collision_53.obj" />
+    <mesh name="env_05_pin_rack_collision_54" file="env_05_pin_rack_collision_54.obj" />
+    <mesh name="env_05_pin_rack_collision_55" file="env_05_pin_rack_collision_55.obj" />
+    <mesh name="env_05_pin_rack_collision_56" file="env_05_pin_rack_collision_56.obj" />
+    <mesh name="env_05_pin_rack_collision_57" file="env_05_pin_rack_collision_57.obj" />
+    <mesh name="env_05_pin_rack_collision_58" file="env_05_pin_rack_collision_58.obj" />
+    <mesh name="env_05_pin_rack_collision_59" file="env_05_pin_rack_collision_59.obj" />
+    <mesh name="env_05_pin_rack_collision_60" file="env_05_pin_rack_collision_60.obj" />
+    <mesh name="env_05_pin_rack_collision_61" file="env_05_pin_rack_collision_61.obj" />
+    <mesh name="env_05_pin_rack_collision_62" file="env_05_pin_rack_collision_62.obj" />
+    <mesh name="env_05_pin_rack_collision_63" file="env_05_pin_rack_collision_63.obj" />
+    <mesh name="env_05_pin_rack_collision_64" file="env_05_pin_rack_collision_64.obj" />
+    <mesh name="env_05_pin_rack_collision_65" file="env_05_pin_rack_collision_65.obj" />
+    <mesh name="env_05_pin_rack_collision_66" file="env_05_pin_rack_collision_66.obj" />
+    <mesh name="env_05_pin_rack_collision_67" file="env_05_pin_rack_collision_67.obj" />
+    <mesh name="env_05_pin_rack_collision_68" file="env_05_pin_rack_collision_68.obj" />
+    <mesh name="env_05_pin_rack_collision_69" file="env_05_pin_rack_collision_69.obj" />
+    <mesh name="env_05_pin_rack_collision_70" file="env_05_pin_rack_collision_70.obj" />
+    <mesh name="env_05_pin_rack_collision_71" file="env_05_pin_rack_collision_71.obj" />
+    <mesh name="env_05_pin_rack_collision_72" file="env_05_pin_rack_collision_72.obj" />
+    <mesh name="env_05_pin_rack_collision_73" file="env_05_pin_rack_collision_73.obj" />
+    <mesh name="env_05_pin_rack_collision_74" file="env_05_pin_rack_collision_74.obj" />
+    <mesh name="env_05_pin_rack_collision_75" file="env_05_pin_rack_collision_75.obj" />
+    <mesh name="env_05_pin_rack_collision_76" file="env_05_pin_rack_collision_76.obj" />
+    <mesh name="env_05_pin_rack_collision_77" file="env_05_pin_rack_collision_77.obj" />
+    <mesh name="env_05_pin_rack_collision_78" file="env_05_pin_rack_collision_78.obj" />
+    <mesh name="env_05_pin_rack_collision_79" file="env_05_pin_rack_collision_79.obj" />
+    <mesh name="env_05_pin_rack_collision_80" file="env_05_pin_rack_collision_80.obj" />
+    <mesh name="env_05_pin_rack_collision_81" file="env_05_pin_rack_collision_81.obj" />
+    <mesh name="env_05_pin_rack_collision_82" file="env_05_pin_rack_collision_82.obj" />
+    <mesh name="env_05_pin_rack_collision_83" file="env_05_pin_rack_collision_83.obj" />
+    <mesh name="env_05_pin_rack_collision_84" file="env_05_pin_rack_collision_84.obj" />
+    <mesh name="env_05_pin_rack_collision_85" file="env_05_pin_rack_collision_85.obj" />
+    <mesh name="env_05_pin_rack_collision_86" file="env_05_pin_rack_collision_86.obj" />
+    <mesh name="env_05_pin_rack_collision_87" file="env_05_pin_rack_collision_87.obj" />
+    <mesh name="env_05_pin_rack_collision_88" file="env_05_pin_rack_collision_88.obj" />
+    <mesh name="env_05_pin_rack_collision_89" file="env_05_pin_rack_collision_89.obj" />
+    <mesh name="env_05_pin_rack_collision_90" file="env_05_pin_rack_collision_90.obj" />
+    <mesh name="env_05_pin_rack_collision_91" file="env_05_pin_rack_collision_91.obj" />
+    <mesh name="env_05_pin_rack_collision_92" file="env_05_pin_rack_collision_92.obj" />
+    <mesh name="env_05_pin_rack_collision_93" file="env_05_pin_rack_collision_93.obj" />
+    <mesh name="env_05_pin_rack_collision_94" file="env_05_pin_rack_collision_94.obj" />
+    <mesh name="env_05_pin_rack_collision_95" file="env_05_pin_rack_collision_95.obj" />
+    <mesh name="env_05_pin_rack_collision_96" file="env_05_pin_rack_collision_96.obj" />
+    <mesh name="env_05_pin_rack_collision_97" file="env_05_pin_rack_collision_97.obj" />
+    <mesh name="env_05_pin_rack_collision_98" file="env_05_pin_rack_collision_98.obj" />
+    <mesh name="env_05_pin_rack_collision_99" file="env_05_pin_rack_collision_99.obj" />
+    <mesh name="env_05_pin_rack_collision_100" file="env_05_pin_rack_collision_100.obj" />
+    <mesh name="env_05_pin_rack_collision_101" file="env_05_pin_rack_collision_101.obj" />
+    <mesh name="env_05_pin_rack_collision_102" file="env_05_pin_rack_collision_102.obj" />
+    <mesh name="env_05_pin_rack_collision_103" file="env_05_pin_rack_collision_103.obj" />
+    <mesh name="env_05_pin_rack_collision_104" file="env_05_pin_rack_collision_104.obj" />
+    <mesh name="env_05_pin_rack_collision_105" file="env_05_pin_rack_collision_105.obj" />
+    <mesh name="env_05_pin_rack_collision_106" file="env_05_pin_rack_collision_106.obj" />
+    <mesh name="env_05_pin_rack_collision_107" file="env_05_pin_rack_collision_107.obj" />
+    <mesh name="env_05_pin_rack_collision_108" file="env_05_pin_rack_collision_108.obj" />
+    <mesh name="env_05_pin_rack_collision_109" file="env_05_pin_rack_collision_109.obj" />
+    <mesh name="env_05_pin_rack_collision_110" file="env_05_pin_rack_collision_110.obj" />
+    <mesh name="env_05_pin_rack_collision_111" file="env_05_pin_rack_collision_111.obj" />
+    <mesh name="env_05_pin_rack_collision_112" file="env_05_pin_rack_collision_112.obj" />
+    <mesh name="env_05_pin_rack_collision_113" file="env_05_pin_rack_collision_113.obj" />
+    <mesh name="env_05_pin_rack_collision_114" file="env_05_pin_rack_collision_114.obj" />
+    <mesh name="env_05_pin_rack_collision_115" file="env_05_pin_rack_collision_115.obj" />
+    <mesh name="env_05_pin_rack_collision_116" file="env_05_pin_rack_collision_116.obj" />
+    <mesh name="env_05_pin_rack_collision_117" file="env_05_pin_rack_collision_117.obj" />
+    <mesh name="env_05_pin_rack_collision_118" file="env_05_pin_rack_collision_118.obj" />
+    <mesh name="env_05_pin_rack_collision_119" file="env_05_pin_rack_collision_119.obj" />
+    <mesh name="env_05_pin_rack_collision_120" file="env_05_pin_rack_collision_120.obj" />
+    <mesh name="env_05_pin_rack_collision_121" file="env_05_pin_rack_collision_121.obj" />
+    <mesh name="env_05_pin_rack_collision_122" file="env_05_pin_rack_collision_122.obj" />
+    <mesh name="env_05_pin_rack_collision_123" file="env_05_pin_rack_collision_123.obj" />
+    <mesh name="env_05_pin_rack_collision_124" file="env_05_pin_rack_collision_124.obj" />
+    <mesh name="env_05_pin_rack_collision_125" file="env_05_pin_rack_collision_125.obj" />
+    <mesh name="env_05_pin_rack_collision_126" file="env_05_pin_rack_collision_126.obj" />
+    <mesh name="env_05_pin_rack_collision_127" file="env_05_pin_rack_collision_127.obj" />
+    <mesh name="env_05_pin_rack_collision_128" file="env_05_pin_rack_collision_128.obj" />
+    <mesh name="env_05_pin_rack_collision_129" file="env_05_pin_rack_collision_129.obj" />
+    <mesh name="env_05_pin_rack_collision_130" file="env_05_pin_rack_collision_130.obj" />
+    <mesh name="env_05_pin_rack_collision_131" file="env_05_pin_rack_collision_131.obj" />
+    <mesh name="env_05_pin_rack_collision_132" file="env_05_pin_rack_collision_132.obj" />
+    <mesh name="env_05_pin_rack_collision_133" file="env_05_pin_rack_collision_133.obj" />
+    <mesh name="env_06_pipette_stand_visual_0" file="env_06_pipette_stand_visual_0.obj" />
+    <material name="env_material_153" rgba="0.959999979 0.389999986 0.0350000001 1.0" specular=".2" shininess="0.2799999713897705" />
+    <mesh name="env_06_pipette_stand_visual_1" file="env_06_pipette_stand_visual_1.obj" />
+    <material name="env_material_154" rgba="0.105899997 0.113700002 0.125499994 1.0" specular=".2" shininess="0.18000000715255737" />
+    <mesh name="env_06_pipette_stand_collision_0" file="env_06_pipette_stand_collision_0.obj" />
+    <mesh name="env_07_table_new_visual_0" file="env_07_table_new_visual_0.obj" />
+    <material name="env_material_155" rgba="0.5 0.460000008 0.389999986 1.0" specular=".2" shininess="0.18000000715255737" />
+  </asset>
+  <worldbody>
+    <light pos="0 0 5" directional="true" dir="0 0 -1" diffuse=".7 .7 .7" />
+    <body name="env_00_cylinder_base">
+      <geom name="env_00_cylinder_base_visual_0" type="mesh" mesh="env_00_cylinder_base_visual_0" material="env_material_0" contype="0" conaffinity="0" group="1" />
+      <geom name="env_00_cylinder_base_visual_1" type="mesh" mesh="env_00_cylinder_base_visual_1" material="env_material_1" contype="0" conaffinity="0" group="1" />
+      <geom name="env_00_cylinder_base_collision_0" type="mesh" mesh="env_00_cylinder_base_collision_0" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_00_cylinder_base_collision_1" type="mesh" mesh="env_00_cylinder_base_collision_1" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+    </body>
+    <body name="env_01_pipette">
+      <geom name="env_01_pipette_visual_0" type="mesh" mesh="env_01_pipette_visual_0" material="env_material_2" contype="0" conaffinity="0" group="1" />
+      <geom name="env_01_pipette_visual_1" type="mesh" mesh="env_01_pipette_visual_1" material="env_material_3" contype="0" conaffinity="0" group="1" />
+      <geom name="env_01_pipette_visual_2" type="mesh" mesh="env_01_pipette_visual_2" material="env_material_4" contype="0" conaffinity="0" group="1" />
+      <geom name="env_01_pipette_visual_3" type="mesh" mesh="env_01_pipette_visual_3" material="env_material_5" contype="0" conaffinity="0" group="1" />
+      <geom name="env_01_pipette_visual_4" type="mesh" mesh="env_01_pipette_visual_4" material="env_material_6" contype="0" conaffinity="0" group="1" />
+      <geom name="env_01_pipette_visual_5" type="mesh" mesh="env_01_pipette_visual_5" material="env_material_7" contype="0" conaffinity="0" group="1" />
+      <geom name="env_01_pipette_visual_6" type="mesh" mesh="env_01_pipette_visual_6" material="env_material_8" contype="0" conaffinity="0" group="1" />
+      <geom name="env_01_pipette_collision_0" type="mesh" mesh="env_01_pipette_collision_0" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_1" type="mesh" mesh="env_01_pipette_collision_1" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_2" type="mesh" mesh="env_01_pipette_collision_2" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_3" type="mesh" mesh="env_01_pipette_collision_3" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_4" type="mesh" mesh="env_01_pipette_collision_4" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_5" type="mesh" mesh="env_01_pipette_collision_5" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_6" type="mesh" mesh="env_01_pipette_collision_6" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_7" type="mesh" mesh="env_01_pipette_collision_7" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_8" type="mesh" mesh="env_01_pipette_collision_8" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_9" type="mesh" mesh="env_01_pipette_collision_9" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_10" type="mesh" mesh="env_01_pipette_collision_10" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_11" type="mesh" mesh="env_01_pipette_collision_11" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_12" type="mesh" mesh="env_01_pipette_collision_12" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_13" type="mesh" mesh="env_01_pipette_collision_13" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_14" type="mesh" mesh="env_01_pipette_collision_14" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_15" type="mesh" mesh="env_01_pipette_collision_15" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_16" type="mesh" mesh="env_01_pipette_collision_16" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_17" type="mesh" mesh="env_01_pipette_collision_17" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_18" type="mesh" mesh="env_01_pipette_collision_18" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_19" type="mesh" mesh="env_01_pipette_collision_19" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_01_pipette_collision_20" type="mesh" mesh="env_01_pipette_collision_20" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+    </body>
+    <body name="env_02_cylinder">
+      <geom name="env_02_cylinder_visual_0" type="mesh" mesh="env_02_cylinder_visual_0" material="env_material_9" contype="0" conaffinity="0" group="1" />
+      <geom name="env_02_cylinder_visual_1" type="mesh" mesh="env_02_cylinder_visual_1" material="env_material_10" contype="0" conaffinity="0" group="1" />
+      <geom name="env_02_cylinder_collision_0" type="mesh" mesh="env_02_cylinder_collision_0" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_1" type="mesh" mesh="env_02_cylinder_collision_1" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_2" type="mesh" mesh="env_02_cylinder_collision_2" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_3" type="mesh" mesh="env_02_cylinder_collision_3" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_4" type="mesh" mesh="env_02_cylinder_collision_4" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_5" type="mesh" mesh="env_02_cylinder_collision_5" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_6" type="mesh" mesh="env_02_cylinder_collision_6" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_7" type="mesh" mesh="env_02_cylinder_collision_7" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_8" type="mesh" mesh="env_02_cylinder_collision_8" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_9" type="mesh" mesh="env_02_cylinder_collision_9" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_10" type="mesh" mesh="env_02_cylinder_collision_10" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_11" type="mesh" mesh="env_02_cylinder_collision_11" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_12" type="mesh" mesh="env_02_cylinder_collision_12" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_13" type="mesh" mesh="env_02_cylinder_collision_13" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_14" type="mesh" mesh="env_02_cylinder_collision_14" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_15" type="mesh" mesh="env_02_cylinder_collision_15" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_16" type="mesh" mesh="env_02_cylinder_collision_16" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_17" type="mesh" mesh="env_02_cylinder_collision_17" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_18" type="mesh" mesh="env_02_cylinder_collision_18" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_19" type="mesh" mesh="env_02_cylinder_collision_19" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_20" type="mesh" mesh="env_02_cylinder_collision_20" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_21" type="mesh" mesh="env_02_cylinder_collision_21" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_22" type="mesh" mesh="env_02_cylinder_collision_22" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_02_cylinder_collision_23" type="mesh" mesh="env_02_cylinder_collision_23" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+    </body>
+    <body name="env_03_dome_object_open_assembly">
+      <geom name="env_03_dome_object_open_assembly_visual_0" type="mesh" mesh="env_03_dome_object_open_assembly_visual_0" material="env_material_11" contype="0" conaffinity="0" group="1" />
+      <geom name="env_03_dome_object_open_assembly_visual_1" type="mesh" mesh="env_03_dome_object_open_assembly_visual_1" material="env_material_12" contype="0" conaffinity="0" group="1" />
+      <geom name="env_03_dome_object_open_assembly_visual_2" type="mesh" mesh="env_03_dome_object_open_assembly_visual_2" material="env_material_13" contype="0" conaffinity="0" group="1" />
+      <geom name="env_03_dome_object_open_assembly_visual_3" type="mesh" mesh="env_03_dome_object_open_assembly_visual_3" material="env_material_14" contype="0" conaffinity="0" group="1" />
+      <geom name="env_03_dome_object_open_assembly_collision_0" type="mesh" mesh="env_03_dome_object_open_assembly_collision_0" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_1" type="mesh" mesh="env_03_dome_object_open_assembly_collision_1" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_2" type="mesh" mesh="env_03_dome_object_open_assembly_collision_2" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_3" type="mesh" mesh="env_03_dome_object_open_assembly_collision_3" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_4" type="mesh" mesh="env_03_dome_object_open_assembly_collision_4" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_5" type="mesh" mesh="env_03_dome_object_open_assembly_collision_5" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_6" type="mesh" mesh="env_03_dome_object_open_assembly_collision_6" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_7" type="mesh" mesh="env_03_dome_object_open_assembly_collision_7" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_8" type="mesh" mesh="env_03_dome_object_open_assembly_collision_8" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_9" type="mesh" mesh="env_03_dome_object_open_assembly_collision_9" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_10" type="mesh" mesh="env_03_dome_object_open_assembly_collision_10" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_11" type="mesh" mesh="env_03_dome_object_open_assembly_collision_11" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_12" type="mesh" mesh="env_03_dome_object_open_assembly_collision_12" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_13" type="mesh" mesh="env_03_dome_object_open_assembly_collision_13" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_14" type="mesh" mesh="env_03_dome_object_open_assembly_collision_14" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_15" type="mesh" mesh="env_03_dome_object_open_assembly_collision_15" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_16" type="mesh" mesh="env_03_dome_object_open_assembly_collision_16" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_17" type="mesh" mesh="env_03_dome_object_open_assembly_collision_17" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_18" type="mesh" mesh="env_03_dome_object_open_assembly_collision_18" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_19" type="mesh" mesh="env_03_dome_object_open_assembly_collision_19" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_20" type="mesh" mesh="env_03_dome_object_open_assembly_collision_20" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_21" type="mesh" mesh="env_03_dome_object_open_assembly_collision_21" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_22" type="mesh" mesh="env_03_dome_object_open_assembly_collision_22" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_03_dome_object_open_assembly_collision_23" type="mesh" mesh="env_03_dome_object_open_assembly_collision_23" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+    </body>
+    <body name="env_05_pin_rack">
+      <geom name="env_05_pin_rack_visual_0" type="mesh" mesh="env_05_pin_rack_visual_0" material="env_material_15" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_1" type="mesh" mesh="env_05_pin_rack_visual_1" material="env_material_16" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_2" type="mesh" mesh="env_05_pin_rack_visual_2" material="env_material_17" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_3" type="mesh" mesh="env_05_pin_rack_visual_3" material="env_material_18" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_4" type="mesh" mesh="env_05_pin_rack_visual_4" material="env_material_19" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_5" type="mesh" mesh="env_05_pin_rack_visual_5" material="env_material_20" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_6" type="mesh" mesh="env_05_pin_rack_visual_6" material="env_material_21" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_7" type="mesh" mesh="env_05_pin_rack_visual_7" material="env_material_22" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_8" type="mesh" mesh="env_05_pin_rack_visual_8" material="env_material_23" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_9" type="mesh" mesh="env_05_pin_rack_visual_9" material="env_material_24" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_10" type="mesh" mesh="env_05_pin_rack_visual_10" material="env_material_25" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_11" type="mesh" mesh="env_05_pin_rack_visual_11" material="env_material_26" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_12" type="mesh" mesh="env_05_pin_rack_visual_12" material="env_material_27" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_13" type="mesh" mesh="env_05_pin_rack_visual_13" material="env_material_28" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_14" type="mesh" mesh="env_05_pin_rack_visual_14" material="env_material_29" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_15" type="mesh" mesh="env_05_pin_rack_visual_15" material="env_material_30" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_16" type="mesh" mesh="env_05_pin_rack_visual_16" material="env_material_31" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_17" type="mesh" mesh="env_05_pin_rack_visual_17" material="env_material_32" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_18" type="mesh" mesh="env_05_pin_rack_visual_18" material="env_material_33" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_19" type="mesh" mesh="env_05_pin_rack_visual_19" material="env_material_34" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_20" type="mesh" mesh="env_05_pin_rack_visual_20" material="env_material_35" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_21" type="mesh" mesh="env_05_pin_rack_visual_21" material="env_material_36" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_22" type="mesh" mesh="env_05_pin_rack_visual_22" material="env_material_37" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_23" type="mesh" mesh="env_05_pin_rack_visual_23" material="env_material_38" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_24" type="mesh" mesh="env_05_pin_rack_visual_24" material="env_material_39" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_25" type="mesh" mesh="env_05_pin_rack_visual_25" material="env_material_40" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_26" type="mesh" mesh="env_05_pin_rack_visual_26" material="env_material_41" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_27" type="mesh" mesh="env_05_pin_rack_visual_27" material="env_material_42" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_28" type="mesh" mesh="env_05_pin_rack_visual_28" material="env_material_43" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_29" type="mesh" mesh="env_05_pin_rack_visual_29" material="env_material_44" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_30" type="mesh" mesh="env_05_pin_rack_visual_30" material="env_material_45" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_31" type="mesh" mesh="env_05_pin_rack_visual_31" material="env_material_46" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_32" type="mesh" mesh="env_05_pin_rack_visual_32" material="env_material_47" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_33" type="mesh" mesh="env_05_pin_rack_visual_33" material="env_material_48" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_34" type="mesh" mesh="env_05_pin_rack_visual_34" material="env_material_49" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_35" type="mesh" mesh="env_05_pin_rack_visual_35" material="env_material_50" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_36" type="mesh" mesh="env_05_pin_rack_visual_36" material="env_material_51" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_37" type="mesh" mesh="env_05_pin_rack_visual_37" material="env_material_52" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_38" type="mesh" mesh="env_05_pin_rack_visual_38" material="env_material_53" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_39" type="mesh" mesh="env_05_pin_rack_visual_39" material="env_material_54" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_40" type="mesh" mesh="env_05_pin_rack_visual_40" material="env_material_55" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_41" type="mesh" mesh="env_05_pin_rack_visual_41" material="env_material_56" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_42" type="mesh" mesh="env_05_pin_rack_visual_42" material="env_material_57" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_43" type="mesh" mesh="env_05_pin_rack_visual_43" material="env_material_58" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_44" type="mesh" mesh="env_05_pin_rack_visual_44" material="env_material_59" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_45" type="mesh" mesh="env_05_pin_rack_visual_45" material="env_material_60" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_46" type="mesh" mesh="env_05_pin_rack_visual_46" material="env_material_61" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_47" type="mesh" mesh="env_05_pin_rack_visual_47" material="env_material_62" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_48" type="mesh" mesh="env_05_pin_rack_visual_48" material="env_material_63" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_49" type="mesh" mesh="env_05_pin_rack_visual_49" material="env_material_64" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_50" type="mesh" mesh="env_05_pin_rack_visual_50" material="env_material_65" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_51" type="mesh" mesh="env_05_pin_rack_visual_51" material="env_material_66" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_52" type="mesh" mesh="env_05_pin_rack_visual_52" material="env_material_67" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_53" type="mesh" mesh="env_05_pin_rack_visual_53" material="env_material_68" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_54" type="mesh" mesh="env_05_pin_rack_visual_54" material="env_material_69" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_55" type="mesh" mesh="env_05_pin_rack_visual_55" material="env_material_70" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_56" type="mesh" mesh="env_05_pin_rack_visual_56" material="env_material_71" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_57" type="mesh" mesh="env_05_pin_rack_visual_57" material="env_material_72" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_58" type="mesh" mesh="env_05_pin_rack_visual_58" material="env_material_73" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_59" type="mesh" mesh="env_05_pin_rack_visual_59" material="env_material_74" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_60" type="mesh" mesh="env_05_pin_rack_visual_60" material="env_material_75" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_61" type="mesh" mesh="env_05_pin_rack_visual_61" material="env_material_76" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_62" type="mesh" mesh="env_05_pin_rack_visual_62" material="env_material_77" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_63" type="mesh" mesh="env_05_pin_rack_visual_63" material="env_material_78" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_64" type="mesh" mesh="env_05_pin_rack_visual_64" material="env_material_79" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_65" type="mesh" mesh="env_05_pin_rack_visual_65" material="env_material_80" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_66" type="mesh" mesh="env_05_pin_rack_visual_66" material="env_material_81" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_67" type="mesh" mesh="env_05_pin_rack_visual_67" material="env_material_82" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_68" type="mesh" mesh="env_05_pin_rack_visual_68" material="env_material_83" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_69" type="mesh" mesh="env_05_pin_rack_visual_69" material="env_material_84" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_70" type="mesh" mesh="env_05_pin_rack_visual_70" material="env_material_85" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_71" type="mesh" mesh="env_05_pin_rack_visual_71" material="env_material_86" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_72" type="mesh" mesh="env_05_pin_rack_visual_72" material="env_material_87" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_73" type="mesh" mesh="env_05_pin_rack_visual_73" material="env_material_88" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_74" type="mesh" mesh="env_05_pin_rack_visual_74" material="env_material_89" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_75" type="mesh" mesh="env_05_pin_rack_visual_75" material="env_material_90" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_76" type="mesh" mesh="env_05_pin_rack_visual_76" material="env_material_91" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_77" type="mesh" mesh="env_05_pin_rack_visual_77" material="env_material_92" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_78" type="mesh" mesh="env_05_pin_rack_visual_78" material="env_material_93" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_79" type="mesh" mesh="env_05_pin_rack_visual_79" material="env_material_94" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_80" type="mesh" mesh="env_05_pin_rack_visual_80" material="env_material_95" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_81" type="mesh" mesh="env_05_pin_rack_visual_81" material="env_material_96" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_82" type="mesh" mesh="env_05_pin_rack_visual_82" material="env_material_97" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_83" type="mesh" mesh="env_05_pin_rack_visual_83" material="env_material_98" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_84" type="mesh" mesh="env_05_pin_rack_visual_84" material="env_material_99" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_85" type="mesh" mesh="env_05_pin_rack_visual_85" material="env_material_100" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_86" type="mesh" mesh="env_05_pin_rack_visual_86" material="env_material_101" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_87" type="mesh" mesh="env_05_pin_rack_visual_87" material="env_material_102" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_88" type="mesh" mesh="env_05_pin_rack_visual_88" material="env_material_103" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_89" type="mesh" mesh="env_05_pin_rack_visual_89" material="env_material_104" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_90" type="mesh" mesh="env_05_pin_rack_visual_90" material="env_material_105" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_91" type="mesh" mesh="env_05_pin_rack_visual_91" material="env_material_106" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_92" type="mesh" mesh="env_05_pin_rack_visual_92" material="env_material_107" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_93" type="mesh" mesh="env_05_pin_rack_visual_93" material="env_material_108" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_94" type="mesh" mesh="env_05_pin_rack_visual_94" material="env_material_109" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_95" type="mesh" mesh="env_05_pin_rack_visual_95" material="env_material_110" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_96" type="mesh" mesh="env_05_pin_rack_visual_96" material="env_material_111" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_97" type="mesh" mesh="env_05_pin_rack_visual_97" material="env_material_112" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_98" type="mesh" mesh="env_05_pin_rack_visual_98" material="env_material_113" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_99" type="mesh" mesh="env_05_pin_rack_visual_99" material="env_material_114" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_100" type="mesh" mesh="env_05_pin_rack_visual_100" material="env_material_115" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_101" type="mesh" mesh="env_05_pin_rack_visual_101" material="env_material_116" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_102" type="mesh" mesh="env_05_pin_rack_visual_102" material="env_material_117" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_103" type="mesh" mesh="env_05_pin_rack_visual_103" material="env_material_118" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_104" type="mesh" mesh="env_05_pin_rack_visual_104" material="env_material_119" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_105" type="mesh" mesh="env_05_pin_rack_visual_105" material="env_material_120" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_106" type="mesh" mesh="env_05_pin_rack_visual_106" material="env_material_121" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_107" type="mesh" mesh="env_05_pin_rack_visual_107" material="env_material_122" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_108" type="mesh" mesh="env_05_pin_rack_visual_108" material="env_material_123" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_109" type="mesh" mesh="env_05_pin_rack_visual_109" material="env_material_124" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_110" type="mesh" mesh="env_05_pin_rack_visual_110" material="env_material_125" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_111" type="mesh" mesh="env_05_pin_rack_visual_111" material="env_material_126" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_112" type="mesh" mesh="env_05_pin_rack_visual_112" material="env_material_127" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_113" type="mesh" mesh="env_05_pin_rack_visual_113" material="env_material_128" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_114" type="mesh" mesh="env_05_pin_rack_visual_114" material="env_material_129" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_115" type="mesh" mesh="env_05_pin_rack_visual_115" material="env_material_130" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_116" type="mesh" mesh="env_05_pin_rack_visual_116" material="env_material_131" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_117" type="mesh" mesh="env_05_pin_rack_visual_117" material="env_material_132" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_118" type="mesh" mesh="env_05_pin_rack_visual_118" material="env_material_133" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_119" type="mesh" mesh="env_05_pin_rack_visual_119" material="env_material_134" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_120" type="mesh" mesh="env_05_pin_rack_visual_120" material="env_material_135" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_121" type="mesh" mesh="env_05_pin_rack_visual_121" material="env_material_136" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_122" type="mesh" mesh="env_05_pin_rack_visual_122" material="env_material_137" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_123" type="mesh" mesh="env_05_pin_rack_visual_123" material="env_material_138" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_124" type="mesh" mesh="env_05_pin_rack_visual_124" material="env_material_139" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_125" type="mesh" mesh="env_05_pin_rack_visual_125" material="env_material_140" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_126" type="mesh" mesh="env_05_pin_rack_visual_126" material="env_material_141" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_127" type="mesh" mesh="env_05_pin_rack_visual_127" material="env_material_142" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_128" type="mesh" mesh="env_05_pin_rack_visual_128" material="env_material_143" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_129" type="mesh" mesh="env_05_pin_rack_visual_129" material="env_material_144" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_130" type="mesh" mesh="env_05_pin_rack_visual_130" material="env_material_145" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_131" type="mesh" mesh="env_05_pin_rack_visual_131" material="env_material_146" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_132" type="mesh" mesh="env_05_pin_rack_visual_132" material="env_material_147" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_133" type="mesh" mesh="env_05_pin_rack_visual_133" material="env_material_148" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_134" type="mesh" mesh="env_05_pin_rack_visual_134" material="env_material_149" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_135" type="mesh" mesh="env_05_pin_rack_visual_135" material="env_material_150" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_136" type="mesh" mesh="env_05_pin_rack_visual_136" material="env_material_151" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_visual_137" type="mesh" mesh="env_05_pin_rack_visual_137" material="env_material_152" contype="0" conaffinity="0" group="1" />
+      <geom name="env_05_pin_rack_collision_0" type="mesh" mesh="env_05_pin_rack_collision_0" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_1" type="mesh" mesh="env_05_pin_rack_collision_1" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_2" type="mesh" mesh="env_05_pin_rack_collision_2" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_3" type="mesh" mesh="env_05_pin_rack_collision_3" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_4" type="mesh" mesh="env_05_pin_rack_collision_4" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_5" type="mesh" mesh="env_05_pin_rack_collision_5" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_6" type="mesh" mesh="env_05_pin_rack_collision_6" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_7" type="mesh" mesh="env_05_pin_rack_collision_7" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_8" type="mesh" mesh="env_05_pin_rack_collision_8" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_9" type="mesh" mesh="env_05_pin_rack_collision_9" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_10" type="mesh" mesh="env_05_pin_rack_collision_10" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_11" type="mesh" mesh="env_05_pin_rack_collision_11" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_12" type="mesh" mesh="env_05_pin_rack_collision_12" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_13" type="mesh" mesh="env_05_pin_rack_collision_13" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_14" type="mesh" mesh="env_05_pin_rack_collision_14" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_15" type="mesh" mesh="env_05_pin_rack_collision_15" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_16" type="mesh" mesh="env_05_pin_rack_collision_16" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_17" type="mesh" mesh="env_05_pin_rack_collision_17" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_18" type="mesh" mesh="env_05_pin_rack_collision_18" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_19" type="mesh" mesh="env_05_pin_rack_collision_19" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_20" type="mesh" mesh="env_05_pin_rack_collision_20" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_21" type="mesh" mesh="env_05_pin_rack_collision_21" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_22" type="mesh" mesh="env_05_pin_rack_collision_22" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_23" type="mesh" mesh="env_05_pin_rack_collision_23" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_24" type="mesh" mesh="env_05_pin_rack_collision_24" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_25" type="mesh" mesh="env_05_pin_rack_collision_25" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_26" type="mesh" mesh="env_05_pin_rack_collision_26" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_27" type="mesh" mesh="env_05_pin_rack_collision_27" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_28" type="mesh" mesh="env_05_pin_rack_collision_28" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_29" type="mesh" mesh="env_05_pin_rack_collision_29" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_30" type="mesh" mesh="env_05_pin_rack_collision_30" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_31" type="mesh" mesh="env_05_pin_rack_collision_31" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_32" type="mesh" mesh="env_05_pin_rack_collision_32" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_33" type="mesh" mesh="env_05_pin_rack_collision_33" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_34" type="mesh" mesh="env_05_pin_rack_collision_34" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_35" type="mesh" mesh="env_05_pin_rack_collision_35" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_36" type="mesh" mesh="env_05_pin_rack_collision_36" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_37" type="mesh" mesh="env_05_pin_rack_collision_37" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_38" type="mesh" mesh="env_05_pin_rack_collision_38" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_39" type="mesh" mesh="env_05_pin_rack_collision_39" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_40" type="mesh" mesh="env_05_pin_rack_collision_40" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_41" type="mesh" mesh="env_05_pin_rack_collision_41" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_42" type="mesh" mesh="env_05_pin_rack_collision_42" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_43" type="mesh" mesh="env_05_pin_rack_collision_43" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_44" type="mesh" mesh="env_05_pin_rack_collision_44" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_45" type="mesh" mesh="env_05_pin_rack_collision_45" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_46" type="mesh" mesh="env_05_pin_rack_collision_46" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_47" type="mesh" mesh="env_05_pin_rack_collision_47" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_48" type="mesh" mesh="env_05_pin_rack_collision_48" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_49" type="mesh" mesh="env_05_pin_rack_collision_49" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_50" type="mesh" mesh="env_05_pin_rack_collision_50" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_51" type="mesh" mesh="env_05_pin_rack_collision_51" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_52" type="mesh" mesh="env_05_pin_rack_collision_52" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_53" type="mesh" mesh="env_05_pin_rack_collision_53" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_54" type="mesh" mesh="env_05_pin_rack_collision_54" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_55" type="mesh" mesh="env_05_pin_rack_collision_55" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_56" type="mesh" mesh="env_05_pin_rack_collision_56" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_57" type="mesh" mesh="env_05_pin_rack_collision_57" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_58" type="mesh" mesh="env_05_pin_rack_collision_58" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_59" type="mesh" mesh="env_05_pin_rack_collision_59" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_60" type="mesh" mesh="env_05_pin_rack_collision_60" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_61" type="mesh" mesh="env_05_pin_rack_collision_61" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_62" type="mesh" mesh="env_05_pin_rack_collision_62" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_63" type="mesh" mesh="env_05_pin_rack_collision_63" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_64" type="mesh" mesh="env_05_pin_rack_collision_64" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_65" type="mesh" mesh="env_05_pin_rack_collision_65" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_66" type="mesh" mesh="env_05_pin_rack_collision_66" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_67" type="mesh" mesh="env_05_pin_rack_collision_67" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_68" type="mesh" mesh="env_05_pin_rack_collision_68" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_69" type="mesh" mesh="env_05_pin_rack_collision_69" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_70" type="mesh" mesh="env_05_pin_rack_collision_70" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_71" type="mesh" mesh="env_05_pin_rack_collision_71" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_72" type="mesh" mesh="env_05_pin_rack_collision_72" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_73" type="mesh" mesh="env_05_pin_rack_collision_73" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_74" type="mesh" mesh="env_05_pin_rack_collision_74" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_75" type="mesh" mesh="env_05_pin_rack_collision_75" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_76" type="mesh" mesh="env_05_pin_rack_collision_76" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_77" type="mesh" mesh="env_05_pin_rack_collision_77" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_78" type="mesh" mesh="env_05_pin_rack_collision_78" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_79" type="mesh" mesh="env_05_pin_rack_collision_79" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_80" type="mesh" mesh="env_05_pin_rack_collision_80" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_81" type="mesh" mesh="env_05_pin_rack_collision_81" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_82" type="mesh" mesh="env_05_pin_rack_collision_82" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_83" type="mesh" mesh="env_05_pin_rack_collision_83" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_84" type="mesh" mesh="env_05_pin_rack_collision_84" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_85" type="mesh" mesh="env_05_pin_rack_collision_85" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_86" type="mesh" mesh="env_05_pin_rack_collision_86" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_87" type="mesh" mesh="env_05_pin_rack_collision_87" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_88" type="mesh" mesh="env_05_pin_rack_collision_88" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_89" type="mesh" mesh="env_05_pin_rack_collision_89" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_90" type="mesh" mesh="env_05_pin_rack_collision_90" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_91" type="mesh" mesh="env_05_pin_rack_collision_91" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_92" type="mesh" mesh="env_05_pin_rack_collision_92" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_93" type="mesh" mesh="env_05_pin_rack_collision_93" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_94" type="mesh" mesh="env_05_pin_rack_collision_94" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_95" type="mesh" mesh="env_05_pin_rack_collision_95" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_96" type="mesh" mesh="env_05_pin_rack_collision_96" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_97" type="mesh" mesh="env_05_pin_rack_collision_97" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_98" type="mesh" mesh="env_05_pin_rack_collision_98" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_99" type="mesh" mesh="env_05_pin_rack_collision_99" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_100" type="mesh" mesh="env_05_pin_rack_collision_100" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_101" type="mesh" mesh="env_05_pin_rack_collision_101" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_102" type="mesh" mesh="env_05_pin_rack_collision_102" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_103" type="mesh" mesh="env_05_pin_rack_collision_103" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_104" type="mesh" mesh="env_05_pin_rack_collision_104" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_105" type="mesh" mesh="env_05_pin_rack_collision_105" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_106" type="mesh" mesh="env_05_pin_rack_collision_106" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_107" type="mesh" mesh="env_05_pin_rack_collision_107" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_108" type="mesh" mesh="env_05_pin_rack_collision_108" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_109" type="mesh" mesh="env_05_pin_rack_collision_109" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_110" type="mesh" mesh="env_05_pin_rack_collision_110" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_111" type="mesh" mesh="env_05_pin_rack_collision_111" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_112" type="mesh" mesh="env_05_pin_rack_collision_112" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_113" type="mesh" mesh="env_05_pin_rack_collision_113" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_114" type="mesh" mesh="env_05_pin_rack_collision_114" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_115" type="mesh" mesh="env_05_pin_rack_collision_115" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_116" type="mesh" mesh="env_05_pin_rack_collision_116" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_117" type="mesh" mesh="env_05_pin_rack_collision_117" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_118" type="mesh" mesh="env_05_pin_rack_collision_118" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_119" type="mesh" mesh="env_05_pin_rack_collision_119" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_120" type="mesh" mesh="env_05_pin_rack_collision_120" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_121" type="mesh" mesh="env_05_pin_rack_collision_121" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_122" type="mesh" mesh="env_05_pin_rack_collision_122" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_123" type="mesh" mesh="env_05_pin_rack_collision_123" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_124" type="mesh" mesh="env_05_pin_rack_collision_124" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_125" type="mesh" mesh="env_05_pin_rack_collision_125" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_126" type="mesh" mesh="env_05_pin_rack_collision_126" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_127" type="mesh" mesh="env_05_pin_rack_collision_127" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_128" type="mesh" mesh="env_05_pin_rack_collision_128" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_129" type="mesh" mesh="env_05_pin_rack_collision_129" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_130" type="mesh" mesh="env_05_pin_rack_collision_130" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_131" type="mesh" mesh="env_05_pin_rack_collision_131" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_132" type="mesh" mesh="env_05_pin_rack_collision_132" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_05_pin_rack_collision_133" type="mesh" mesh="env_05_pin_rack_collision_133" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+    </body>
+    <body name="env_06_pipette_stand">
+      <geom name="env_06_pipette_stand_visual_0" type="mesh" mesh="env_06_pipette_stand_visual_0" material="env_material_153" contype="0" conaffinity="0" group="1" />
+      <geom name="env_06_pipette_stand_visual_1" type="mesh" mesh="env_06_pipette_stand_visual_1" material="env_material_154" contype="0" conaffinity="0" group="1" />
+      <geom name="env_06_pipette_stand_collision_0" type="mesh" mesh="env_06_pipette_stand_collision_0" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+    </body>
+    <body name="env_07_table_new">
+      <geom name="env_07_table_new_visual_0" type="mesh" mesh="env_07_table_new_visual_0" material="env_material_155" contype="0" conaffinity="0" group="1" />
+      <geom name="env_07_table_new_collision_0" type="box" pos="0 0 0.576999962" size="0.768000007 1.53600001 0.0480000377" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_07_table_new_collision_1" type="box" pos="-0.702719986 1.47071999 -0.143000007" size="0.0652800202 0.0652800202 0.671999931" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_07_table_new_collision_2" type="box" pos="-0.702719986 -1.47071999 -0.143000007" size="0.0652800202 0.0652800202 0.671999931" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_07_table_new_collision_3" type="box" pos="0.702719986 1.47071999 -0.143000007" size="0.0652800202 0.0652800202 0.671999931" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+      <geom name="env_07_table_new_collision_4" type="box" pos="0.702719986 -1.47071999 -0.143000007" size="0.0652800202 0.0652800202 0.671999931" group="3" rgba=".9 .2 .1 .25" contype="1" conaffinity="15" friction=".8 .005 .0001" />
+    </body>
+    <geom name="env_ground" type="plane" pos="0 0 -0.814999938" size="10 10 .02" rgba=".35 .35 .35 1" contype="1" conaffinity="15" />
+  </worldbody>
+  <statistic center="0 0 0.169776618" extent="1.5360000133514404" />
+</mujoco>
