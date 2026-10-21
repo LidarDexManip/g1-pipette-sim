@@ -10,12 +10,12 @@ from g1_pipette_sim.environments import ENVIRONMENTS,environment_manifest
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--dataset',type=Path,required=True);p.add_argument('--episodes',type=int,nargs='+',default=[0,126,188,127,1]);p.add_argument('--output',type=Path,default=Path('outputs/lidar-teleop/replay-audit.json'));a=p.parse_args()
-    cfg=load_registration();m=mujoco.MjModel.from_xml_string(build_robot_scene(registration=cfg));d=mujoco.MjData(m)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--dataset',type=Path,required=True);p.add_argument('--episodes',type=int,nargs='+',default=[0,126,188,127,1]);p.add_argument('--output',type=Path,default=Path('outputs/lidar-teleop/replay-audit.json'));p.add_argument('--hand',choices=['inspire','wuji'],default='inspire');a=p.parse_args()
+    cfg=load_registration();m=mujoco.MjModel.from_xml_string(build_robot_scene(registration=cfg,hand=a.hand));d=mujoco.MjData(m)
     manifest=environment_manifest('lidar');table=next(o for o in manifest['objects'] if o['name']=='Table_new');top=table['bounds_m'][2][1]
     rows=[]
     for i in a.episodes:
-        e=Episode(a.dataset,i);r=MeasuredReplay(m,d,e);max_error=0.;heights=[];ranges=[];table_contact_frames=0;max_penetration=0.;penetration_by_body={}
+        e=Episode(a.dataset,i);r=MeasuredReplay(m,d,e,a.hand);max_error=0.;heights=[];ranges=[];table_contact_frames=0;max_penetration=0.;penetration_by_body={}
         adr=np.array([m.joint(n).qposadr[0] for n in e.names])
         for frame,t in enumerate(e.times):
             r.pose(t);max_error=max(max_error,float(np.max(np.abs(d.qpos[adr]-e.arrays['observation.state'][frame,:29]))))
