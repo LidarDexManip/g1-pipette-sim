@@ -12,18 +12,20 @@ def run_imported(args):
     args.video=args.video or args.compare
     from .robot import build_robot_scene,load_registration,apply_joint_pose,MeasuredReplay
     from .physical import build_physical_scene,PhysicalReplay
+    from ..hands import HANDS
+    hand=getattr(args,'hand','inspire')
     registration=load_registration(args.config)
     dynamic=args.physics=='dynamic'
-    xml=(build_physical_scene if dynamic else build_robot_scene)(args.environment,registration)
+    xml=(build_physical_scene if dynamic else build_robot_scene)(args.environment,registration,hand)
     model=mujoco.MjModel.from_xml_string(xml);data=mujoco.MjData(model);mujoco.mj_forward(model,data)
     episode=None;replay=None
     if args.dataset is not None:
         from ..dataset import Episode
         episode=Episode(args.dataset,args.episode or 0,args.clock)
-        if not dynamic:replay=MeasuredReplay(model,data,episode);replay.pose(0)
+        if not dynamic:replay=MeasuredReplay(model,data,episode,hand);replay.pose(0)
     else:
         apply_joint_pose(model,data,registration.get('joint_pose',{}));mujoco.mj_forward(model,data)
-    if dynamic:replay=PhysicalReplay(model,data,episode,args.source,registration.get('joint_pose',{}))
+    if dynamic:replay=PhysicalReplay(model,data,episode,args.source,registration.get('joint_pose',{}),hand)
     camera=mujoco.MjvCamera();mujoco.mjv_defaultCamera(camera)
     view=registration['viewer'];camera.lookat[:]=view['lookat'];camera.distance=view['distance'];camera.azimuth=view['azimuth'];camera.elevation=view['elevation']
     option=mujoco.MjvOption();option.geomgroup[3]=args.show_collisions
@@ -34,7 +36,7 @@ def run_imported(args):
     (args.output/'environment.json').write_text(json.dumps(manifest,indent=2)+'\n')
     description=('dynamic servos, gravity, free pipette/tube; fixed pelvis and furniture; grasp success unvalidated'
                  if dynamic else 'measured-position diagnostics, static props, no physical response')
-    print(f"Environment: {args.environment}; {description}.",flush=True)
+    print(f"Environment: {args.environment}; {HANDS[hand]['label']}; {description}.",flush=True)
     print('Mouse: left orbit, right pan, wheel zoom. Collision groups are '+('visible.' if args.show_collisions else 'hidden.'),flush=True)
     duration=min(args.duration or episode.duration,episode.duration) if episode else (args.duration or (5.0 if args.headless else float('inf')))
     if episode:print(f'Replay: episode {episode.index}; physics={args.physics}, source={args.source}; hand sources: {replay.hand_sources}',flush=True)
@@ -93,14 +95,17 @@ def run_imported(args):
                 next_progress+=2.
             if viewer:
                 viewer.sync();time.sleep(max(0,min(.01,start+data.time/args.speed-time.monotonic())))
-        report={'environment':args.environment,'robot':'G1/Inspire','playback':'physical servo replay' if dynamic else ('measured joint positions' if replay else 'static pose'),
+        limitations=(['Fixed estimated pelvis pose; no root odometry','Furniture fixed; pipette/tube initially use approximate imported placement','Hand mapping, gains, friction and inertia need calibration','Grasp success unvalidated']
+                     if dynamic else ['Kinematic playback; no physical response','Static props do not follow hands'])
+        if hand!='inspire':limitations+=['Recorded Inspire registers drive Wuji joints through an approximate synergy','Robot placement was fitted with the Inspire palm, not the longer Wuji hand']
+        report={'environment':args.environment,'robot':HANDS[hand]['label'],'hand':hand,'playback':'physical servo replay' if dynamic else ('measured joint positions' if replay else 'static pose'),
                 'physics':args.physics,'source':args.source,
                 'episode':episode.index if episode else None,'dataset':str(episode.root) if episode else None,
                 'duration_s':float(data.time),'finite':bool(np.isfinite(data.qpos).all()),'hand_sources':replay.hand_sources if replay else {},
                 'wall_time_s':time.monotonic()-start,
                 'scene_state':replay.scene_state if replay else None,
                 'dynamics':replay.report() if dynamic else None,
-                'task_success':None,'limitations':['Fixed estimated pelvis pose; no root odometry','Furniture fixed; pipette/tube initially use approximate imported placement','Hand mapping, gains, friction and inertia need calibration','Grasp success unvalidated'] if dynamic else ['Kinematic playback; no physical response','Static props do not follow hands'],
+                'task_success':None,'limitations':limitations,
                 'video_frames':frame if writer else 0}
         (args.output/'replay-report.json').write_text(json.dumps(report,indent=2)+'\n')
         print(f'Scene preview saved in {args.output}',flush=True)

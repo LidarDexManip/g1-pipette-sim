@@ -1,0 +1,480 @@
+{
+  "source_repository": "https://github.com/LidarDexManip/g1-wuji-retargeting",
+  "source_commit": "fa3f94394c32c97f19724efde2cfef26bf5f4224",
+  "source_scene_sha256": "c2b521ffef58795666a3756dcd1eff042a920404cdc64598fb09db0c5b428ec6",
+  "upstream_provenance": {
+    "sources": [
+      {
+        "repository": "https://github.com/unitreerobotics/unitree_ros",
+        "commit": "7d6075f7f58588b189b940130e3edab3c839b2df"
+      },
+      {
+        "repository": "https://github.com/wuji-technology/wuji-description",
+        "commit": "4c1073d0a3ad1daaf6546d219db751d8448d3888"
+      }
+    ],
+    "sha256": {
+      "vendor/unitree_ros/robots/g1_description/g1_29dof.urdf": "e1dc89366bf96aa33ba4ef211884f6d81320ddd2ac6f8b1ad82986e64008be31",
+      "generated/meshes/0_pelvis.STL": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31",
+      "generated/meshes/0_pelvis_contour_link.STL": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420",
+      "generated/meshes/0_left_hip_pitch_link.STL": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4",
+      "generated/meshes/0_left_hip_roll_link.STL": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf",
+      "generated/meshes/0_left_hip_yaw_link.STL": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b",
+      "generated/meshes/0_left_knee_link.STL": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477",
+      "generated/meshes/0_left_ankle_pitch_link.STL": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d",
+      "generated/meshes/0_left_ankle_roll_link.STL": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f",
+      "generated/meshes/0_right_hip_pitch_link.STL": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6",
+      "generated/meshes/0_right_hip_roll_link.STL": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6",
+      "generated/meshes/0_right_hip_yaw_link.STL": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668",
+      "generated/meshes/0_right_knee_link.STL": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8",
+      "generated/meshes/0_right_ankle_pitch_link.STL": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9",
+      "generated/meshes/0_right_ankle_roll_link.STL": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5",
+      "generated/meshes/0_waist_yaw_link.STL": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb",
+      "generated/meshes/0_waist_roll_link.STL": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df",
+      "generated/meshes/0_torso_link.STL": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0",
+      "generated/meshes/0_logo_link.STL": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b",
+      "generated/meshes/0_head_link.STL": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411",
+      "generated/meshes/0_waist_support_link.STL": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a",
+      "generated/meshes/0_left_shoulder_pitch_link.STL": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52",
+      "generated/meshes/0_left_shoulder_roll_link.STL": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88",
+      "generated/meshes/0_left_shoulder_yaw_link.STL": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e",
+      "generated/meshes/0_left_elbow_link.STL": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3",
+      "generated/meshes/0_left_wrist_roll_link.STL": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c",
+      "generated/meshes/0_left_wrist_pitch_link.STL": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9",
+      "generated/meshes/0_left_wrist_yaw_link.STL": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b",
+      "generated/meshes/0_left_rubber_hand.STL": "cff2221a690fa69303f61fce68f2d155c1517b52efb6ca9262dd56e0bc6e70fe",
+      "generated/meshes/0_right_shoulder_pitch_link.STL": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02",
+      "generated/meshes/0_right_shoulder_roll_link.STL": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81",
+      "generated/meshes/0_right_shoulder_yaw_link.STL": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5",
+      "generated/meshes/0_right_elbow_link.STL": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab",
+      "generated/meshes/0_right_wrist_roll_link.STL": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f",
+      "generated/meshes/0_right_wrist_pitch_link.STL": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477",
+      "generated/meshes/0_right_wrist_yaw_link.STL": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6",
+      "generated/meshes/0_right_rubber_hand.STL": "99533b778bca6246144fa511bb9d4e555e075c641f2a0251e04372869cd99d67",
+      "vendor/wuji-description/hand2/hand2_beta2/body/urdf/left_with_mount.urdf": "ca90978657cb4508c9008458303e7bddfa50a98422f37d6eed559efb934ed42f",
+      "generated/meshes/1_l_mount.STL": "175491889134d13e4b468c32e80cc93e14d6eed3f287c52ed7e0cb8273920aae",
+      "generated/meshes/1_l_wrist.STL": "b37d7bbcb3c8888e7179f27e8c87e436358adad9cf30d7cb86bc46ee696a7ee8",
+      "generated/meshes/1_l_thumb_proximal.STL": "115227446584dd51e3ae77113063f97dc9e88cf4ce5db201eef2b81c17dd939c",
+      "generated/meshes/1_l_thumb_proximal_abd.STL": "3528478e63b18ee73b4170d03b6cf2df5bbf00f31bca2c1b03eccdfde0f5caa4",
+      "generated/meshes/1_l_thumb_middle.STL": "33cafea989a21445ceb51fee5bc6777b23c6ded88183ad2103946108efdbc292",
+      "generated/meshes/1_l_thumb_distal.STL": "c64baf6839b633a668cfc8b9386f44b26e1a52f9ae28e11a24aae54cd6fcd4c6",
+      "generated/meshes/1_l_thumb_tip_sensor_frame.STL": "1f0460fbb02d1d148ade528851099034e90652ea5440f39c26415cf281eb8232",
+      "generated/meshes/1_l_index_finger_proximal.STL": "4f8635951712c36749c362c18f33253e852179c6042211afebee7a57d8db9c57",
+      "generated/meshes/1_l_index_finger_proximal_abd.STL": "879583b9403fbb8a408de722a77c37e42bc29b5ec4a3f28ce35d8bde758684ac",
+      "generated/meshes/1_l_index_finger_middle.STL": "ad167cffae6957a062eb67576cf40584b668ad5a26ce9133269ea1028c8a4765",
+      "generated/meshes/1_l_index_finger_distal.STL": "3e87920820252191b66a337bffe1bdddb4392fc30309758e0369bdcd9964c996",
+      "generated/meshes/1_l_index_finger_tip_sensor_frame.STL": "7b66999e7d8a09b0d194af807b0780c2205cc9f1b00db49444369911bd85135b",
+      "generated/meshes/1_l_middle_finger_proximal.STL": "60bd1719c350e60126f6eaea8a702902df748f426c4bd47eb48d9f8fa8c3803c",
+      "generated/meshes/1_l_middle_finger_proximal_abd.STL": "921328fed4290d6abb0ff559e7b9f6818513210d3562a64811ca9b084af8b2b1",
+      "generated/meshes/1_l_middle_finger_middle.STL": "3fa4868a8c2431c42bad76a6e8ce7a87b71b370c05af89dbff7a9441a5e8880d",
+      "generated/meshes/1_l_middle_finger_distal.STL": "d52e9285937c71589da2a0cc04ef91a39019f09d4a9d6d413ffdf226e9bdc3c3",
+      "generated/meshes/1_l_middle_finger_tip_sensor_frame.STL": "7b66999e7d8a09b0d194af807b0780c2205cc9f1b00db49444369911bd85135b",
+      "generated/meshes/1_l_ring_finger_proximal.STL": "1025331cca112596feb9e5c6e39e110297bbf7c5b9a80c73aa8f552dc97c4877",
+      "generated/meshes/1_l_ring_finger_proximal_abd.STL": "2a687303caa5ea25ef63640b8e3606be1493b9f26d1b95d89e687425abcb53a8",
+      "generated/meshes/1_l_ring_finger_middle.STL": "386912dd2d79d6f274a957d4b227cd12208393b65f19da59155e190fc835d093",
+      "generated/meshes/1_l_ring_finger_distal.STL": "7f7abd5a0b0762012296aa57895c3abaace20965557c8ceda20bd184e70009f7",
+      "generated/meshes/1_l_ring_finger_tip_sensor_frame.STL": "7b66999e7d8a09b0d194af807b0780c2205cc9f1b00db49444369911bd85135b",
+      "generated/meshes/1_l_pinky_proximal.STL": "df5bbe36bbd592c8913ea3c6c31af5cda0011f801de184815672b2fbe4f429b1",
+      "generated/meshes/1_l_pinky_proximal_abd.STL": "af1e1a26483fac1b030b3bec7fe6a96b1705c8b1f1410095ecb6fb09751ad641",
+      "generated/meshes/1_l_pinky_middle.STL": "c19b3b46d170a87e08beb309307fcbcc11b89fc52061f6d8ad63a6692c0c33d5",
+      "generated/meshes/1_l_pinky_distal.STL": "630261a156db18cd88207aa5a90572d15480961c4b68fbfb6877b6349195232a",
+      "generated/meshes/1_l_pinky_tip_sensor_frame.STL": "be13adc0fdfbec3c1f70821a0ea946cc6ff9f0a1531c065a7965c9dfcf7b8514",
+      "vendor/wuji-description/hand2/hand2_beta2/body/urdf/right_with_mount.urdf": "909e73b29a20b2169db23d7e8033730e220eab69013b0d8732a214fc24ed2748",
+      "generated/meshes/2_r_mount.STL": "fd30d30dbfd254e317e957588dd5863c46405f719e255fe79104ece93a08e416",
+      "generated/meshes/2_r_wrist.STL": "748cf6a16bc5bfedf9c7e2ee489459f726740680db1449221133be570f9ee505",
+      "generated/meshes/2_r_thumb_proximal.STL": "e5f4c7dbffeddf626e5d6c7883e10a6c1de0e2d8213a9122dba5ee29a488345f",
+      "generated/meshes/2_r_thumb_proximal_abd.STL": "d9e28b15b054ede554f23524c32f430fefa3622eb9fa10016c39fec10a2638e8",
+      "generated/meshes/2_r_thumb_middle.STL": "a3e9851cd3aed770fb0ed2b05b2ceca86980af1bfef2fbc8e1925e9a6110f56f",
+      "generated/meshes/2_r_thumb_distal.STL": "133cd575b899cf7c40651d8851065d43c87addb6be61face329c170edcc389dd",
+      "generated/meshes/2_r_thumb_tip_sensor_frame.STL": "7a94ebdd1c50ec5b62e73abd51848fe15589d9eb07e2fa3b1eab6567e5f08c12",
+      "generated/meshes/2_r_index_finger_proximal.STL": "46b1e8036544dcd4aeba9382d1b3fbe4adb531fb2fe56b6ab5138d0a81f6661c",
+      "generated/meshes/2_r_index_finger_proximal_abd.STL": "f1ff36b8d54ce2bf93f42424da9392df6568dc1b286ff588157fe6030797f1f6",
+      "generated/meshes/2_r_index_finger_middle.STL": "2e1dd153fb0725aa3caed4dd49cb918da0378e875c4b9442bd147793a111f7d7",
+      "generated/meshes/2_r_index_finger_distal.STL": "837f4ffdcd4a786731ded0652a57ec9015605148cba78881d2d4d71ced804976",
+      "generated/meshes/2_r_index_finger_tip_sensor_frame.STL": "4142c661bbe09bcbbee8c6188676915986bcdcc49f397720252864148665da37",
+      "generated/meshes/2_r_middle_finger_proximal.STL": "ea4db9cd3cccfd4048b620d334a1f00b034110d667aa689e3421e56c08725ff9",
+      "generated/meshes/2_r_middle_finger_proximal_abd.STL": "483d9af13da2a605263cf27cbbc789f2dfcd571cb0a37b54c9322e5705c7ada9",
+      "generated/meshes/2_r_middle_finger_middle.STL": "8f7234c6ef133c11ecea89e3d1a94f4842dec9099c53faccd9312115d86fed4d",
+      "generated/meshes/2_r_middle_finger_distal.STL": "81ed25e0a780172603b334895e2f7487478e785db0b9c1642ddbb4964b7a388a",
+      "generated/meshes/2_r_middle_finger_tip_sensor_frame.STL": "4142c661bbe09bcbbee8c6188676915986bcdcc49f397720252864148665da37",
+      "generated/meshes/2_r_ring_finger_proximal.STL": "7f22b426af3ce5ddae228e370d51d15c1c66e7888c4db292ab5b8127dadcef5f",
+      "generated/meshes/2_r_ring_finger_proximal_abd.STL": "bfc1ac8e3324942ecfd2dae448b925db3bf668a03b3aaa36a050aef1d8734d40",
+      "generated/meshes/2_r_ring_finger_middle.STL": "9069d35b6f34fe23b49a7b28f8ef2dfd36ee18bebcf72de039e550f38d6a36cb",
+      "generated/meshes/2_r_ring_finger_distal.STL": "32129d2a8cf862f410c64201fea9f8942108af3bdc3b6e8ddd5776c3e9da465a",
+      "generated/meshes/2_r_ring_finger_tip_sensor_frame.STL": "4142c661bbe09bcbbee8c6188676915986bcdcc49f397720252864148665da37",
+      "generated/meshes/2_r_pinky_proximal.STL": "6a5696573c69e37467e3ba3b722d92ecd0078f0e18ae8e1e2c49ad118800ea8b",
+      "generated/meshes/2_r_pinky_proximal_abd.STL": "321e9e615166eab4cd87ad4bc8609a7c19944fd7200f957d11bb020fa255bb72",
+      "generated/meshes/2_r_pinky_middle.STL": "12466b870cf8cc47aacdc02a535474d65bce3bf128840a8e471c4fede43d57ee",
+      "generated/meshes/2_r_pinky_distal.STL": "d6aef893258d6de0200e1bc4cdfeb3a7f941072aa79aa4d955162b362b9af894",
+      "generated/meshes/2_r_pinky_tip_sensor_frame.STL": "b9c9df3fee37dd4f30072c15b65bd1019c4cea1b90dbba9b082eb05b6678d561",
+      "vendor/wuji-description/hand2/hand2_beta2/body/mjcf/left_with_mount.xml": "903d80d3fa00ff78efa7f7684cedb768b0a1b960db9f68fdb1d28c03eee3ba22",
+      "vendor/wuji-description/hand2/hand2_beta2/body/mjcf/right_with_mount.xml": "9bce131e7cf7147b2fdf822cf762ac6ed7a313c449e65c7ff0db3120a617254a"
+    },
+    "mounts": {
+      "left": {
+        "xyz": "0.0415 0.003 0",
+        "rpy": "0 -1.5707963267948966 0"
+      },
+      "right": {
+        "xyz": "0.0415 -0.003 0",
+        "rpy": "0 -1.5707963267948966 0"
+      }
+    },
+    "notes": "Wuji Hand 2 Beta 2 with official 69 g mounts. G1-to-mount poses are provisional; no additional G1 adapter mass or geometry is added. MuJoCo imports URDF collision meshes as convex hulls. Simulation gains are not hardware-calibrated."
+  },
+  "warning": "Wuji Hand 2 Beta 2 with provisional G1 wrist mounts from the retargeting repository. Gains, friction and mounts are not hardware-calibrated. Upstream asset terms remain applicable.",
+  "meshes": [
+    {
+      "file": "0_pelvis.STL",
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "file": "0_pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "file": "0_left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "file": "0_left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "file": "0_left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "file": "0_left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "file": "0_left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "file": "0_left_ankle_roll_link.STL",
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "file": "0_right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "file": "0_right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "file": "0_right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "file": "0_right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "file": "0_right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "file": "0_right_ankle_roll_link.STL",
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "file": "0_waist_yaw_link.STL",
+      "sha256": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb"
+    },
+    {
+      "file": "0_waist_roll_link.STL",
+      "sha256": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df"
+    },
+    {
+      "file": "0_torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "file": "0_logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "file": "0_head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "file": "0_waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "file": "0_left_shoulder_pitch_link.STL",
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "file": "0_left_shoulder_roll_link.STL",
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "file": "0_left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "file": "0_left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "file": "0_left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "file": "0_left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "file": "0_left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "file": "0_right_shoulder_pitch_link.STL",
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "file": "0_right_shoulder_roll_link.STL",
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "file": "0_right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "file": "0_right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "file": "0_right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "file": "0_right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "file": "0_right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "file": "1_l_mount.STL",
+      "sha256": "175491889134d13e4b468c32e80cc93e14d6eed3f287c52ed7e0cb8273920aae"
+    },
+    {
+      "file": "1_l_wrist.STL",
+      "sha256": "b37d7bbcb3c8888e7179f27e8c87e436358adad9cf30d7cb86bc46ee696a7ee8"
+    },
+    {
+      "file": "1_l_thumb_proximal.STL",
+      "sha256": "115227446584dd51e3ae77113063f97dc9e88cf4ce5db201eef2b81c17dd939c"
+    },
+    {
+      "file": "1_l_thumb_proximal_abd.STL",
+      "sha256": "3528478e63b18ee73b4170d03b6cf2df5bbf00f31bca2c1b03eccdfde0f5caa4"
+    },
+    {
+      "file": "1_l_thumb_middle.STL",
+      "sha256": "33cafea989a21445ceb51fee5bc6777b23c6ded88183ad2103946108efdbc292"
+    },
+    {
+      "file": "1_l_thumb_distal.STL",
+      "sha256": "c64baf6839b633a668cfc8b9386f44b26e1a52f9ae28e11a24aae54cd6fcd4c6"
+    },
+    {
+      "file": "1_l_thumb_tip_sensor_frame.STL",
+      "sha256": "1f0460fbb02d1d148ade528851099034e90652ea5440f39c26415cf281eb8232"
+    },
+    {
+      "file": "1_l_index_finger_proximal.STL",
+      "sha256": "4f8635951712c36749c362c18f33253e852179c6042211afebee7a57d8db9c57"
+    },
+    {
+      "file": "1_l_index_finger_proximal_abd.STL",
+      "sha256": "879583b9403fbb8a408de722a77c37e42bc29b5ec4a3f28ce35d8bde758684ac"
+    },
+    {
+      "file": "1_l_index_finger_middle.STL",
+      "sha256": "ad167cffae6957a062eb67576cf40584b668ad5a26ce9133269ea1028c8a4765"
+    },
+    {
+      "file": "1_l_index_finger_distal.STL",
+      "sha256": "3e87920820252191b66a337bffe1bdddb4392fc30309758e0369bdcd9964c996"
+    },
+    {
+      "file": "1_l_index_finger_tip_sensor_frame.STL",
+      "sha256": "7b66999e7d8a09b0d194af807b0780c2205cc9f1b00db49444369911bd85135b"
+    },
+    {
+      "file": "1_l_middle_finger_proximal.STL",
+      "sha256": "60bd1719c350e60126f6eaea8a702902df748f426c4bd47eb48d9f8fa8c3803c"
+    },
+    {
+      "file": "1_l_middle_finger_proximal_abd.STL",
+      "sha256": "921328fed4290d6abb0ff559e7b9f6818513210d3562a64811ca9b084af8b2b1"
+    },
+    {
+      "file": "1_l_middle_finger_middle.STL",
+      "sha256": "3fa4868a8c2431c42bad76a6e8ce7a87b71b370c05af89dbff7a9441a5e8880d"
+    },
+    {
+      "file": "1_l_middle_finger_distal.STL",
+      "sha256": "d52e9285937c71589da2a0cc04ef91a39019f09d4a9d6d413ffdf226e9bdc3c3"
+    },
+    {
+      "file": "1_l_middle_finger_tip_sensor_frame.STL",
+      "sha256": "7b66999e7d8a09b0d194af807b0780c2205cc9f1b00db49444369911bd85135b"
+    },
+    {
+      "file": "1_l_ring_finger_proximal.STL",
+      "sha256": "1025331cca112596feb9e5c6e39e110297bbf7c5b9a80c73aa8f552dc97c4877"
+    },
+    {
+      "file": "1_l_ring_finger_proximal_abd.STL",
+      "sha256": "2a687303caa5ea25ef63640b8e3606be1493b9f26d1b95d89e687425abcb53a8"
+    },
+    {
+      "file": "1_l_ring_finger_middle.STL",
+      "sha256": "386912dd2d79d6f274a957d4b227cd12208393b65f19da59155e190fc835d093"
+    },
+    {
+      "file": "1_l_ring_finger_distal.STL",
+      "sha256": "7f7abd5a0b0762012296aa57895c3abaace20965557c8ceda20bd184e70009f7"
+    },
+    {
+      "file": "1_l_ring_finger_tip_sensor_frame.STL",
+      "sha256": "7b66999e7d8a09b0d194af807b0780c2205cc9f1b00db49444369911bd85135b"
+    },
+    {
+      "file": "1_l_pinky_proximal.STL",
+      "sha256": "df5bbe36bbd592c8913ea3c6c31af5cda0011f801de184815672b2fbe4f429b1"
+    },
+    {
+      "file": "1_l_pinky_proximal_abd.STL",
+      "sha256": "af1e1a26483fac1b030b3bec7fe6a96b1705c8b1f1410095ecb6fb09751ad641"
+    },
+    {
+      "file": "1_l_pinky_middle.STL",
+      "sha256": "c19b3b46d170a87e08beb309307fcbcc11b89fc52061f6d8ad63a6692c0c33d5"
+    },
+    {
+      "file": "1_l_pinky_distal.STL",
+      "sha256": "630261a156db18cd88207aa5a90572d15480961c4b68fbfb6877b6349195232a"
+    },
+    {
+      "file": "1_l_pinky_tip_sensor_frame.STL",
+      "sha256": "be13adc0fdfbec3c1f70821a0ea946cc6ff9f0a1531c065a7965c9dfcf7b8514"
+    },
+    {
+      "file": "2_r_mount.STL",
+      "sha256": "fd30d30dbfd254e317e957588dd5863c46405f719e255fe79104ece93a08e416"
+    },
+    {
+      "file": "2_r_wrist.STL",
+      "sha256": "748cf6a16bc5bfedf9c7e2ee489459f726740680db1449221133be570f9ee505"
+    },
+    {
+      "file": "2_r_thumb_proximal.STL",
+      "sha256": "e5f4c7dbffeddf626e5d6c7883e10a6c1de0e2d8213a9122dba5ee29a488345f"
+    },
+    {
+      "file": "2_r_thumb_proximal_abd.STL",
+      "sha256": "d9e28b15b054ede554f23524c32f430fefa3622eb9fa10016c39fec10a2638e8"
+    },
+    {
+      "file": "2_r_thumb_middle.STL",
+      "sha256": "a3e9851cd3aed770fb0ed2b05b2ceca86980af1bfef2fbc8e1925e9a6110f56f"
+    },
+    {
+      "file": "2_r_thumb_distal.STL",
+      "sha256": "133cd575b899cf7c40651d8851065d43c87addb6be61face329c170edcc389dd"
+    },
+    {
+      "file": "2_r_thumb_tip_sensor_frame.STL",
+      "sha256": "7a94ebdd1c50ec5b62e73abd51848fe15589d9eb07e2fa3b1eab6567e5f08c12"
+    },
+    {
+      "file": "2_r_index_finger_proximal.STL",
+      "sha256": "46b1e8036544dcd4aeba9382d1b3fbe4adb531fb2fe56b6ab5138d0a81f6661c"
+    },
+    {
+      "file": "2_r_index_finger_proximal_abd.STL",
+      "sha256": "f1ff36b8d54ce2bf93f42424da9392df6568dc1b286ff588157fe6030797f1f6"
+    },
+    {
+      "file": "2_r_index_finger_middle.STL",
+      "sha256": "2e1dd153fb0725aa3caed4dd49cb918da0378e875c4b9442bd147793a111f7d7"
+    },
+    {
+      "file": "2_r_index_finger_distal.STL",
+      "sha256": "837f4ffdcd4a786731ded0652a57ec9015605148cba78881d2d4d71ced804976"
+    },
+    {
+      "file": "2_r_index_finger_tip_sensor_frame.STL",
+      "sha256": "4142c661bbe09bcbbee8c6188676915986bcdcc49f397720252864148665da37"
+    },
+    {
+      "file": "2_r_middle_finger_proximal.STL",
+      "sha256": "ea4db9cd3cccfd4048b620d334a1f00b034110d667aa689e3421e56c08725ff9"
+    },
+    {
+      "file": "2_r_middle_finger_proximal_abd.STL",
+      "sha256": "483d9af13da2a605263cf27cbbc789f2dfcd571cb0a37b54c9322e5705c7ada9"
+    },
+    {
+      "file": "2_r_middle_finger_middle.STL",
+      "sha256": "8f7234c6ef133c11ecea89e3d1a94f4842dec9099c53faccd9312115d86fed4d"
+    },
+    {
+      "file": "2_r_middle_finger_distal.STL",
+      "sha256": "81ed25e0a780172603b334895e2f7487478e785db0b9c1642ddbb4964b7a388a"
+    },
+    {
+      "file": "2_r_middle_finger_tip_sensor_frame.STL",
+      "sha256": "4142c661bbe09bcbbee8c6188676915986bcdcc49f397720252864148665da37"
+    },
+    {
+      "file": "2_r_ring_finger_proximal.STL",
+      "sha256": "7f22b426af3ce5ddae228e370d51d15c1c66e7888c4db292ab5b8127dadcef5f"
+    },
+    {
+      "file": "2_r_ring_finger_proximal_abd.STL",
+      "sha256": "bfc1ac8e3324942ecfd2dae448b925db3bf668a03b3aaa36a050aef1d8734d40"
+    },
+    {
+      "file": "2_r_ring_finger_middle.STL",
+      "sha256": "9069d35b6f34fe23b49a7b28f8ef2dfd36ee18bebcf72de039e550f38d6a36cb"
+    },
+    {
+      "file": "2_r_ring_finger_distal.STL",
+      "sha256": "32129d2a8cf862f410c64201fea9f8942108af3bdc3b6e8ddd5776c3e9da465a"
+    },
+    {
+      "file": "2_r_ring_finger_tip_sensor_frame.STL",
+      "sha256": "4142c661bbe09bcbbee8c6188676915986bcdcc49f397720252864148665da37"
+    },
+    {
+      "file": "2_r_pinky_proximal.STL",
+      "sha256": "6a5696573c69e37467e3ba3b722d92ecd0078f0e18ae8e1e2c49ad118800ea8b"
+    },
+    {
+      "file": "2_r_pinky_proximal_abd.STL",
+      "sha256": "321e9e615166eab4cd87ad4bc8609a7c19944fd7200f957d11bb020fa255bb72"
+    },
+    {
+      "file": "2_r_pinky_middle.STL",
+      "sha256": "12466b870cf8cc47aacdc02a535474d65bce3bf128840a8e471c4fede43d57ee"
+    },
+    {
+      "file": "2_r_pinky_distal.STL",
+      "sha256": "d6aef893258d6de0200e1bc4cdfeb3a7f941072aa79aa4d955162b362b9af894"
+    },
+    {
+      "file": "2_r_pinky_tip_sensor_frame.STL",
+      "sha256": "b9c9df3fee37dd4f30072c15b65bd1019c4cea1b90dbba9b082eb05b6678d561"
+    }
+  ]
+}

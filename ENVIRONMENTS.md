@@ -212,6 +212,42 @@ implemented in `g1_pipette_sim/environments/physical.py`.
 The dataset's 35-value main action is a high-level controller input, not identical
 to its 29-value low-level motor targets.
 
+## Wuji Hand 2 option
+
+`--hand wuji` replaces both Inspire hands with Wuji Hand 2 (Beta 2) in the LIDAR
+scene. The G1 + Wuji model comes from
+[g1-wuji-retargeting](https://github.com/LidarDexManip/g1-wuji-retargeting), so
+trajectories retargeted there use the same assembly and provisional wrist mounts.
+Build it there, then copy the robot into `assets/robot_wuji/`:
+
+```bash
+cd ~/Projects/g1-wuji-retargeting && ./fetch_assets.sh && python build.py
+cd ~/Projects/g1-pipette-sim && python tools/prepare_wuji_assets.py
+./view_lidar.sh --episode 126 --hand wuji
+./view_lidar.sh --episode 126 --hand wuji --headless --compare \
+  --output outputs/lidar-teleop/wuji-comparison-126
+python tools/check_lidar_replays.py --dataset "$DATASET" --hand wuji \
+  --output outputs/lidar-teleop/wuji-replay-audit.json
+```
+
+Both the default physical replay and `--physics kinematic` accept `--hand wuji`;
+`replay-report.json` records `robot`/`hand` and Wuji-specific limitations. The 29 G1
+joints use the same targets and servos as with Inspire. The recorded hands are
+Inspire, so their six registers drive the 20 Wuji joints per hand through the
+approximate synergy in `config/hands/wuji-from-inspire.json` (finger curl, thumb
+rotation via `thumb_cmc_flex`, thumb bend via `thumb_cmc_abd`, `mcp`, `ip`). Thumb
+rotation follows the register convention (1000 = open hand, thumb beside the index
+finger). This is a playback proxy, not a retargeting result. In physical replay all
+20 Wuji joints per hand are independent position servos with the retargeting
+repository's gains (kp 2, kv 0.06), armature/damping and URDF effort limits.
+
+The robot placement was fitted with the Inspire palm; the Wuji hand is longer. With
+the current global placement, physical episode 0 lifts the pipette 9.7 mm and episode
+126 starts with the left thumb 9.8 mm inside the tube without lifting it, so Wuji
+grasp success is not expected yet. `--hand inspire` (the default) builds a scene
+identical to before and replays identically; the pipette workspace remains
+Inspire-only because its grasp, ejector and contact settings are tuned for Inspire.
+
 ## Code organization
 
 Collision-repair tools:

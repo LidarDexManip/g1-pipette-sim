@@ -1,0 +1,26 @@
+{
+  "description": "Approximate playback of Inspire six-register hand commands on Wuji Hand 2 joints. Visualization proxy for Inspire-recorded demonstrations, not a retargeting result.",
+  "register_max": 1000.0,
+  "finger_names": {
+    "pinky": "pinky",
+    "ring": "ring_finger",
+    "middle": "middle_finger",
+    "index": "index_finger"
+  },
+  "finger_closed_rad": {
+    "mcp_flex": 1.1,
+    "pip": 1.3,
+    "dip": 0.8
+  },
+  "finger_abduction_rad": 0.0,
+  "thumb_rotation_rad": {
+    "thumb_cmc_flex": 0.8
+  },
+  "thumb_bend_closed_rad": {
+    "thumb_cmc_abd": -0.5,
+    "thumb_mcp": 0.3,
+    "thumb_ip": 0.7
+  },
+  "self_collision_check": "No Wuji finger self-penetration over 1 mm for any of the 3^6 register combinations {0, 500, 1000} on either hand (2026-10-21).",
+  "thumb_rotation_note": "Register 1000 is the open hand (thumb in the palm plane); thumb_rotation_rad applies at register 0."
+}
