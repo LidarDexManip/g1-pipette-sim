@@ -5,10 +5,11 @@ import mujoco
 
 from . import environment_manifest, _vec
 from .robot import build_robot_scene, MeasuredReplay, apply_joint_pose
+from ..hands import HANDS
 
 
-def build_physical_scene(name='lidar', registration=None):
-    root=ET.fromstring(build_robot_scene(name, registration))
+def build_physical_scene(name='lidar', registration=None, hand='inspire'):
+    root=ET.fromstring(build_robot_scene(name, registration, hand))
     option=root.find('option')
     option.set('timestep','0.001');option.set('integrator','implicitfast')
     option.set('iterations','100');option.set('cone','elliptic')
@@ -31,13 +32,19 @@ def build_physical_scene(name='lidar', registration=None):
     pelvis=root.find("./worldbody/body[@name='pelvis']")
     joints={j.get('name'):j for j in pelvis.iter('joint')}
     actuators=root.find('actuator');actuators.clear()
+    finger_prefix=tuple(p+'_' for p in HANDS[hand]['prefix'].values())
     for joint_name,joint in joints.items():
-        hand=joint_name.startswith(('L_','R_'))
-        if hand:
+        finger=joint_name.startswith(finger_prefix)
+        if finger and hand=='inspire':
             joint.set('armature','.00001');joint.set('damping','.005');joint.set('frictionloss','.001')
             # Distal joints follow the original mechanical coupling equalities.
             if 'intermediate' in joint_name or 'distal' in joint_name:continue
-        kp,kv,limit=(3.,.12,1.) if hand else ((45.,3.,5.) if 'wrist' in joint_name else (180.,18.,80.))
+        if finger and hand=='wuji':
+            # Wuji joints are independently actuated. Keep the retargeting
+            # repository's armature/damping, servo gains and URDF effort limits.
+            kp,kv=2.,.06;limit=float(np.max(np.abs(np.fromstring(joint.get('actuatorfrcrange'),sep=' '))))
+        else:
+            kp,kv,limit=(3.,.12,1.) if finger else ((45.,3.,5.) if 'wrist' in joint_name else (180.,18.,80.))
         hardware=np.fromstring(joint.get('actuatorfrcrange',f'{-limit} {limit}'),sep=' ')
         limit=min(limit,float(np.max(np.abs(hardware))))
         ET.SubElement(actuators,'position',name='servo_'+joint_name,joint=joint_name,
@@ -47,9 +54,9 @@ def build_physical_scene(name='lidar', registration=None):
 
 class PhysicalReplay:
     """Fixed pelvis, free props, torque-limited servo replay with real contacts."""
-    def __init__(self,model,data,episode=None,source='low_level',initial_pose=None):
+    def __init__(self,model,data,episode=None,source='low_level',initial_pose=None,hand='inspire'):
         self.model=model;self.data=data;self.episode=episode;self.source=source
-        self.reference=MeasuredReplay(model,data,episode) if episode else None
+        self.reference=MeasuredReplay(model,data,episode,hand) if episode else None
         self.scene_state=self.reference.scene_state if episode else {}
         absent=self.scene_state.get('absent_objects',[])
         for name in ('env_01_pipette','env_02_cylinder'):

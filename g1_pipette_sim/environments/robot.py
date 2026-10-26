@@ -5,6 +5,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 import numpy as np
 from . import ROOT, ENVIRONMENTS, imported_xml, environment_manifest, _vec
+from ..hands import HANDS, hand_model, load_mapping, register_pose
 
 DEFAULT_REGISTRATION=ROOT/'config/environments/lidar-robot.json'
 
@@ -13,15 +14,15 @@ def load_registration(path=None):
     return json.loads(Path(path or DEFAULT_REGISTRATION).read_text())
 
 
-def build_robot_scene(name='lidar', registration=None):
+def build_robot_scene(name='lidar', registration=None, hand='inspire'):
     cfg=registration or load_registration()
-    root=ET.fromstring(imported_xml(name));robot_path=ROOT/'assets/robot/g1_inspire.xml'
+    root=ET.fromstring(imported_xml(name));robot_path=hand_model(hand)
     robot=ET.parse(robot_path).getroot()
     for asset in robot.findall('./asset/*'):
         asset=copy.deepcopy(asset)
         if asset.get('file'):asset.set('file',str((robot_path.parent/'meshes'/asset.get('file')).resolve()))
         root.find('asset').append(asset)
-    for tag in ('default','actuator','equality','sensor','contact'):
+    for tag in HANDS[hand]['tags']:
         node=robot.find(tag)
         if node is not None:root.append(copy.deepcopy(node))
     pelvis=copy.deepcopy(robot.find("./worldbody/body[@name='pelvis']"))
@@ -46,11 +47,10 @@ def apply_joint_pose(model,data,pose):
 
 class MeasuredReplay:
     """Kinematic diagnostic only: static props never count as successful grasps."""
-    def __init__(self,model,data,episode):
+    def __init__(self,model,data,episode,hand='inspire'):
         import pyarrow.parquet as pq
-        from ..scene import load_config
         from .episode_scene import apply_episode_scene
-        self.model=model;self.data=data;self.episode=episode;self.mapping=load_config()['hand_mapping']
+        self.model=model;self.data=data;self.episode=episode;self.hand=hand;self.mapping=load_mapping(hand)
         self.scene_state=apply_episode_scene(model,episode.root,episode.index)
         path=episode.root/episode.info['data_path'].format(episode_chunk=episode.index//episode.info['chunks_size'],episode_index=episode.index)
         self.hand_sources={}
@@ -64,16 +64,10 @@ class MeasuredReplay:
 
     def targets(self,t,source='state',hand_commands=False):
         e=self.episode;key={'state':'observation.state','low_level':'action.low_level','action':'action'}[source]
-        pose=dict(zip(e.names,e.interpolate(key,t)[:29]));m=self.mapping
-        for side,prefix in [('left','L'),('right','R')]:
+        pose=dict(zip(e.names,e.interpolate(key,t)[:29]))
+        for side in ('left','right'):
             key=f'action.hand_{side}' if hand_commands else self.hand_sources[side]
-            raw=e.interpolate(key,t);u=np.clip(raw/m['register_max'],0,1)
-            for i,finger in enumerate(['pinky','ring','middle','index']):
-                for segment in ['proximal','intermediate']:pose[f'{prefix}_{finger}_{segment}_joint']=(1-u[i])*m['finger_closed_rad']
-            bend=(1-u[4])*m['thumb_bend_closed_rad']
-            pose.update({f'{prefix}_thumb_proximal_yaw_joint':u[5]*m['thumb_rotation_max_rad'],
-                         f'{prefix}_thumb_proximal_pitch_joint':bend,f'{prefix}_thumb_intermediate_joint':bend*1.6,
-                         f'{prefix}_thumb_distal_joint':bend*2.4})
+            pose.update(register_pose(self.hand,side,e.interpolate(key,t),self.mapping))
         return pose
 
     def pose(self,t):

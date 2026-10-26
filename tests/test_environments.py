@@ -85,7 +85,7 @@ class EnvironmentsTest(unittest.TestCase):
 
     def test_imported_scene_cannot_silently_replace_calibrated_task(self):
         cfg=load_config();cfg['environment']='lidar'
-        with self.assertRaisesRegex(ValueError,'standalone calibrated'):
+        with self.assertRaisesRegex(ValueError,'standalone scene'):
             build_xml(cfg)
 
 if __name__=='__main__':unittest.main()

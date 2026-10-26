@@ -29,6 +29,7 @@ def main():
     from .environments import ENVIRONMENTS
     parser.add_argument('--environment',choices=list(ENVIRONMENTS),default=None,help='Workspace/environment selection. lidar uses fixed-base dynamic servo replay with movable pipette/tube; --physics kinematic restores measured-position diagnostics. lab-* adds visual surroundings to the pipette task.')
     parser.add_argument('--list-environments',action='store_true',help='List environments and exit without loading a dataset.')
+    parser.add_argument('--hand',choices=['inspire','wuji'],default='inspire',help='Robot hands. wuji uses the G1 + Wuji Hand 2 model from g1-wuji-retargeting (prepare with tools/prepare_wuji_assets.py); recorded Inspire registers drive it through an approximate mapping. Currently --environment lidar only.')
     parser.add_argument('--dataset',type=Path,default=None,help='Dataset root or HF cache (default: cached HIL194, or HIL293 with its matching replay config when HIL194 is absent; explicit inputs are never substituted)')
     parser.add_argument('--episode',type=int,default=None,help='Episode index; default: fitted config episode, otherwise a verified HIL194 pickup example for automatic dynamic replay, or 0')
     parser.add_argument('--mode',choices=['replay','demo'],default='replay',help=(
@@ -74,6 +75,7 @@ def main():
     if args.speed<=0 or (args.duration is not None and args.duration<=0):parser.error('speed and duration must be positive')
     if args.free_base and args.physics!='dynamic':parser.error('--free-base requires --physics dynamic')
     if args.compare and args.mode!='replay':parser.error('--compare requires --mode replay')
+    if args.hand!='inspire' and not imported:parser.error('--hand wuji currently requires --environment lidar; the pipette workspace grasp, ejector and contact settings are tuned for Inspire.')
     if args.headless:os.environ.setdefault('MUJOCO_GL','egl')
     if not args.headless and not (os.environ.get('DISPLAY') or os.environ.get('WAYLAND_DISPLAY')):parser.error('No display found. Use --headless (optionally --video).')
     if imported:
