@@ -1,0 +1,12 @@
+{
+  "datasets": [{
+    "root": "/data/real-pickup-dataset-v2",
+    "action_contract": "g1_joint29_root6_hand_registers",
+    "command_alignment": "paired_image_rows",
+    "register_max": 1000,
+    "video_key": "observation.images.rgb",
+    "idle_weight": 0.2,
+    "train": [{"episode": 0, "session": "recording-day-a", "task": "pipette_pickup"}],
+    "validation": [{"episode": 2, "session": "recording-day-b", "task": "pipette_pickup"}]
+  }]
+}

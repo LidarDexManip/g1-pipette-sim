@@ -22,7 +22,8 @@ __pycache__/
 .venv-policy/
 
 # Local planning, experiment notes, and reports
-/docs/
+/docs/*
+!/docs/LIDAR_B200.md
 # Isolated reinforcement-learning environment
 .venv-rl/
 
@@ -30,3 +31,8 @@ __pycache__/
 /.cache/huggingface/
 # Large exported mesh is distributed losslessly as .obj.gz and extracted locally.
 /assets/environments/lidar/meshes/env_00_cylinder_base_visual_0.obj
+
+# LIDAR B200 training artifacts
+.venv-lidar-ppo/
+/runs/
+/exports/

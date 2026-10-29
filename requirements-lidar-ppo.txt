@@ -1,0 +1,16 @@
+# Install torch/torchvision from the cu128 index first; see docs/LIDAR_B200.md.
+mujoco==3.8.1
+mujoco-warp==3.8.1
+warp-lang==1.12.0
+numpy==1.26.4
+scipy>=1.10,<2
+transformers==4.57.0
+huggingface-hub>=0.34,<1
+pyarrow>=14,<22
+opencv-python-headless==4.11.0.86
+Pillow>=10,<12
+PyYAML>=6,<7
+onnx==1.19.1
+onnxruntime==1.23.2
+onnx2torch==1.5.15
+pytest>=8,<9

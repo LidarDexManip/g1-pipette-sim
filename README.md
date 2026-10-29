@@ -277,3 +277,11 @@ with its calibrated dimensions and G1 robot (`./view_lidar.sh --episode 0` plays
 workspace by default; `--environment lab-open-shelves` adds procedural visual
 surroundings. See [ENVIRONMENTS.md](ENVIRONMENTS.md) for conversion, collision
 limitations, architecture, and run commands.
+
+## LIDAR pickup RL on B200
+
+See [the B200 training guide](docs/LIDAR_B200.md) for real-data BC, a MuJoCo Warp
+PPO teacher, recurrent ego-camera distillation, and visual PPO with real BC rehearsal.
+This is separate from the existing attachment experiments. The current replay
+starts require contact/registration corrections before qualified full-start RL;
+real-data BC and diagnostic throughput tests can run independently.
