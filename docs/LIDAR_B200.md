@@ -39,7 +39,7 @@ on the actual server before committing a large compute allocation.
   Warp's renderer and does not require a desktop/X server or Blender.
 
 ```bash
-git clone --branch feature/lidar-b200-ppo git@github.com:LidarDexManip/g1-pipette-sim.git
+git clone --branch feature/pick-up-ppo git@github.com:LidarDexManip/g1-pipette-sim.git
 cd g1-pipette-sim
 python3.10 -m venv .venv-lidar-ppo
 source .venv-lidar-ppo/bin/activate
