@@ -57,6 +57,19 @@ or constraint overflow rather than silently training through truncated contacts.
 The exported current scene has 12,337 geoms and 65 velocity DoFs: do not infer
 thousands-of-worlds throughput from benchmarks of simple locomotion scenes.
 
+## Choose a writable data directory
+
+Run this in each terminal used for the commands below, on both the workstation
+and server. The default is inside your home directory and needs no administrator
+permissions. You can instead select a writable server scratch/data mount.
+
+```bash
+export LIDAR_DATA_ROOT="$HOME/Datasets/g1-pickup"
+mkdir -p "$LIDAR_DATA_ROOT"
+```
+
+`/data` is not required. Do not use `sudo` to run the exporter or training.
+
 ## Export the current local scene once
 
 Run this on the workstation that has the current LIDAR replay checkout, dataset,
@@ -71,11 +84,14 @@ python -m lidar_ppo export-bundle \
   --dataset /home/ytung34/Projects/g1_pipette_sim/.cache/huggingface/hub/datasets--jren313--g1-pipette-2view-teleop0925-5task-eerel/snapshots/c7adfc179e5e15ade41b06803542001a24959dda \
   --controller-root /home/ytung34/Projects/TWIST2 \
   --episodes 28 108 30 352 357 \
-  --output /data/lidar-bundle
-python -m lidar_ppo audit-bundle --bundle /data/lidar-bundle
+  --output "${LIDAR_DATA_ROOT}/lidar-bundle" &&
+python -m lidar_ppo audit-bundle --bundle "${LIDAR_DATA_ROOT}/lidar-bundle"
 ```
 
-Use a fresh output directory for each export. Copy `/data/lidar-bundle` to the
+The audit runs only if export succeeds. A failed export does not produce a usable
+`checksums.json`; fix the export error before running the audit.
+
+Use a fresh output directory for each export. Copy `$LIDAR_DATA_ROOT/lidar-bundle` to the
 remote computer with `rsync`/`scp`; keep the same layout. The remote training
 process does not need the original TWIST2 checkout or ONNX model once the bundle
 exists. The bundle is a data artifact and is intentionally not committed to Git.
@@ -105,13 +121,13 @@ to 224x224. It never treats the overview camera or wrist image as the ego view.
 ```bash
 hf download jren313/g1-pipette-2view-teleop0925-5task-eerel \
   --repo-type dataset --revision c7adfc179e5e15ade41b06803542001a24959dda \
-  --local-dir /data/teleop0925
+  --local-dir "${LIDAR_DATA_ROOT}/teleop0925"
 python tools/make_lidar_bc_manifest.py \
-  --dataset /data/teleop0925 --output /data/real-pickups.json
-python -m lidar_ppo prepare-data --manifest /data/real-pickups.json \
-  --bundle /data/lidar-bundle --output /data/pickup-bc
+  --dataset "${LIDAR_DATA_ROOT}/teleop0925" --output "${LIDAR_DATA_ROOT}/real-pickups".json
+python -m lidar_ppo prepare-data --manifest "${LIDAR_DATA_ROOT}/real-pickups".json \
+  --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" --output "${LIDAR_DATA_ROOT}/pickup-bc"
 # Recommended: encode real images once while DINO is frozen.
-python -m lidar_ppo cache-features --data /data/pickup-bc --output /data/pickup-features
+python -m lidar_ppo cache-features --data "${LIDAR_DATA_ROOT}/pickup-bc" --output "${LIDAR_DATA_ROOT}/pickup-features"
 ```
 
 The manifest generator selects recorded successes of the pickup task using dataset
@@ -120,7 +136,7 @@ validation episodes for the pinned dataset, holding out session `20260924_2016`.
 These are dataset labels, not independently reannotated success labels. The
 source's older generic task text is not used for selection.
 
-Use `/data/pickup-features` instead of `/data/pickup-bc` in the training commands
+Use `$LIDAR_DATA_ROOT/pickup-features` instead of `$LIDAR_DATA_ROOT/pickup-bc` in the training commands
 below to avoid repeated real-image encoding and decompression. Cached features
 are FP16 and carry the exact encoder revision; mismatched caches are rejected.
 Recompute features if the encoder or image preprocessing changes. Online simulated
@@ -168,29 +184,29 @@ physics rollout. Choose checkpoints using evaluation, not training reward alone.
 
 ```bash
 # Real-data pretraining can start before simulation reset calibration is complete.
-./run_lidar_ppo.sh bc --data /data/pickup-bc --output runs/bc --updates 10000
+./run_lidar_ppo.sh bc --data "${LIDAR_DATA_ROOT}/pickup-bc" --output runs/bc --updates 10000
 
 # Benchmark before scaling; this measures physics+controller, not vision/learner.
-./run_lidar_ppo.sh benchmark --bundle /data/lidar-bundle --num-envs 256 --steps 100
-./run_lidar_ppo.sh benchmark --bundle /data/lidar-bundle --num-envs 1024 --steps 100
+./run_lidar_ppo.sh benchmark --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" --num-envs 256 --steps 100
+./run_lidar_ppo.sh benchmark --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" --num-envs 1024 --steps 100
 
 # PPO state teacher: 25 Hz actions, 50 Hz TWIST2, 1 kHz physics.
-./run_lidar_ppo.sh teacher --bundle /data/lidar-bundle --num-envs 1024 \
+./run_lidar_ppo.sh teacher --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" --num-envs 1024 \
   --output runs/teacher --updates 1000
-./run_lidar_ppo.sh evaluate --bundle /data/lidar-bundle \
+./run_lidar_ppo.sh evaluate --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" \
   --checkpoint runs/teacher/latest.pt --num-envs 128 --episodes 100 \
   --output runs/teacher/evaluation.json
 
 # Student visits its own states and gets teacher labels, plus 25% real-BC loss.
-./run_lidar_ppo.sh distill --bundle /data/lidar-bundle --data /data/pickup-bc \
+./run_lidar_ppo.sh distill --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" --data "${LIDAR_DATA_ROOT}/pickup-bc" \
   --teacher runs/teacher/latest.pt --student runs/bc/best.pt --num-envs 128 \
   --output runs/student --updates 1000
 
 # Optional visual PPO refinement; separate real BC batch on each optimizer step.
-./run_lidar_ppo.sh visual-ppo --bundle /data/lidar-bundle --data /data/pickup-bc \
+./run_lidar_ppo.sh visual-ppo --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" --data "${LIDAR_DATA_ROOT}/pickup-bc" \
   --student runs/student/latest.pt --num-envs 128 \
   --output runs/visual-ppo --updates 500
-./run_lidar_ppo.sh evaluate --bundle /data/lidar-bundle \
+./run_lidar_ppo.sh evaluate --bundle "${LIDAR_DATA_ROOT}/lidar-bundle" \
   --checkpoint runs/visual-ppo/latest.pt --num-envs 128 --episodes 100 \
   --output runs/visual-ppo/evaluation.json
 ./run_lidar_ppo.sh export-policy --checkpoint runs/visual-ppo/latest.pt \
